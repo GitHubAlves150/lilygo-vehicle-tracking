@@ -27,3 +27,6 @@
 - exit
 - docker exec -it lilygo-vehicle-tracking bash
 - idf.py --version  # Ainda funciona!
+
+--- 
+### ..........Fim...............

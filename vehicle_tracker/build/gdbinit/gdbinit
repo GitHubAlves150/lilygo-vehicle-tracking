@@ -1,0 +1,2 @@
+source /workspace/vehicle_tracker/build/gdbinit/symbols
+source /workspace/vehicle_tracker/build/gdbinit/connect

@@ -115,7 +115,7 @@ Depois de baixado é preciso entrar na pasta ```esp-idf``` executar o instalador
 
 E por fim executar o comando ```export.sh``` para confugar as variaveis de ambiente para o idf.py poder funcionar no terminal(idf.py seria o mesmo que git e docker quando é preciso executar alguma comando pertinente)
 
-
+**Ver a configuração do docker o passo a passo no arquivo [docker-steps.md](./docs/docker-steps.md)**
 
 ### 🐳 Estrutura no Docker  
 ``` bash
