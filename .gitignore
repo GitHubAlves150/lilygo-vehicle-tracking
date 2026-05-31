@@ -1,0 +1,25 @@
+# PlatformIO
+.pio/
+platformio_upload_timestamp
+platformio.lock
+
+# Docker cache
+platformio_cache/
+
+# ESP-IDF caches (mantidos localmente apenas)
+esp_tools_cache/
+esp_idf_cache/
+
+# Compiled files
+*.o
+*.d
+*.elf
+*.bin
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  esp32-dev:
+    build: .
+    container_name: lilygo-vehicle-tracking
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - esp_tools_cache:/opt/esp/tools
+      - esp_idf_cache:/opt/esp/idf
+    environment:
+      - IDF_PATH=/opt/esp/idf
+      - IDF_TOOLS_PATH=/opt/esp/tools
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"   # ← ALTERADO PARA ACM0
+    stdin_open: true
+    tty: true
+
+volumes:
+  esp_tools_cache:
+  esp_idf_cache:
