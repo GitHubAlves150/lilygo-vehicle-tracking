@@ -4,6 +4,8 @@
 #include "esp_log.h"
 #include "driver/uart.h"
 
+
+
 static const char *TAG = "VEHICLE_TRACKER";
 
 // Configuração da UART para o GPS (A7670E)

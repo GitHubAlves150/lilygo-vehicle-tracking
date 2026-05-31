@@ -1,0 +1,2 @@
+source /workspace/vehicle_tracker/build/bootloader/gdbinit/symbols
+source /workspace/vehicle_tracker/build/bootloader/gdbinit/connect

@@ -1,38 +1,13 @@
-FROM ubuntu:22.04
+ARG DOCKER_TAG=latest
+FROM espressif/idf:${DOCKER_TAG}
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
-# Instala dependências básicas
-RUN apt-get update && apt-get install -y \
-    git \ 
-    wget \ 
-    curl \
-    flex \
-    bison \
-    gperf \
-    ccache \
-    dfu-util \
-    cmake \
-    libffi-dev \
-    libssl-dev \
-    python3 \
-    python3-pip \
-    python3-venv \
-    usbutils \
-    udev \
-    ninja-build \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -y && apt-get install udev -y
 
-# Instala ESP-IDF
-ENV IDF_PATH=/opt/esp/idf
-ENV IDF_TOOLS_PATH=/opt/esp/tools
+RUN echo "source /opt/esp/idf/export.sh > /dev/null 2>&1" >> ~/.bashrc
 
-RUN mkdir -p /opt/esp && \
-    cd /opt/esp && \
-    git clone --recursive --depth 1 --branch release/v5.3 https://github.com/espressif/esp-idf.git
+ENTRYPOINT [ "/opt/esp/entrypoint.sh" ]
 
-ENV PATH="/opt/esp/tools:${PATH}"
-
-WORKDIR /workspace
-
-CMD ["tail", "-f", "/dev/null"]
+CMD ["/bin/bash", "-c"]
