@@ -1,0 +1,5 @@
+/workspace/vehicle_tracker/main/main.cpp: In function 'void app_main()':
+/workspace/vehicle_tracker/main/main.cpp:33:5: warning: missing initializer for member 'uart_config_t::rx_flow_ctrl_thresh' [-Wmissing-field-initializers]
+   33 |     };
+      |     ^
+/workspace/vehicle_tracker/main/main.cpp:33:5: warning: missing initializer for member 'uart_config_t::flags' [-Wmissing-field-initializers]
