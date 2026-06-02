@@ -1,0 +1,528 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  2 2026 02:56:06[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ae0ch ( 44556) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ae34 vaddr=3ffb0000 size=027cch ( 10188) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d608 vaddr=40080000 size=02a10h ( 10768) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19c34h (105524) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00039c5c vaddr=40082a10 size=0b394h ( 45972) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) app_init: Application information:[0m
+[0;32mI (219) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (225) app_init: App version:      1[0m
+[0;32mI (229) app_init: Compile time:     Jun  2 2026 02:55:58[0m
+[0;32mI (235) app_init: ELF file SHA256:  42913199b...[0m
+[0;32mI (240) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (245) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (250) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (260) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (267) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (273) heap_init: At 3FFB30C8 len 0002CF38 (179 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 4008DDA4 len 0001225C (72 KiB): IRAM[0m
+[0;32mI (300) spi_flash: detected chip: generic[0m
+[0;32mI (303) spi_flash: flash io: dio[0m
+[0;33mW (307) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (321) main_task: Started on CPU0[0m
+[0;32mI (331) main_task: Calling app_main()[0m
+[0;32mI (331) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (331) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (341) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1451) VEHICLE_TRACKER: Hardware energizado e pinos configurados.[0m
+[0;32mI (3451) main_task: Returned from app_main()[0m
+[0;33mW (4121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (5121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (6111) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (7121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (8121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (9121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (10121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (11121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (12121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (13121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (14121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (15121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (16121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (17121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (18121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (19121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (20121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (21121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (22121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (23121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (24121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (25121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (26121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (27121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (28121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (29121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (30121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (31121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (32121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (33121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (34121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (35121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (36121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (37121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (38121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (39121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (40121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (41121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (42121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (43121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (44121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (45121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (46121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (47121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (48121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (49121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (50121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (51121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (52121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (53121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (54121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (55121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (56121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (57121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (58121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (59121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (60151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (61151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (62151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (63151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (64121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (65151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (66151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (67151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (68151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (69151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (70151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (71151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (72151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (73151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (74151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (75151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (76151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (77151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (78151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (79151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (80151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (81151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (82151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (83151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (84151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (85151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (86151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (87151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (88151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (89151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (90151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (91151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (92151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (93151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (94151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (95151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (96151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (97151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (98151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (99151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (100121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (101151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (102151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (103151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (104151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (105151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (106151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (107151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (108151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (109151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (110151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (111151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (112151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (113151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (114151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (115151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (116151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (117151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (118151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (119151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (120151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (121151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (122151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (123151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (124151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (125151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (126151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (127151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (128151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (129151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (130151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (131151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (132151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (133151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (134151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (135151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (136121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (137121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (138121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (139121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (140121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (141121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (142121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (143121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (144121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (145121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (146121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (147121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (148121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (149121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (150121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (151121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (152121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (153121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (154121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (155121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (156121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (157131) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (158151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (159151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (160151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (161151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (162151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (163151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (164151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (165151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (166151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (167151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (168151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (169151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (170151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (171151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (172151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (173151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (174151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (175151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (176151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (177151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (178151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (179151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (180151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (181151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (182151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (183121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (184151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (185151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (186151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (187151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (188151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (189151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (190121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (191151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (192151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (193121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (194151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (195151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (196151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (197151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (198151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (199151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (200151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (201151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (202151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (203151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (204151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (205151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (206121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (207151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (208151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (209151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (210151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (211151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (212151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (213151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (214151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (215151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (216151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (217121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (218121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (219151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (220151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (221121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (222151) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (223121) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;32mI (224271) VEHICLE_TRACKER: Location: -27.599965, -48.508800 | Hora UTC: 030058 | Data: 020626[0m
+[0;32mI (225241) VEHICLE_TRACKER: Location: -27.599966, -48.508802 | Hora UTC: 030059 | Data: 020626[0m
+[0;32mI (226251) VEHICLE_TRACKER: Location: -27.599973, -48.508806 | Hora UTC: 030100 | Data: 020626[0m
+[0;32mI (227271) VEHICLE_TRACKER: Location: -27.599973, -48.508805 | Hora UTC: 030101 | Data: 020626[0m
+[0;32mI (228271) VEHICLE_TRACKER: Location: -27.599966, -48.508799 | Hora UTC: 030102 | Data: 020626[0m
+[0;32mI (229271) VEHICLE_TRACKER: Location: -27.599954, -48.508789 | Hora UTC: 030103 | Data: 020626[0m
+[0;32mI (230241) VEHICLE_TRACKER: Location: -27.599932, -48.508774 | Hora UTC: 030104 | Data: 020626[0m
+[0;32mI (231261) VEHICLE_TRACKER: Location: -27.599918, -48.508747 | Hora UTC: 030105 | Data: 020626[0m
+[0;32mI (232291) VEHICLE_TRACKER: Location: -27.599875, -48.508671 | Hora UTC: 030106 | Data: 020626[0m
+[0;32mI (233291) VEHICLE_TRACKER: Location: -27.599840, -48.508631 | Hora UTC: 030107 | Data: 020626[0m
+[0;32mI (234291) VEHICLE_TRACKER: Location: -27.599818, -48.508609 | Hora UTC: 030108 | Data: 020626[0m
+[0;32mI (235291) VEHICLE_TRACKER: Location: -27.599803, -48.508593 | Hora UTC: 030109 | Data: 020626[0m
+[0;32mI (236291) VEHICLE_TRACKER: Location: -27.599791, -48.508581 | Hora UTC: 030110 | Data: 020626[0m
+[0;32mI (237281) VEHICLE_TRACKER: Location: -27.599787, -48.508578 | Hora UTC: 030111 | Data: 020626[0m
+[0;32mI (238281) VEHICLE_TRACKER: Location: -27.599784, -48.508576 | Hora UTC: 030112 | Data: 020626[0m
+[0;32mI (239241) VEHICLE_TRACKER: Location: -27.599785, -48.508577 | Hora UTC: 030113 | Data: 020626[0m
+[0;32mI (240271) VEHICLE_TRACKER: Location: -27.599786, -48.508578 | Hora UTC: 030114 | Data: 020626[0m
+[0;32mI (241271) VEHICLE_TRACKER: Location: -27.599786, -48.508578 | Hora UTC: 030115 | Data: 020626[0m
+[0;32mI (242271) VEHICLE_TRACKER: Location: -27.599777, -48.508567 | Hora UTC: 030116 | Data: 020626[0m
+[0;32mI (243271) VEHICLE_TRACKER: Location: -27.599776, -48.508565 | Hora UTC: 030117 | Data: 020626[0m
+[0;32mI (244271) VEHICLE_TRACKER: Location: -27.599773, -48.508563 | Hora UTC: 030118 | Data: 020626[0m
+[0;32mI (245271) VEHICLE_TRACKER: Location: -27.599767, -48.508558 | Hora UTC: 030119 | Data: 020626[0m
+[0;32mI (246271) VEHICLE_TRACKER: Location: -27.599766, -48.508556 | Hora UTC: 030120 | Data: 020626[0m
+[0;32mI (247241) VEHICLE_TRACKER: Location: -27.599773, -48.508562 | Hora UTC: 030121 | Data: 020626[0m
+[0;32mI (248271) VEHICLE_TRACKER: Location: -27.599774, -48.508564 | Hora UTC: 030122 | Data: 020626[0m
+[0;32mI (249271) VEHICLE_TRACKER: Location: -27.599772, -48.508562 | Hora UTC: 030123 | Data: 020626[0m
+[0;32mI (250271) VEHICLE_TRACKER: Location: -27.599772, -48.508560 | Hora UTC: 030124 | Data: 020626[0m
+[0;32mI (251271) VEHICLE_TRACKER: Location: -27.599771, -48.508558 | Hora UTC: 030125 | Data: 020626[0m
+[0;32mI (252271) VEHICLE_TRACKER: Location: -27.599770, -48.508557 | Hora UTC: 030126 | Data: 020626[0m
+[0;32mI (253271) VEHICLE_TRACKER: Location: -27.599767, -48.508555 | Hora UTC: 030127 | Data: 020626[0m
+[0;32mI (254271) VEHICLE_TRACKER: Location: -27.599761, -48.508551 | Hora UTC: 030128 | Data: 020626[0m
+[0;32mI (255241) VEHICLE_TRACKER: Location: -27.599761, -48.508552 | Hora UTC: 030129 | Data: 020626[0m
+[0;32mI (256271) VEHICLE_TRACKER: Location: -27.599779, -48.508565 | Hora UTC: 030130 | Data: 020626[0m
+[0;32mI (257241) VEHICLE_TRACKER: Location: -27.599787, -48.508573 | Hora UTC: 030131 | Data: 020626[0m
+[0;32mI (258271) VEHICLE_TRACKER: Location: -27.599795, -48.508580 | Hora UTC: 030132 | Data: 020626[0m
+[0;32mI (259271) VEHICLE_TRACKER: Location: -27.599803, -48.508586 | Hora UTC: 030133 | Data: 020626[0m
+[0;32mI (260271) VEHICLE_TRACKER: Location: -27.599810, -48.508591 | Hora UTC: 030134 | Data: 020626[0m
+[0;32mI (261271) VEHICLE_TRACKER: Location: -27.599809, -48.508585 | Hora UTC: 030135 | Data: 020626[0m
+[0;32mI (262271) VEHICLE_TRACKER: Location: -27.599798, -48.508573 | Hora UTC: 030136 | Data: 020626[0m
+[0;32mI (263271) VEHICLE_TRACKER: Location: -27.599797, -48.508569 | Hora UTC: 030137 | Data: 020626[0m
+[0;32mI (264271) VEHICLE_TRACKER: Location: -27.599799, -48.508572 | Hora UTC: 030138 | Data: 020626[0m
+[0;32mI (265271) VEHICLE_TRACKER: Location: -27.599801, -48.508570 | Hora UTC: 030139 | Data: 020626[0m
+[0;32mI (266271) VEHICLE_TRACKER: Location: -27.599803, -48.508565 | Hora UTC: 030140 | Data: 020626[0m
+[0;32mI (267271) VEHICLE_TRACKER: Location: -27.599803, -48.508558 | Hora UTC: 030141 | Data: 020626[0m
+[0;32mI (268271) VEHICLE_TRACKER: Location: -27.599803, -48.508552 | Hora UTC: 030142 | Data: 020626[0m
+[0;32mI (269271) VEHICLE_TRACKER: Location: -27.599802, -48.508548 | Hora UTC: 030143 | Data: 020626[0m
+[0;32mI (270271) VEHICLE_TRACKER: Location: -27.599806, -48.508550 | Hora UTC: 030144 | Data: 020626[0m
+[0;32mI (271241) VEHICLE_TRACKER: Location: -27.599801, -48.508546 | Hora UTC: 030145 | Data: 020626[0m
+[0;32mI (272241) VEHICLE_TRACKER: Location: -27.599799, -48.508543 | Hora UTC: 030146 | Data: 020626[0m
+[0;32mI (273271) VEHICLE_TRACKER: Location: -27.599798, -48.508543 | Hora UTC: 030147 | Data: 020626[0m
+[0;32mI (274271) VEHICLE_TRACKER: Location: -27.599799, -48.508546 | Hora UTC: 030148 | Data: 020626[0m
+[0;32mI (275271) VEHICLE_TRACKER: Location: -27.599802, -48.508551 | Hora UTC: 030149 | Data: 020626[0m
+[0;32mI (276271) VEHICLE_TRACKER: Location: -27.599801, -48.508555 | Hora UTC: 030150 | Data: 020626[0m
+[0;32mI (277271) VEHICLE_TRACKER: Location: -27.599803, -48.508559 | Hora UTC: 030151 | Data: 020626[0m
+[0;32mI (278271) VEHICLE_TRACKER: Location: -27.599807, -48.508562 | Hora UTC: 030152 | Data: 020626[0m
+[0;32mI (279271) VEHICLE_TRACKER: Location: -27.599810, -48.508566 | Hora UTC: 030153 | Data: 020626[0m
+[0;32mI (280271) VEHICLE_TRACKER: Location: -27.599813, -48.508568 | Hora UTC: 030154 | Data: 020626[0m
+[0;32mI (281271) VEHICLE_TRACKER: Location: -27.599814, -48.508571 | Hora UTC: 030155 | Data: 020626[0m
+[0;32mI (282271) VEHICLE_TRACKER: Location: -27.599814, -48.508572 | Hora UTC: 030156 | Data: 020626[0m
+[0;32mI (283271) VEHICLE_TRACKER: Location: -27.599810, -48.508570 | Hora UTC: 030157 | Data: 020626[0m
+[0;32mI (284271) VEHICLE_TRACKER: Location: -27.599810, -48.508568 | Hora UTC: 030158 | Data: 020626[0m
+[0;32mI (285271) VEHICLE_TRACKER: Location: -27.599813, -48.508570 | Hora UTC: 030159 | Data: 020626[0m
+[0;32mI (286271) VEHICLE_TRACKER: Location: -27.599819, -48.508577 | Hora UTC: 030200 | Data: 020626[0m
+[0;32mI (287271) VEHICLE_TRACKER: Location: -27.599829, -48.508589 | Hora UTC: 030201 | Data: 020626[0m
+[0;32mI (288271) VEHICLE_TRACKER: Location: -27.599831, -48.508593 | Hora UTC: 030202 | Data: 020626[0m
+[0;32mI (289241) VEHICLE_TRACKER: Location: -27.599830, -48.508594 | Hora UTC: 030203 | Data: 020626[0m
+[0;32mI (290271) VEHICLE_TRACKER: Location: -27.599830, -48.508592 | Hora UTC: 030204 | Data: 020626[0m
+[0;32mI (291241) VEHICLE_TRACKER: Location: -27.599832, -48.508590 | Hora UTC: 030205 | Data: 020626[0m
+[0;32mI (292241) VEHICLE_TRACKER: Location: -27.599835, -48.508589 | Hora UTC: 030206 | Data: 020626[0m
+[0;32mI (293241) VEHICLE_TRACKER: Location: -27.599834, -48.508586 | Hora UTC: 030207 | Data: 020626[0m
+[0;32mI (294271) VEHICLE_TRACKER: Location: -27.599835, -48.508585 | Hora UTC: 030208 | Data: 020626[0m
+[0;32mI (295241) VEHICLE_TRACKER: Location: -27.599836, -48.508583 | Hora UTC: 030209 | Data: 020626[0m
+[0;32mI (296241) VEHICLE_TRACKER: Location: -27.599838, -48.508581 | Hora UTC: 030210 | Data: 020626[0m
+[0;32mI (297241) VEHICLE_TRACKER: Location: -27.599842, -48.508585 | Hora UTC: 030211 | Data: 020626[0m
+[0;32mI (298271) VEHICLE_TRACKER: Location: -27.599849, -48.508595 | Hora UTC: 030212 | Data: 020626[0m
+[0;32mI (299271) VEHICLE_TRACKER: Location: -27.599840, -48.508589 | Hora UTC: 030213 | Data: 020626[0m
+[0;32mI (300271) VEHICLE_TRACKER: Location: -27.599844, -48.508600 | Hora UTC: 030214 | Data: 020626[0m
+[0;32mI (301271) VEHICLE_TRACKER: Location: -27.599860, -48.508612 | Hora UTC: 030215 | Data: 020626[0m
+[0;32mI (302271) VEHICLE_TRACKER: Location: -27.599863, -48.508621 | Hora UTC: 030216 | Data: 020626[0m
+[0;32mI (303271) VEHICLE_TRACKER: Location: -27.599865, -48.508629 | Hora UTC: 030217 | Data: 020626[0m
+[0;32mI (304271) VEHICLE_TRACKER: Location: -27.599869, -48.508631 | Hora UTC: 030218 | Data: 020626[0m
+[0;32mI (305271) VEHICLE_TRACKER: Location: -27.599874, -48.508637 | Hora UTC: 030219 | Data: 020626[0m
+[0;32mI (306271) VEHICLE_TRACKER: Location: -27.599879, -48.508642 | Hora UTC: 030220 | Data: 020626[0m
+[0;32mI (307271) VEHICLE_TRACKER: Location: -27.599881, -48.508645 | Hora UTC: 030221 | Data: 020626[0m
+[0;32mI (308271) VEHICLE_TRACKER: Location: -27.599875, -48.508643 | Hora UTC: 030222 | Data: 020626[0m
+[0;32mI (309271) VEHICLE_TRACKER: Location: -27.599861, -48.508641 | Hora UTC: 030223 | Data: 020626[0m
+[0;32mI (310271) VEHICLE_TRACKER: Location: -27.599860, -48.508636 | Hora UTC: 030224 | Data: 020626[0m
+[0;32mI (311271) VEHICLE_TRACKER: Location: -27.599858, -48.508632 | Hora UTC: 030225 | Data: 020626[0m
+[0;32mI (312271) VEHICLE_TRACKER: Location: -27.599855, -48.508626 | Hora UTC: 030226 | Data: 020626[0m
+[0;32mI (313271) VEHICLE_TRACKER: Location: -27.599851, -48.508620 | Hora UTC: 030227 | Data: 020626[0m
+[0;32mI (314271) VEHICLE_TRACKER: Location: -27.599845, -48.508611 | Hora UTC: 030228 | Data: 020626[0m
+[0;32mI (315271) VEHICLE_TRACKER: Location: -27.599839, -48.508603 | Hora UTC: 030229 | Data: 020626[0m
+[0;32mI (316271) VEHICLE_TRACKER: Location: -27.599846, -48.508606 | Hora UTC: 030230 | Data: 020626[0m
+[0;32mI (317271) VEHICLE_TRACKER: Location: -27.599845, -48.508604 | Hora UTC: 030231 | Data: 020626[0m
+[0;32mI (318271) VEHICLE_TRACKER: Location: -27.599845, -48.508602 | Hora UTC: 030232 | Data: 020626[0m
+[0;32mI (319271) VEHICLE_TRACKER: Location: -27.599846, -48.508600 | Hora UTC: 030233 | Data: 020626[0m
+[0;32mI (320271) VEHICLE_TRACKER: Location: -27.599845, -48.508596 | Hora UTC: 030234 | Data: 020626[0m
+[0;32mI (321271) VEHICLE_TRACKER: Location: -27.599845, -48.508591 | Hora UTC: 030235 | Data: 020626[0m
+[0;32mI (322271) VEHICLE_TRACKER: Location: -27.599850, -48.508591 | Hora UTC: 030236 | Data: 020626[0m
+[0;32mI (323271) VEHICLE_TRACKER: Location: -27.599858, -48.508591 | Hora UTC: 030237 | Data: 020626[0m
+[0;32mI (324271) VEHICLE_TRACKER: Location: -27.599865, -48.508592 | Hora UTC: 030238 | Data: 020626[0m
+[0;32mI (325271) VEHICLE_TRACKER: Location: -27.599869, -48.508593 | Hora UTC: 030239 | Data: 020626[0m
+[0;32mI (326241) VEHICLE_TRACKER: Location: -27.599872, -48.508589 | Hora UTC: 030240 | Data: 020626[0m
+[0;32mI (327271) VEHICLE_TRACKER: Location: -27.599873, -48.508587 | Hora UTC: 030241 | Data: 020626[0m
+[0;32mI (328271) VEHICLE_TRACKER: Location: -27.599875, -48.508586 | Hora UTC: 030242 | Data: 020626[0m
+[0;32mI (329271) VEHICLE_TRACKER: Location: -27.599878, -48.508588 | Hora UTC: 030243 | Data: 020626[0m
+[0;32mI (330271) VEHICLE_TRACKER: Location: -27.599877, -48.508588 | Hora UTC: 030244 | Data: 020626[0m
+[0;32mI (331271) VEHICLE_TRACKER: Location: -27.599878, -48.508591 | Hora UTC: 030245 | Data: 020626[0m
+[0;32mI (332271) VEHICLE_TRACKER: Location: -27.599878, -48.508592 | Hora UTC: 030246 | Data: 020626[0m
+[0;32mI (333271) VEHICLE_TRACKER: Location: -27.599879, -48.508592 | Hora UTC: 030247 | Data: 020626[0m
+[0;32mI (334271) VEHICLE_TRACKER: Location: -27.599879, -48.508593 | Hora UTC: 030248 | Data: 020626[0m
+[0;32mI (335241) VEHICLE_TRACKER: Location: -27.599881, -48.508592 | Hora UTC: 030249 | Data: 020626[0m
+[0;32mI (336271) VEHICLE_TRACKER: Location: -27.599882, -48.508592 | Hora UTC: 030250 | Data: 020626[0m
+[0;32mI (337271) VEHICLE_TRACKER: Location: -27.599882, -48.508590 | Hora UTC: 030251 | Data: 020626[0m
+[0;32mI (338271) VEHICLE_TRACKER: Location: -27.599883, -48.508588 | Hora UTC: 030252 | Data: 020626[0m
+[0;32mI (339271) VEHICLE_TRACKER: Location: -27.599886, -48.508592 | Hora UTC: 030253 | Data: 020626[0m
+[0;32mI (340271) VEHICLE_TRACKER: Location: -27.599888, -48.508600 | Hora UTC: 030254 | Data: 020626[0m
+[0;32mI (341271) VEHICLE_TRACKER: Location: -27.599897, -48.508611 | Hora UTC: 030255 | Data: 020626[0m
+[0;32mI (342271) VEHICLE_TRACKER: Location: -27.599905, -48.508623 | Hora UTC: 030256 | Data: 020626[0m
+[0;32mI (343271) VEHICLE_TRACKER: Location: -27.599911, -48.508633 | Hora UTC: 030257 | Data: 020626[0m
+[0;32mI (344241) VEHICLE_TRACKER: Location: -27.599915, -48.508642 | Hora UTC: 030258 | Data: 020626[0m
+[0;32mI (345241) VEHICLE_TRACKER: Location: -27.599920, -48.508648 | Hora UTC: 030259 | Data: 020626[0m
+[0;32mI (346271) VEHICLE_TRACKER: Location: -27.599924, -48.508655 | Hora UTC: 030300 | Data: 020626[0m
+[0;32mI (347271) VEHICLE_TRACKER: Location: -27.599929, -48.508663 | Hora UTC: 030301 | Data: 020626[0m
+[0;32mI (348271) VEHICLE_TRACKER: Location: -27.599936, -48.508670 | Hora UTC: 030302 | Data: 020626[0m
+[0;32mI (349271) VEHICLE_TRACKER: Location: -27.599934, -48.508672 | Hora UTC: 030303 | Data: 020626[0m
+[0;32mI (350241) VEHICLE_TRACKER: Location: -27.599939, -48.508678 | Hora UTC: 030304 | Data: 020626[0m
+[0;32mI (351241) VEHICLE_TRACKER: Location: -27.599939, -48.508678 | Hora UTC: 030305 | Data: 020626[0m
+[0;32mI (352241) VEHICLE_TRACKER: Location: -27.599944, -48.508682 | Hora UTC: 030306 | Data: 020626[0m
+[0;32mI (353241) VEHICLE_TRACKER: Location: -27.599948, -48.508685 | Hora UTC: 030307 | Data: 020626[0m
+[0;32mI (354231) VEHICLE_TRACKER: Location: -27.599947, -48.508690 | Hora UTC: 030308 | Data: 020626[0m
+[0;32mI (355241) VEHICLE_TRACKER: Location: -27.599948, -48.508696 | Hora UTC: 030309 | Data: 020626[0m
+[0;32mI (356241) VEHICLE_TRACKER: Location: -27.599943, -48.508690 | Hora UTC: 030310 | Data: 020626[0m
+[0;32mI (357241) VEHICLE_TRACKER: Location: -27.599939, -48.508686 | Hora UTC: 030311 | Data: 020626[0m
+[0;32mI (358241) VEHICLE_TRACKER: Location: -27.599938, -48.508684 | Hora UTC: 030312 | Data: 020626[0m
+[0;32mI (359241) VEHICLE_TRACKER: Location: -27.599936, -48.508683 | Hora UTC: 030313 | Data: 020626[0m
+[0;32mI (360241) VEHICLE_TRACKER: Location: -27.599941, -48.508687 | Hora UTC: 030314 | Data: 020626[0m
+[0;32mI (361241) VEHICLE_TRACKER: Location: -27.599942, -48.508690 | Hora UTC: 030315 | Data: 020626[0m
+[0;32mI (362241) VEHICLE_TRACKER: Location: -27.599944, -48.508693 | Hora UTC: 030316 | Data: 020626[0m
+[0;32mI (363241) VEHICLE_TRACKER: Location: -27.599947, -48.508693 | Hora UTC: 030317 | Data: 020626[0m
+[0;32mI (364241) VEHICLE_TRACKER: Location: -27.599949, -48.508695 | Hora UTC: 030318 | Data: 020626[0m
+[0;32mI (365241) VEHICLE_TRACKER: Location: -27.599951, -48.508696 | Hora UTC: 030319 | Data: 020626[0m
+[0;32mI (366241) VEHICLE_TRACKER: Location: -27.599952, -48.508698 | Hora UTC: 030320 | Data: 020626[0m
+[0;32mI (367241) VEHICLE_TRACKER: Location: -27.599957, -48.508702 | Hora UTC: 030321 | Data: 020626[0m
+[0;32mI (368241) VEHICLE_TRACKER: Location: -27.599958, -48.508705 | Hora UTC: 030322 | Data: 020626[0m
+[0;32mI (369241) VEHICLE_TRACKER: Location: -27.599960, -48.508706 | Hora UTC: 030323 | Data: 020626[0m
+[0;32mI (370241) VEHICLE_TRACKER: Location: -27.599964, -48.508708 | Hora UTC: 030324 | Data: 020626[0m
+[0;32mI (371241) VEHICLE_TRACKER: Location: -27.599968, -48.508712 | Hora UTC: 030325 | Data: 020626[0m
+[0;32mI (372241) VEHICLE_TRACKER: Location: -27.599972, -48.508716 | Hora UTC: 030326 | Data: 020626[0m
+[0;32mI (373231) VEHICLE_TRACKER: Location: -27.599976, -48.508721 | Hora UTC: 030327 | Data: 020626[0m
+[0;32mI (1451) VEHICLE_TRACKER: Hardware energizado e pinos configurados.[0m
+[0;32mI (3451) main_task: Returned from app_main()[0m
+[0;33mW (3971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (4971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (5971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (6971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+
+*ATREADY: 1
+[0;33mW (7971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (8981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+
++CPIN: SIM REMOVED
+[0;33mW (9981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (10971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+
++CPIN: SIM REMOVED
+[0;33mW (11971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (12981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (13981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (14981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (15971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (16981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (17981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (18981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (19981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (20981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (21981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (22981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (23981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (24981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (25981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (26981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (27981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (28981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (29981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (30981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (31981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (32971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (33981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (34981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (35981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (36981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (37981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (38971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (39981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (40981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (41981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (42981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (43981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (44971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (45981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (46981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (47981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (48971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (49981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (50981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (51971) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (52981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (53981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (54981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (55981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (56981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (57981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (58981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (59981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (60981) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (62021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (63021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (64021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (65021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (66021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (67021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (67991) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (69021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (70021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (71021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (72021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (73021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (73991) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (74991) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (75991) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (77021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (78021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (79021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (80021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (81021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (81991) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (83021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (84021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;33mW (85021) VEHICLE_TRACKER: Location: INVALID (Aguardando sinal dos satélites...)[0m
+[0;32mI (86141) VEHICLE_TRACKER: Location: -27.600224, -48.508868 | Hora UTC: 030525 | Data: 020626[0m
+[0;32mI (87111) VEHICLE_TRACKER: Location: -27.600223, -48.508862 | Hora UTC: 030526 | Data: 020626[0m
+[0;32mI (88141) VEHICLE_TRACKER: Location: -27.600223, -48.508865 | Hora UTC: 030527 | Data: 020626[0m
+[0;32mI (89141) VEHICLE_TRACKER: Location: -27.600222, -48.508869 | Hora UTC: 030528 | Data: 020626[0m
+[0;32mI (90141) VEHICLE_TRACKER: Location: -27.600219, -48.508869 | Hora UTC: 030529 | Data: 020626[0m
+[0;32mI (91151) VEHICLE_TRACKER: Location: -27.600219, -48.508874 | Hora UTC: 030530 | Data: 020626[0m
+[0;32mI
