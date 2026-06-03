@@ -3,7 +3,8 @@ idf_component_register(
         "main.cpp"
         "./src/gps_parser.cpp"
         "./src/hardware.cpp"
-        "./src/modem.cpp"        
+        "./src/modem.cpp"  
+        "./src/wifi_init_.cpp"      
     INCLUDE_DIRS      
         "./include"
         "."

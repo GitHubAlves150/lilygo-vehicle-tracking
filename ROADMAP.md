@@ -10,7 +10,7 @@ FASE 1: DADOS GPS ✅
 ├── Extrair latitude, longitude, velocidade
 └── Exibir no monitor serial
 
-FASE 2: CONEXÃO WiFi (Atual)
+FASE 2: CONEXÃO WiFi ✅
 ├── Conectar ao hotspot do celular
 └── Testar conectividade
 

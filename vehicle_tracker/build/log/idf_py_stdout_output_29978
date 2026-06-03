@@ -1,5 +1,5 @@
 [1/5] cd /workspace/vehicle_tracker/build/esp-idf/esptool_py && /opt/esp/tools/python_env/idf5.3_py3.10_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /workspace/vehicle_tracker/build/partition_table/partition-table.bin /workspace/vehicle_tracker/build/vehicle_tracker.bin
-vehicle_tracker.bin binary size 0xa4610 bytes. Smallest app partition is 0x100000 bytes. 0x5b9f0 bytes (36%) free.
+vehicle_tracker.bin binary size 0xa4620 bytes. Smallest app partition is 0x100000 bytes. 0x5b9e0 bytes (36%) free.
 [2/5] Performing build step for 'bootloader'
 [1/1] cd /workspace/vehicle_tracker/build/bootloader/esp-idf/esptool_py && /opt/esp/tools/python_env/idf5.3_py3.10_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /workspace/vehicle_tracker/build/bootloader/bootloader.bin
 Bootloader binary size 0x68e0 bytes. 0x720 bytes (6%) free.
@@ -7,7 +7,7 @@ Bootloader binary size 0x68e0 bytes. 0x720 bytes (6%) free.
 esptool.py --chip esp32 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 vehicle_tracker.bin 0x8000 partition_table/partition-table.bin
 esptool.py v4.11.0
 Serial port /dev/ttyACM0
-Connecting.....
+Connecting..........
 Chip is ESP32-D0WD-V3 (revision v3.1)
 Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
 Crystal is 40MHz
@@ -22,43 +22,43 @@ Flash will be erased from 0x00001000 to 0x00007fff...
 Flash will be erased from 0x00010000 to 0x000b4fff...
 Flash will be erased from 0x00008000 to 0x00008fff...
 SHA digest in image updated
-Compressed 26848 bytes to 16429...
+Compressed 26848 bytes to 16430...
 Writing at 0x00001000... (50 %)
-Writing at 0x000078a2... (100 %)
-Wrote 26848 bytes (16429 compressed) at 0x00001000 in 0.6 seconds (effective 370.1 kbit/s)...
+Writing at 0x0000789c... (100 %)
+Wrote 26848 bytes (16430 compressed) at 0x00001000 in 0.6 seconds (effective 370.1 kbit/s)...
 Hash of data verified.
-Compressed 673296 bytes to 424490...
+Compressed 673312 bytes to 424506...
 Writing at 0x00010000... (3 %)
-Writing at 0x0001c5fc... (7 %)
-Writing at 0x000252cc... (11 %)
-Writing at 0x0002dca0... (15 %)
-Writing at 0x000336e9... (19 %)
-Writing at 0x0003964a... (23 %)
-Writing at 0x0003f509... (26 %)
-Writing at 0x00045325... (30 %)
-Writing at 0x0004b092... (34 %)
-Writing at 0x000515d7... (38 %)
-Writing at 0x0005710d... (42 %)
-Writing at 0x0005c978... (46 %)
-Writing at 0x00061fe2... (50 %)
-Writing at 0x0006758c... (53 %)
-Writing at 0x0006cd57... (57 %)
-Writing at 0x0007284c... (61 %)
-Writing at 0x00078545... (65 %)
-Writing at 0x0007e002... (69 %)
-Writing at 0x00083d4d... (73 %)
-Writing at 0x000897f2... (76 %)
+Writing at 0x0001c607... (7 %)
+Writing at 0x000252c7... (11 %)
+Writing at 0x0002dc8f... (15 %)
+Writing at 0x000336de... (19 %)
+Writing at 0x00039674... (23 %)
+Writing at 0x0003f502... (26 %)
+Writing at 0x00045320... (30 %)
+Writing at 0x0004b087... (34 %)
+Writing at 0x000515d0... (38 %)
+Writing at 0x00057105... (42 %)
+Writing at 0x0005c985... (46 %)
+Writing at 0x00061feb... (50 %)
+Writing at 0x0006758d... (53 %)
+Writing at 0x0006cd4e... (57 %)
+Writing at 0x00072840... (61 %)
+Writing at 0x00078538... (65 %)
+Writing at 0x0007dff8... (69 %)
+Writing at 0x00083d42... (73 %)
+Writing at 0x000897f0... (76 %)
 Writing at 0x0008f1b9... (80 %)
-Writing at 0x000981de... (84 %)
-Writing at 0x0009de48... (88 %)
-Writing at 0x000a3ab7... (92 %)
-Writing at 0x000a9c4a... (96 %)
-Writing at 0x000af501... (100 %)
-Wrote 673296 bytes (424490 compressed) at 0x00010000 in 9.6 seconds (effective 562.7 kbit/s)...
+Writing at 0x000981dc... (84 %)
+Writing at 0x0009de43... (88 %)
+Writing at 0x000a3aac... (92 %)
+Writing at 0x000a9c36... (96 %)
+Writing at 0x000af4f3... (100 %)
+Wrote 673312 bytes (424506 compressed) at 0x00010000 in 9.6 seconds (effective 563.0 kbit/s)...
 Hash of data verified.
 Compressed 3072 bytes to 103...
 Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 824.1 kbit/s)...
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 860.7 kbit/s)...
 Hash of data verified.
 
 Leaving...

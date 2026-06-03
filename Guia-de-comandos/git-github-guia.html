@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub - Guia Essencial para Projetos IoT</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- GitHub Markdown Style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #c9d1d9;
+            line-height: 1.5;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f0f6fc, #58a6ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 i {
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            color: #f0f6fc;
+        }
+
+        .header .subtitle {
+            color: #8b949e;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .header .badge {
+            background: rgba(88, 166, 255, 0.15);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: #58a6ff;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(56, 139, 253, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .stat-card i {
+            font-size: 1.5rem;
+            color: #58a6ff;
+        }
+
+        .stat-card .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f0f6fc;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+
+        /* Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            border: 1px solid #30363d;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #58a6ff;
+        }
+
+        .card-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(13, 17, 23, 0.5);
+        }
+
+        .card-header i {
+            font-size: 1.5rem;
+        }
+
+        .card-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .card-header .step-badge {
+            margin-left: auto;
+            background: rgba(88, 166, 255, 0.15);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #58a6ff;
+        }
+
+        .card-content {
+            padding: 1.25rem 1.5rem;
+        }
+
+        /* Comandos */
+        .command-block {
+            background: #0d1117;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid #21262d;
+        }
+
+        .command-header {
+            padding: 0.6rem 1rem;
+            background: rgba(13, 17, 23, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #21262d;
+            font-size: 0.75rem;
+            color: #8b949e;
+        }
+
+        .command-code {
+            padding: 0.85rem 1rem;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: #a5d6ff;
+            line-height: 1.4;
+            background: #0d1117;
+        }
+
+        .copy-btn {
+            background: rgba(56, 139, 253, 0.15);
+            border: 1px solid #30363d;
+            color: #58a6ff;
+            cursor: pointer;
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.375rem;
+            font-size: 0.7rem;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(56, 139, 253, 0.3);
+            border-color: #58a6ff;
+        }
+
+        .description {
+            font-size: 0.8rem;
+            color: #8b949e;
+            margin-top: 0.5rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid #58a6ff;
+        }
+
+        .tip {
+            background: rgba(210, 153, 34, 0.1);
+            border-left: 3px solid #d29922;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #e3b341;
+        }
+
+        .tip i {
+            margin-right: 0.5rem;
+        }
+
+        .warning {
+            background: rgba(248, 81, 73, 0.1);
+            border-left: 3px solid #f85149;
+            color: #f85149;
+        }
+
+        .success {
+            background: rgba(35, 134, 54, 0.1);
+            border-left: 3px solid #238636;
+            color: #56d364;
+        }
+
+        .quick-commands {
+            background: rgba(22, 27, 34, 0.6);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #30363d;
+        }
+
+        .quick-commands h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .quick-item {
+            background: #0d1117;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #21262d;
+        }
+
+        .quick-item code {
+            font-family: 'SF Mono', monospace;
+            font-size: 0.8rem;
+            color: #a5d6ff;
+        }
+
+        .quick-item .desc {
+            font-size: 0.7rem;
+            color: #8b949e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .command-code {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fab fa-github"></i> Git & GitHub Essentials</h1>
+            <div class="subtitle">
+                <span class="badge"><i class="fab fa-linux"></i> Linux / Ubuntu</span>
+                <span class="badge"><i class="fas fa-code-branch"></i> Para projetos IoT</span>
+                <span><i class="fas fa-terminal"></i> Comandos essenciais</span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <i class="fab fa-git-alt"></i>
+                <div>
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Comandos Git</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fab fa-github"></i>
+                <div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Comandos GitHub</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-workflow"></i>
+                <div>
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Fluxos de Trabalho</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <!-- CARD 1: Instalação e Configuração Inicial -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-download" style="color: #58a6ff;"></i>
+                    <h2>Instalação e Setup</h2>
+                    <span class="step-badge">PASSO 1</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header">
+                            <span><i class="fab fa-ubuntu"></i> Instalar Git (Ubuntu)</span>
+                            <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="command-code">sudo apt update && sudo apt install git</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header">
+                            <span><i class="fas fa-user"></i> Configurar nome de usuário</span>
+                            <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="command-code">git config --global user.name "Seu Nome"</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header">
+                            <span><i class="fas fa-envelope"></i> Configurar email</span>
+                            <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="command-code">git config --global user.email "seu-email@exemplo.com"</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header">
+                            <span><i class="fas fa-palette"></i> Editor padrão (nano)</span>
+                            <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="command-code">git config --global core.editor "nano"</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header">
+                            <span><i class="fas fa-list"></i> Ver configurações</span>
+                            <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="command-code">git config --list</div>
+                    </div>
+
+                    <div class="tip success">
+                        <i class="fas fa-check-circle"></i> <strong>Pronto!</strong> Git instalado e configurado globalmente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2: Iniciar e Trabalhar Localmente -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-folder-open" style="color: #d2a8ff;"></i>
+                    <h2>Comandos Básicos Locais</h2>
+                    <span class="step-badge">PASSO 2</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-plus-circle"></i> Iniciar repositório</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git init</div>
+                        <div class="description">Cria um novo repositório Git na pasta atual.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-plus"></i> Adicionar arquivo(s)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git add arquivo.txt<br>git add .<br>git add --all</div>
+                        <div class="description">Prepara arquivos para commit (staging area).</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-check-double"></i> Fazer commit</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git commit -m "mensagem descritiva"<br>git commit -am "pula o git add"</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-history"></i> Ver histórico</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git log --oneline --graph --all</div>
+                        <div class="description">Histórico de commits formatado.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-eye"></i> Status atual</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git status</div>
+                        <div class="description">Mostra arquivos modificados/untracked.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-code-branch"></i> Ver diferenças</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git diff<br>git diff --staged</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3: Branches e Merging -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-code-branch" style="color: #f78166;"></i>
+                    <h2>Branches (Ramos)</h2>
+                    <span class="step-badge">PASSO 3</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-list"></i> Listar branches</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git branch<br>git branch -a</div>
+                        <div class="description">Com -a mostra branches locais e remotos.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-plus"></i> Criar branch</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git branch nome-da-branch</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-random"></i> Mudar de branch</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git checkout nome-da-branch<br>git switch nome-da-branch</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-plus-square"></i> Criar e mudar</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git checkout -b nova-branch<br>git switch -c nova-branch</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-code-merge"></i> Merge</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git merge nome-da-branch</div>
+                        <div class="description">Faz merge da branch nomeada na branch atual.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-trash-alt"></i> Deletar branch</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git branch -d nome-da-branch</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4: GitHub - Repositórios Remotos -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fab fa-github" style="color: #f0f6fc;"></i>
+                    <h2>GitHub (Remotos)</h2>
+                    <span class="step-badge">PASSO 4</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fab fa-github"></i> Clonar repositório (HTTPS)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git clone https://github.com/usuario/repositorio.git</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fab fa-github"></i> Clonar com SSH (recomendado)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git clone git@github.com:usuario/repositorio.git</div>
+                        <div class="description">SSH evita digitar senha/token a cada push.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-link"></i> Verificar remote</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git remote -v</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-plus-circle"></i> Adicionar remote</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git remote add origin git@github.com:usuario/repo.git</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-cloud-upload-alt"></i> Enviar (push)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git push -u origin main<br>git push origin main</div>
+                        <div class="description">-u configura upstream (próximo push sem argumentos).</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-cloud-download-alt"></i> Baixar (pull)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git pull origin main</div>
+                        <div class="description">Busca e mescla alterações do remoto.</div>
+                    </div>
+
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i> <strong>Gerar chave SSH:</strong> <code>ssh-keygen -t ed25519 -C "email@exemplo.com"</code>. Depois adicione ao GitHub (Settings → SSH Keys).
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5: Desfazer, Resolver Conflitos -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-undo-alt" style="color: #f85149;"></i>
+                    <h2>Desfazer e Recuperar</h2>
+                    <span class="step-badge">CORREÇÕES</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-eraser"></i> Desfazer add (unstage)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git restore --staged arquivo.txt<br>git reset HEAD arquivo.txt</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-history"></i> Desfazer modificações</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git restore arquivo.txt<br>git checkout -- arquivo.txt</div>
+                        <div class="description">Restaura arquivo para o último commit (cuidado: perde alterações!).</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-undo"></i> Desfazer último commit</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git reset --soft HEAD~1   # mantém alterações<br>git reset --hard HEAD~1   # perde alterações</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-exclamation-triangle"></i> Abortar merge com conflito</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git merge --abort</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-download"></i> Baixar sem merge (fetch)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git fetch origin</div>
+                    </div>
+
+                    <div class="tip warning">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>Cuidado:</strong> <code>git reset --hard</code> e <code>git restore</code> perdem alterações não commitadas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6: .gitignore e Boas Práticas -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-file-alt" style="color: #7ee787;"></i>
+                    <h2>.gitignore e Boas Práticas</h2>
+                    <span class="step-badge">FLUXO IDEAL</span>
+                </div>
+                <div class="card-content">
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-file-excel"></i> Exemplo de .gitignore</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code"># Arquivos compilados<br>*.o<br>*.elf<br>*.bin<br><br># IDE<br>.vscode/<br>__pycache__/<br><br># Credenciais<br>.env<br>secrets.txt</div>
+                        <div class="description">Crie o arquivo <code>.gitignore</code> na raiz do projeto.</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-tag"></i> Criar tag</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git tag -a v1.0.0 -m "Primeira versão estável"<br>git push origin v1.0.0</div>
+                    </div>
+
+                    <div class="command-block">
+                        <div class="command-header"><span><i class="fas fa-sync-alt"></i> Rebase (atualizar branch)</span><button class="copy-btn" onclick="copyToClipboard(this)">Copiar</button></div>
+                        <div class="command-code">git fetch origin<br>git rebase origin/main</div>
+                    </div>
+
+                    <div class="tip success">
+                        <i class="fas fa-check-circle"></i> <strong>Fluxo recomendado para seu projeto:</strong><br>
+                        <code>git add .</code> → <code>git commit -m "descrição"</code> → <code>git push origin main</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de comandos rápidos -->
+        <div class="quick-commands">
+            <h3><i class="fas fa-bolt"></i> Comandos Rápidos (Cheat Sheet)</h3>
+            <div class="quick-grid">
+                <div class="quick-item"><code>git --version</code><span class="desc">versão instalada</span></div>
+                <div class="quick-item"><code>git branch -v</code><span class="desc">último commit por branch</span></div>
+                <div class="quick-item"><code>git stash</code><span class="desc">guardar alterações temporárias</span></div>
+                <div class="quick-item"><code>git stash pop</code><span class="desc">restaurar stash</span></div>
+                <div class="quick-item"><code>git show commit-id</code><span class="desc">ver detalhes do commit</span></div>
+                <div class="quick-item"><code>git log -p</code><span class="desc">ver mudanças no log</span></div>
+                <div class="quick-item"><code>git remote prune origin</code><span class="desc">limpar branches remotas deletadas</span></div>
+                <div class="quick-item"><code>git checkout -- .</code><span class="desc">desfazer TUDO (cuidado!)</span></div>
+            </div>
+        </div>
+
+        <footer>
+            <i class="fab fa-git-alt"></i> Git & GitHub - Guia prático para o projeto LILYGO Vehicle Tracking<br>
+            Comandos validados e organizados por fluxo de trabalho
+        </footer>
+    </div>
+
+    <script>
+        function copyToClipboard(btn) {
+            const commandBlock = btn.closest('.command-block');
+            const codeElement = commandBlock.querySelector('.command-code');
+            let textToCopy = codeElement.innerText;
+            
+            // Limpa caracteres extras se houver múltiplas linhas no display
+            textToCopy = textToCopy.trim();
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1500);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+                // Fallback para browsers mais antigos
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>
