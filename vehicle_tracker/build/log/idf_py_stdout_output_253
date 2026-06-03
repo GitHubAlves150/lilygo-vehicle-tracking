@@ -1,0 +1,306 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  3 2026 20:10:11[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15ab4h ( 88756) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00025adc vaddr=3ffb0000 size=043a8h ( 17320) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=00029e8c vaddr=40080000 size=0618ch ( 24972) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=71bfch (465916) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000a1c24 vaddr=4008618c size=129b8h ( 76216) load[0m
+[0;32mI (354) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (354) boot: Disabling RNG early entropy source...[0m
+[0;32mI (366) cpu_start: Multicore app[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (375) app_init: Application information:[0m
+[0;32mI (378) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (383) app_init: App version:      1[0m
+[0;32mI (388) app_init: Compile time:     Jun  3 2026 20:10:00[0m
+[0;32mI (394) app_init: ELF file SHA256:  656001f25...[0m
+[0;32mI (399) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (404) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (409) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (414) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (419) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (426) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (432) heap_init: At 3FFB7CA8 len 00028358 (160 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (451) heap_init: At 40098B44 len 000074BC (29 KiB): IRAM[0m
+[0;32mI (459) spi_flash: detected chip: generic[0m
+[0;32mI (462) spi_flash: flash io: dio[0m
+[0;33mW (466) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (480) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+
+========================================
+   RASTREADOR VEICULAR - LILYGO T-A7670
+   Versao 3.0 - Com WiFi
+========================================
+
+[0;32mI (500) MAIN: Inicializando WiFi...[0m
+[0;32mI (540) wifi:wifi driver task: 3ffbe610, prio:23, stack:6656, core=0[0m
+[0;32mI (550) wifi:wifi firmware version: 4209e03[0m
+[0;32mI (550) wifi:wifi certification version: v7.0[0m
+[0;32mI (550) wifi:config NVS flash: enabled[0m
+[0;32mI (550) wifi:config nano formating: disabled[0m
+[0;32mI (550) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (560) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (560) wifi:Init management short buffer num: 32[0m
+[0;32mI (570) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (570) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (570) wifi:Init static rx buffer num: 10[0m
+[0;32mI (580) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (580) wifi_init: rx ba win: 6[0m
+[0;32mI (590) wifi_init: accept mbox: 6[0m
+[0;32mI (590) wifi_init: tcpip mbox: 32[0m
+[0;32mI (590) wifi_init: udp mbox: 6[0m
+[0;32mI (600) wifi_init: tcp mbox: 6[0m
+[0;32mI (600) wifi_init: tcp tx win: 5760[0m
+[0;32mI (610) wifi_init: tcp rx win: 5760[0m
+[0;32mI (610) wifi_init: tcp mss: 1440[0m
+[0;32mI (610) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (620) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (620) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (650) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (720) wifi:mode : sta (e0:8c:fe:d3:66:9c)[0m
+[0;32mI (720) wifi:enable tsf[0m
+[0;32mI (730) MAIN: Conectando ao WiFi...[0m
+[0;32mI (730) MAIN: WiFi inicializado.[0m
+[0;32mI (730) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (730) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (740) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1570) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1570) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2630) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2640) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2670) HARDWARE: Hardware energizado e pinos configurados.[0m
+[0;32mI (2670) wifi:connected with KINGKONG_ES, aid = 6, channel 1, BW20, bssid = ee:82:05:40:1e:40[0m
+[0;32mI (2670) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -41, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (2690) wifi:pm start, type: 1[0m
+
+[0;32mI (2690) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2700) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (4670) MAIN: Sistema em execucao - Aguardando GPS...[0m
+[0;32mI (4670) main_task: Returned from app_main()[0m
+[0;32mI (5220) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201821 | Data: 030626[0m
+[0;32mI (6120) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201822 | Data: 030626[0m
+[0;32mI (7120) GPS_PARSER: Location: -27.600042, -48.508662 | Hora UTC: 201823 | Data: 030626[0m
+
+*ATREADY: 1
+[0;32mI (8110) GPS_PARSER: Location: -27.600041, -48.508663 | Hora UTC: 201824 | Data: 030626[0m
+
++CPIN: SIM REMOVED
+[0;32mI (9110) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201825 | Data: 030626[0m
+[0;32mI (10110) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201826 | Data: 030626[0m
+[0;32mI (11110) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201827 | Data: 030626[0m
+
++CPIN: SIM REMOVED
+[0;32mI (12110) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201828 | Data: 030626[0m
+[0;32mI (13120) GPS_PARSER: Location: -27.600042, -48.508662 | Hora UTC: 201829 | Data: 030626[0m
+[0;32mI (14110) GPS_PARSER: Location: -27.600041, -48.508662 | Hora UTC: 201830 | Data: 030626[0m
+[0;32mI (15120) GPS_PARSER: Location: -27.600042, -48.508662 | Hora UTC: 201831 | Data: 030626[0m
+[0;32mI (16110) GPS_PARSER: Location: -27.600042, -48.508662 | Hora UTC: 201832 | Data: 030626[0m
+[0;32mI (17120) GPS_PARSER: Location: -27.600042, -48.508662 | Hora UTC: 201833 | Data: 030626[0m
+[0;32mI (18130) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201834 | Data: 030626[0m
+[0;32mI (19120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201835 | Data: 030626[0m
+[0;32mI (20120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201836 | Data: 030626[0m
+[0;32mI (21120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201837 | Data: 030626[0m
+[0;32mI (22120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201838 | Data: 030626[0m
+[0;32mI (23120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201839 | Data: 030626[0m
+[0;32mI (24110) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201840 | Data: 030626[0m
+[0;32mI (25130) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201841 | Data: 030626[0m
+[0;32mI (25850) wifi:state: run -> init (0x1c0)[0m
+[0;32mI (25860) wifi:pm stop, total sleep time: 22712840 us / 23165386 us[0m
+
+[0;32mI (25860) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (25860) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (26110) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201842 | Data: 030626[0m
+[0;32mI (27130) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201843 | Data: 030626[0m
+[0;32mI (28130) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201844 | Data: 030626[0m
+[0;33mW (28280) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (29120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201845 | Data: 030626[0m
+[0;32mI (30130) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201846 | Data: 030626[0m
+[0;33mW (30700) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (31120) GPS_PARSER: Location: -27.600041, -48.508661 | Hora UTC: 201847 | Data: 030626[0m
+[0;32mI (32120) GPS_PARSER: Location: -27.600044, -48.508660 | Hora UTC: 201848 | Data: 030626[0m
+[0;33mW (33120) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (33130) GPS_PARSER: Location: -27.600049, -48.508664 | Hora UTC: 201849 | Data: 030626[0m
+[0;32mI (34130) GPS_PARSER: Location: -27.600053, -48.508670 | Hora UTC: 201850 | Data: 030626[0m
+[0;32mI (35120) GPS_PARSER: Location: -27.600057, -48.508674 | Hora UTC: 201851 | Data: 030626[0m
+[0;33mW (35540) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (35550) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (35550) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (36120) GPS_PARSER: Location: -27.600062, -48.508680 | Hora UTC: 201852 | Data: 030626[0m
+[0;32mI (37120) GPS_PARSER: Location: -27.600065, -48.508689 | Hora UTC: 201853 | Data: 030626[0m
+[0;32mI (37400) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (37410) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (37440) wifi:connected with KINGKONG_ES, aid = 6, channel 1, BW20, bssid = 76:e4:48:f4:22:9a[0m
+[0;32mI (37440) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -41, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (37450) wifi:pm start, type: 1[0m
+
+[0;32mI (37470) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (38120) GPS_PARSER: Location: -27.600071, -48.508698 | Hora UTC: 201854 | Data: 030626[0m
+[0;32mI (39130) GPS_PARSER: Location: -27.600076, -48.508702 | Hora UTC: 201855 | Data: 030626[0m
+[0;32mI (40110) GPS_PARSER: Location: -27.600074, -48.508704 | Hora UTC: 201856 | Data: 030626[0m
+[0;32mI (41110) GPS_PARSER: Location: -27.600072, -48.508705 | Hora UTC: 201857 | Data: 030626[0m
+[0;32mI (42110) GPS_PARSER: Location: -27.600071, -48.508705 | Hora UTC: 201858 | Data: 030626[0m
+[0;32mI (43110) GPS_PARSER: Location: -27.600070, -48.508707 | Hora UTC: 201859 | Data: 030626[0m
+[0;32mI (44110) GPS_PARSER: Location: -27.600069, -48.508709 | Hora UTC: 201900 | Data: 030626[0m
+[0;32mI (45110) GPS_PARSER: Location: -27.600069, -48.508710 | Hora UTC: 201901 | Data: 030626[0m
+[0;32mI (46110) GPS_PARSER: Location: -27.600068, -48.508712 | Hora UTC: 201902 | Data: 030626[0m
+[0;32mI (47110) GPS_PARSER: Location: -27.600068, -48.508713 | Hora UTC: 201903 | Data: 030626[0m
+[0;32mI (48110) GPS_PARSER: Location: -27.600068, -48.508714 | Hora UTC: 201904 | Data: 030626[0m
+[0;32mI (49110) GPS_PARSER: Location: -27.600068, -48.508715 | Hora UTC: 201905 | Data: 030626[0m
+[0;32mI (50110) GPS_PARSER: Location: -27.600068, -48.508717 | Hora UTC: 201906 | Data: 030626[0m
+[0;32mI (51110) GPS_PARSER: Location: -27.600068, -48.508718 | Hora UTC: 201907 | Data: 030626[0m
+[0;32mI (52110) GPS_PARSER: Location: -27.600069, -48.508718 | Hora UTC: 201908 | Data: 030626[0m
+[0;32mI (53120) GPS_PARSER: Location: -27.600069, -48.508719 | Hora UTC: 201909 | Data: 030626[0m
+[0;32mI (54120) GPS_PARSER: Location: -27.600065, -48.508715 | Hora UTC: 201910 | Data: 030626[0m
+[0;32mI (55110) GPS_PARSER: Location: -27.600065, -48.508715 | Hora UTC: 201911 | Data: 030626[0m
+[0;32mI (56110) GPS_PARSER: Location: -27.600066, -48.508715 | Hora UTC: 201912 | Data: 030626[0m
+[0;32mI (57110) GPS_PARSER: Location: -27.600066, -48.508715 | Hora UTC: 201913 | Data: 030626[0m
+[0;32mI (58110) GPS_PARSER: Location: -27.600066, -48.508715 | Hora UTC: 201914 | Data: 030626[0m
+[0;32mI (59110) GPS_PARSER: Location: -27.600066, -48.508714 | Hora UTC: 201915 | Data: 030626[0m
+[0;32mI (60120) GPS_PARSER: Location: -27.600066, -48.508714 | Hora UTC: 201916 | Data: 030626[0m
+[0;32mI (61130) GPS_PARSER: Location: -27.600062, -48.508706 | Hora UTC: 201917 | Data: 030626[0m
+[0;32mI (62110) GPS_PARSER: Location: -27.600062, -48.508705 | Hora UTC: 201918 | Data: 030626[0m
+[0;32mI (63120) GPS_PARSER: Location: -27.600063, -48.508705 | Hora UTC: 201919 | Data: 030626[0m
+[0;32mI (64120) GPS_PARSER: Location: -27.600063, -48.508707 | Hora UTC: 201920 | Data: 030626[0m
+[0;32mI (65120) GPS_PARSER: Location: -27.600064, -48.508707 | Hora UTC: 201921 | Data: 030626[0m
+[0;32mI (66110) GPS_PARSER: Location: -27.600064, -48.508706 | Hora UTC: 201922 | Data: 030626[0m
+[0;32mI (67120) GPS_PARSER: Location: -27.600064, -48.508707 | Hora UTC: 201923 | Data: 030626[0m
+[0;32mI (68110) GPS_PARSER: Location: -27.600064, -48.508707 | Hora UTC: 201924 | Data: 030626[0m
+[0;32mI (69110) GPS_PARSER: Location: -27.600065, -48.508707 | Hora UTC: 201925 | Data: 030626[0m
+[0;32mI (70110) GPS_PARSER: Location: -27.600065, -48.508707 | Hora UTC: 201926 | Data: 030626[0m
+[0;32mI (71110) GPS_PARSER: Location: -27.600065, -48.508706 | Hora UTC: 201927 | Data: 030626[0m
+[0;32mI (72110) GPS_PARSER: Location: -27.600064, -48.508705 | Hora UTC: 201928 | Data: 030626[0m
+[0;32mI (73110) GPS_PARSER: Location: -27.600064, -48.508704 | Hora UTC: 201929 | Data: 030626[0m
+[0;32mI (74110) GPS_PARSER: Location: -27.600064, -48.508703 | Hora UTC: 201930 | Data: 030626[0m
+[0;32mI (75110) GPS_PARSER: Location: -27.600064, -48.508702 | Hora UTC: 201931 | Data: 030626[0m
+[0;32mI (76110) GPS_PARSER: Location: -27.600063, -48.508700 | Hora UTC: 201932 | Data: 030626[0m
+[0;32mI (77110) GPS_PARSER: Location: -27.600063, -48.508699 | Hora UTC: 201933 | Data: 030626[0m
+[0;32mI (78110) GPS_PARSER: Location: -27.600063, -48.508699 | Hora UTC: 201934 | Data: 030626[0m
+[0;32mI (79110) GPS_PARSER: Location: -27.600062, -48.508698 | Hora UTC: 201935 | Data: 030626[0m
+[0;32mI (80110) GPS_PARSER: Location: -27.600062, -48.508696 | Hora UTC: 201936 | Data: 030626[0m
+[0;32mI (81110) GPS_PARSER: Location: -27.600062, -48.508695 | Hora UTC: 201937 | Data: 030626[0m
+[0;32mI (82110) GPS_PARSER: Location: -27.600061, -48.508695 | Hora UTC: 201938 | Data: 030626[0m
+[0;32mI (83100) GPS_PARSER: Location: -27.600061, -48.508693 | Hora UTC: 201939 | Data: 030626[0m
+[0;32mI (84100) GPS_PARSER: Location: -27.600060, -48.508692 | Hora UTC: 201940 | Data: 030626[0m
+[0;32mI (85110) GPS_PARSER: Location: -27.600059, -48.508691 | Hora UTC: 201941 | Data: 030626[0m
+[0;32mI (86110) GPS_PARSER: Location: -27.600059, -48.508691 | Hora UTC: 201942 | Data: 030626[0m
+[0;32mI (87110) GPS_PARSER: Location: -27.600058, -48.508690 | Hora UTC: 201943 | Data: 030626[0m
+[0;32mI (88110) GPS_PARSER: Location: -27.600058, -48.508690 | Hora UTC: 201944 | Data: 030626[0m
+[0;32mI (89110) GPS_PARSER: Location: -27.600063, -48.508693 | Hora UTC: 201945 | Data: 030626[0m
+[0;32mI (90120) GPS_PARSER: Location: -27.600066, -48.508698 | Hora UTC: 201946 | Data: 030626[0m
+[0;32mI (91120) GPS_PARSER: Location: -27.600068, -48.508703 | Hora UTC: 201947 | Data: 030626[0m
+[0;32mI (92120) GPS_PARSER: Location: -27.600071, -48.508708 | Hora UTC: 201948 | Data: 030626[0m
+[0;32mI (93120) GPS_PARSER: Location: -27.600073, -48.508713 | Hora UTC: 201949 | Data: 030626[0m
+[0;32mI (94120) GPS_PARSER: Location: -27.600082, -48.508719 | Hora UTC: 201950 | Data: 030626[0m
+[0;32mI (95120) GPS_PARSER: Location: -27.600085, -48.508723 | Hora UTC: 201951 | Data: 030626[0m
+[0;32mI (96110) GPS_PARSER: Location: -27.600088, -48.508725 | Hora UTC: 201952 | Data: 030626[0m
+[0;32mI (97120) GPS_PARSER: Location: -27.600091, -48.508728 | Hora UTC: 201953 | Data: 030626[0m
+[0;32mI (98120) GPS_PARSER: Location: -27.600094, -48.508731 | Hora UTC: 201954 | Data: 030626[0m
+[0;32mI (99130) GPS_PARSER: Location: -27.600096, -48.508733 | Hora UTC: 201955 | Data: 030626[0m
+[0;32mI (100120) GPS_PARSER: Location: -27.600096, -48.508733 | Hora UTC: 201956 | Data: 030626[0m
+[0;32mI (101120) GPS_PARSER: Location: -27.600096, -48.508732 | Hora UTC: 201957 | Data: 030626[0m
+[0;32mI (102120) GPS_PARSER: Location: -27.600097, -48.508732 | Hora UTC: 201958 | Data: 030626[0m
+[0;32mI (103110) GPS_PARSER: Location: -27.600097, -48.508732 | Hora UTC: 201959 | Data: 030626[0m
+[0;32mI (104110) GPS_PARSER: Location: -27.600097, -48.508733 | Hora UTC: 202000 | Data: 030626[0m
+[0;32mI (105110) GPS_PARSER: Location: -27.600096, -48.508733 | Hora UTC: 202001 | Data: 030626[0m
+[0;32mI (106120) GPS_PARSER: Location: -27.600096, -48.508734 | Hora UTC: 202002 | Data: 030626[0m
+[0;32mI (107110) GPS_PARSER: Location: -27.600096, -48.508735 | Hora UTC: 202003 | Data: 030626[0m
+[0;32mI (108130) GPS_PARSER: Location: -27.600096, -48.508737 | Hora UTC: 202004 | Data: 030626[0m
+[0;32mI (109110) GPS_PARSER: Location: -27.600096, -48.508737 | Hora UTC: 202005 | Data: 030626[0m
+[0;32mI (110110) GPS_PARSER: Location: -27.600096, -48.508739 | Hora UTC: 202006 | Data: 030626[0m
+[0;32mI (111120) GPS_PARSER: Location: -27.600097, -48.508741 | Hora UTC: 202007 | Data: 030626[0m
+[0;32mI (112120) GPS_PARSER: Location: -27.600097, -48.508742 | Hora UTC: 202008 | Data: 030626[0m
+[0;32mI (113120) GPS_PARSER: Location: -27.600098, -48.508744 | Hora UTC: 202009 | Data: 030626[0m
+[0;32mI (114120) GPS_PARSER: Location: -27.600098, -48.508746 | Hora UTC: 202010 | Data: 030626[0m
+[0;32mI (115120) GPS_PARSER: Location: -27.600099, -48.508747 | Hora UTC: 202011 | Data: 030626[0m
+[0;32mI (116140) GPS_PARSER: Location: -27.600102, -48.508751 | Hora UTC: 202012 | Data: 030626[0m
+[0;32mI (117130) GPS_PARSER: Location: -27.600101, -48.508752 | Hora UTC: 202013 | Data: 030626[0m
+[0;32mI (118130) GPS_PARSER: Location: -27.600102, -48.508752 | Hora UTC: 202014 | Data: 030626[0m
+[0;32mI (119130) GPS_PARSER: Location: -27.600106, -48.508750 | Hora UTC: 202015 | Data: 030626[0m
+[0;32mI (120130) GPS_PARSER: Location: -27.600111, -48.508751 | Hora UTC: 202016 | Data: 030626[0m
+[0;32mI (121130) GPS_PARSER: Location: -27.600115, -48.508757 | Hora UTC: 202017 | Data: 030626[0m
+[0;32mI (122130) GPS_PARSER: Location: -27.600113, -48.508756 | Hora UTC: 202018 | Data: 030626[0m
+[0;32mI (123120) GPS_PARSER: Location: -27.600112, -48.508756 | Hora UTC: 202019 | Data: 030626[0m
+[0;32mI (124120) GPS_PARSER: Location: -27.600112, -48.508759 | Hora UTC: 202020 | Data: 030626[0m
+[0;32mI (125120) GPS_PARSER: Location: -27.600112, -48.508760 | Hora UTC: 202021 | Data: 030626[0m
+[0;32mI (126130) GPS_PARSER: Location: -27.600109, -48.508759 | Hora UTC: 202022 | Data: 030626[0m
+[0;32mI (127130) GPS_PARSER: Location: -27.600106, -48.508754 | Hora UTC: 202023 | Data: 030626[0m
+[0;32mI (128120) GPS_PARSER: Location: -27.600106, -48.508757 | Hora UTC: 202024 | Data: 030626[0m
+[0;32mI (129110) GPS_PARSER: Location: -27.600107, -48.508759 | Hora UTC: 202025 | Data: 030626[0m
+[0;32mI (130110) GPS_PARSER: Location: -27.600106, -48.508761 | Hora UTC: 202026 | Data: 030626[0m
+[0;32mI (131110) GPS_PARSER: Location: -27.600107, -48.508762 | Hora UTC: 202027 | Data: 030626[0m
+[0;32mI (132110) GPS_PARSER: Location: -27.600107, -48.508764 | Hora UTC: 202028 | Data: 030626[0m
+[0;32mI (133120) GPS_PARSER: Location: -27.600107, -48.508766 | Hora UTC: 202029 | Data: 030626[0m
+[0;32mI (133430) wifi:state: run -> init (0x1c0)[0m
+[0;32mI (133440) wifi:pm stop, total sleep time: 94281294 us / 95981371 us[0m
+
+[0;32mI (133440) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (133440) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (134110) GPS_PARSER: Location: -27.600107, -48.508767 | Hora UTC: 202030 | Data: 030626[0m
+[0;32mI (135110) GPS_PARSER: Location: -27.600107, -48.508768 | Hora UTC: 202031 | Data: 030626[0m
+[0;33mW (135860) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (136120) GPS_PARSER: Location: -27.600106, -48.508769 | Hora UTC: 202032 | Data: 030626[0m
+[0;32mI (137110) GPS_PARSER: Location: -27.600106, -48.508769 | Hora UTC: 202033 | Data: 030626[0m
+[0;32mI (138110) GPS_PARSER: Location: -27.600107, -48.508770 | Hora UTC: 202034 | Data: 030626[0m
+[0;33mW (138280) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (139110) GPS_PARSER: Location: -27.600107, -48.508770 | Hora UTC: 202035 | Data: 030626[0m
+[0;32mI (140110) GPS_PARSER: Location: -27.600107, -48.508770 | Hora UTC: 202036 | Data: 030626[0m
+[0;33mW (140700) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (141110) GPS_PARSER: Location: -27.600107, -48.508771 | Hora UTC: 202037 | Data: 030626[0m
+[0;32mI (142110) GPS_PARSER: Location: -27.600107, -48.508771 | Hora UTC: 202038 | Data: 030626[0m
+[0;32mI (143110) GPS_PARSER: Location: -27.600106, -48.508769 | Hora UTC: 202039 | Data: 030626[0m
+[0;33mW (143120) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (143130) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (143130) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (144110) GPS_PARSER: Location: -27.600106, -48.508769 | Hora UTC: 202040 | Data: 030626[0m
+[0;32mI (144990) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (144990) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (145020) wifi:connected with KINGKONG_ES, aid = 6, channel 1, BW20, bssid = 1a:b4:1e:0f:66:6e[0m
+[0;32mI (145020) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -41, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (145030) wifi:pm start, type: 1[0m
+
+[0;32mI (145120) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (145120) GPS_PARSER: Location: -27.600106, -48.508770 | Hora UTC: 202041 | Data: 030626[0m
+[0;32mI (146110) GPS_PARSER: Location: -27.600106, -48.508771 | Hora UTC: 202042 | Data: 030626[0m
+[0;32mI (147120) GPS_PARSER: Location: -27.600111, -48.508774 | Hora UTC: 202043 | Data: 030626[0m
+[0;32mI (148120) GPS_PARSER: Location: -27.600117, -48.508779 | Hora UTC: 202044 | Data: 030626[0m
+[0;32mI (149120) GPS_PARSER: Location: -27.600118, -48.508780 | Hora UTC: 202045 | Data: 030626[0m
+[0;32mI (150120) GPS_PARSER: Location: -27.600119, -48.508781 | Hora UTC: 202046 | Data: 030626[0m
+[0;32mI (151120) GPS_PARSER: Location: -27.600119, -48.508783 | Hora UTC: 202047 | Data: 030626[0m
+[0;32mI (152110) GPS_PARSER: Location: -27.600120, -48.508784 | Hora UTC: 202048 | Data: 030626[0m
+[0;32mI (153120) GPS_PARSER: Location: -27.600120, -48.508785 | Hora UTC: 202049 | Data: 030626[0m
+[0;32mI (154110) GPS_PARSER: Location: -27.600121, -48.508786 | Hora UTC: 202050 | Data: 030626[0m
+[0;32mI (155120) GPS_PARSER: Location: -27.600122, -48.508789 | Hora UTC: 202051 | Data: 030626[0m
+[0;32mI (156120) GPS_PARSER: Location: -27.600120, -48.508787 | Hora UTC: 202052 | Data: 030626[0m
+[0;32mI (157110) GPS_PARSER: Location: -27.600121, -48.508785 | Hora UTC: 202053 | Data: 030626[0m
+[0;32mI (158120) GPS_PARSER: Location: -27.600125, -48.508783 | Hora UTC: 202054 | Data: 030626[0m
+[0;32mI (159120) GPS_PARSER: Location: -27.600133, -48.508781 | Hora UTC: 202055 | Data: 030626[0m
+[0;32mI (160120) GPS_PARSER: Location: -27.600134, -48.508780 | Hora UTC: 202056 | Data: 030626[0m
+[0;32mI (161

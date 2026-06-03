@@ -36,6 +36,7 @@ void parse_nmea_gprmc(const char *line) {
             current_gps.valid = true;
             snprintf(current_gps.fix_time, sizeof(current_gps.fix_time), "%.6s", time_str);
             snprintf(current_gps.fix_date, sizeof(current_gps.fix_date), "%.6s", date_str);
+           
 
             ESP_LOGI(TAG, "Location: %.6f, %.6f | Hora UTC: %s | Data: %s", 
                      current_gps.latitude, current_gps.longitude, current_gps.fix_time, current_gps.fix_date);

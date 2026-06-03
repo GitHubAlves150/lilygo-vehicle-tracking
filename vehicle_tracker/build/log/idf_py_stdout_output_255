@@ -1,0 +1,126 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  3 2026 20:10:11[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15ab4h ( 88756) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00025adc vaddr=3ffb0000 size=043a8h ( 17320) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=00029e8c vaddr=40080000 size=0618ch ( 24972) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=71c00h (465920) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000a1c28 vaddr=4008618c size=129b8h ( 76216) load[0m
+[0;32mI (354) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (354) boot: Disabling RNG early entropy source...[0m
+[0;32mI (366) cpu_start: Multicore app[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (375) app_init: Application information:[0m
+[0;32mI (378) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (383) app_init: App version:      1[0m
+[0;32mI (388) app_init: Compile time:     Jun  3 2026 20:10:00[0m
+[0;32mI (394) app_init: ELF file SHA256:  8b87531a6...[0m
+[0;32mI (399) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (404) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (409) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (414) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (419) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (426) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (432) heap_init: At 3FFB7CA8 len 00028358 (160 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (451) heap_init: At 40098B44 len 000074BC (29 KiB): IRAM[0m
+[0;32mI (459) spi_flash: detected chip: generic[0m
+[0;32mI (462) spi_flash: flash io: dio[0m
+[0;33mW (466) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (480) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+
+========================================
+   RASTREADOR VEICULAR - LILYGO T-A7670
+   Versao 3.0 - Com WiFi
+========================================
+
+[0;32mI (500) MAIN: Inicializando WiFi...[0m
+[0;32mI (540) wifi:wifi driver task: 3ffbe610, prio:23, stack:6656, core=0[0m
+[0;32mI (550) wifi:wifi firmware version: 4209e03[0m
+[0;32mI (550) wifi:wifi certification version: v7.0[0m
+[0;32mI (550) wifi:config NVS flash: enabled[0m
+[0;32mI (550) wifi:config nano formating: disabled[0m
+[0;32mI (550) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (560) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (560) wifi:Init management short buffer num: 32[0m
+[0;32mI (570) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (570) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (570) wifi:Init static rx buffer num: 10[0m
+[0;32mI (580) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (580) wifi_init: rx ba win: 6[0m
+[0;32mI (590) wifi_init: accept mbox: 6[0m
+[0;32mI (590) wifi_init: tcpip mbox: 32[0m
+[0;32mI (590) wifi_init: udp mbox: 6[0m
+[0;32mI (600) wifi_init: tcp mbox: 6[0m
+[0;32mI (600) wifi_init: tcp tx win: 5760[0m
+[0;32mI (610) wifi_init: tcp rx win: 5760[0m
+[0;32mI (610) wifi_init: tcp mss: 1440[0m
+[0;32mI (610) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (620) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (620) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (630) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (710) wifi:mode : sta (e0:8c:fe:d3:66:9c)[0m
+[0;32mI (710) wifi:enable tsf[0m
+[0;32mI (710) MAIN: Conectando ao WiFi...[0m
+[0;32mI (710) MAIN: WiFi inicializado.[0m
+[0;32mI (720) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (720) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (730) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1840) HARDWARE: Hardware energizado e pinos configurados.[0m
+[0;33mW (3130) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (3840) MAIN: Sistema em execucao - Aguardando GPS...[0m
+[0;32mI (3840) main_task: Returned from app_main()[0m
+[0;32mI (4060) GPS_PARSER: Location: -27.600184, -48.509009 | Hora UTC: 201534 | Data: 030626[0m
+[0;32mI (5060) GPS_PARSER: Location: -27.600178, -48.509008 | Hora UTC: 201535 | Data: 030626[0m
+[0;33mW (5550) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (6050) GPS_PARSER: Location: -27.600166, -48.509002 | Hora UTC: 201536 | Data: 030626[0m
+[0;32mI (7060) GPS_PARSER: Location: -27.600164, -48.509000 | Hora UTC: 201537 | Data: 030626[0m
+[0;33mW (7970) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (8050) GPS_PARSER: Location: -27.600163, -48.508999 | Hora UTC: 201538 | Data: 030626[0m
+[0;32mI (9050) GPS_PARSER: Location: -27.600160, -48.508997 | Hora UTC: 201539 | Data: 030626[0m
+[0;32mI (10050) GPS_PARSER: Location: -27.600158, -48.508996 | Hora UTC: 201540 | Data: 030626[0m
+[0;33mW (10380) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (11050) GPS_PARSER: Location: -27.600155, -48.508994 | Hora UTC: 201541 | Data: 030626[0m
+[0;32mI (12040) GPS_PARSER: Location: -27.600154, -48.508993 | Hora UTC: 201542 | Data: 030626[0m
+[0;33mW (12800) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (13040) GPS_PARSER: Location: -27.600151, -48.508991 | Hora UTC: 201543 | Data: 030626[0m
+[0;32mI (14040) GPS_PARSER: Location: -27.600150, -48.508990 | Hora UTC: 201544 | Data: 030626[0m
+[0;32mI (15040) GPS_PARSER: Location: -27.600147, -48.508987 | Hora UTC: 201545 | Data: 030626[0m
+[0;33mW (15220) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (16040) GPS_PARSER: Location: -27.600144, -48.508984 | Hora UTC: 201546 | Data: 030626[0m
+[0;32mI (17040) GPS_PARSER: Location: -27.600142, -48.508980 | Hora UTC: 201547 | Data: 030626[0m
+[0;33mW (17640) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (18050) GPS_PARSER: Location: -27.600140, -48.508978 | Hora UTC: 201548 | Data: 030626[0m
+[0;32mI (19050) GPS_PARSER: Location: -27.600138, -48.508972 | Hora UTC: 201549 | Data: 030626[0m
+[0;32mI (20040) GPS_PARSER: Location: -27.600137, -48.508968 | Hora UTC: 201550 | Data: 030626[0m
+[0;33mW (20060) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (21040) GPS_PARSER: Location: -27.600136, -48.508963 | Hora UTC: 201551 | Data: 030626[0m
+[0;32mI (22040) GPS_PARSER: Location: -27.600135, -48.508960 | Hora UTC: 201552 | Data: 030626[0m
+[0;33mW (22480) MAIN: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (23040) GPS_PARSER: Location: -27.600134, -48.508957 | Hora UTC: 2
