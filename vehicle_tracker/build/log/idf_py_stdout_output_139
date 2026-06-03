@@ -12,4 +12,4 @@ Merged 2 ELF sections
 Successfully created esp32 image.
 Generated /workspace/vehicle_tracker/build/vehicle_tracker.bin
 [7/7] cd /workspace/vehicle_tracker/build/esp-idf/esptool_py && /opt/esp/tools/python_env/idf5.3_py3.10_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /workspace/vehicle_tracker/build/partition_table/partition-table.bin /workspace/vehicle_tracker/build/vehicle_tracker.bin
-vehicle_tracker.bin binary size 0x35020 bytes. Smallest app partition is 0x100000 bytes. 0xcafe0 bytes (79%) free.
+vehicle_tracker.bin binary size 0x35110 bytes. Smallest app partition is 0x100000 bytes. 0xcaef0 bytes (79%) free.
