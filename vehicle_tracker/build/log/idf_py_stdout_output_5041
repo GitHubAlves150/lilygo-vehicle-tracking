@@ -1,0 +1,19 @@
+[1/13] Performing build step for 'bootloader'
+[1/1] cd /workspace/vehicle_tracker/build/bootloader/esp-idf/esptool_py && /opt/esp/tools/python_env/idf5.3_py3.10_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /workspace/vehicle_tracker/build/bootloader/bootloader.bin
+Bootloader binary size 0x68e0 bytes. 0x720 bytes (6%) free.
+[2/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+[3/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/modem.cpp.obj
+[4/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/hardware.cpp.obj
+[5/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/gps_parser.cpp.obj
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+[8/11] Building C object CMakeFiles/vehicle_tracker.elf.dir/project_elf_src_esp32.c.obj
+[9/11] Linking CXX executable vehicle_tracker.elf
+[10/11] Generating binary image from built executable
+esptool.py v4.11.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /workspace/vehicle_tracker/build/vehicle_tracker.bin
+[11/11] cd /workspace/vehicle_tracker/build/esp-idf/esptool_py && /opt/esp/tools/python_env/idf5.3_py3.10_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /workspace/vehicle_tracker/build/partition_table/partition-table.bin /workspace/vehicle_tracker/build/vehicle_tracker.bin
+vehicle_tracker.bin binary size 0x35230 bytes. Smallest app partition is 0x100000 bytes. 0xcadd0 bytes (79%) free.

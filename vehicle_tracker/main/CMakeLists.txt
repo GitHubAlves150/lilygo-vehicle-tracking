@@ -1,4 +1,12 @@
-idf_component_register(SRCS "main.cpp" INCLUDE_DIRS ".")
-
-
-
+idf_component_register(
+    SRCS 
+        "main.cpp"
+        "./src/gps_parser.cpp"
+        "./src/hardware.cpp"
+        "./src/modem.cpp"
+    INCLUDE_DIRS      
+        "./include"
+        "."
+    REQUIRES 
+        driver
+)

@@ -1190,13 +1190,13 @@
             "dir": "/workspace/vehicle_tracker/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/workspace/vehicle_tracker/build/esp-idf/main/libmain.a",
-            "sources": [ "/workspace/vehicle_tracker/main/main.cpp" ],
-            "include_dirs": [ "." ]
+            "sources": [ "/workspace/vehicle_tracker/main/main.cpp", "/workspace/vehicle_tracker/main/src/gps_parser.cpp", "/workspace/vehicle_tracker/main/src/hardware.cpp", "/workspace/vehicle_tracker/main/src/modem.cpp" ],
+            "include_dirs": [ "./include", "." ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2814,11 +2814,11 @@
             "prefix": "idf",
             "dir": "/workspace/vehicle_tracker/main",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ "./include", "." ]
         }
     },
     "debug_prefix_map_gdbinit": "",
