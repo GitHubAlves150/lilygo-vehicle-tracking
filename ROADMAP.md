@@ -1,5 +1,5 @@
 ```bash
-FASE ATUAL ✅
+FASE 0: Configuração do ambiente ✅
 ├── Ambiente Docker configurado
 ├── ESP-IDF funcionando
 ├── Código base rodando na placa
