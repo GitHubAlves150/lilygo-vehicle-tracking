@@ -1,0 +1,839 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  6 2026 13:39:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1dcb4h (122036) map[0m
+[0;32mI (146) esp_image: segment 1: paddr=0002dcdc vaddr=3ffb0000 size=0233ch (  9020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9a570h (632176) map[0m
+[0;32mI (369) esp_image: segment 3: paddr=000ca598 vaddr=3ffb233c size=0206ch (  8300) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000cc60c vaddr=40080000 size=18b44h (101188) load[0m
+[0;32mI (426) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (427) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (450) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (456) app_init: App version:      1[0m
+[0;32mI (460) app_init: Compile time:     Jun  6 2026 13:48:54[0m
+[0;32mI (466) app_init: ELF file SHA256:  11463c977...[0m
+[0;32mI (472) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (476) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (481) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (491) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB89F8 len 00027608 (157 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (523) heap_init: At 40098B44 len 000074BC (29 KiB): IRAM[0m
+[0;32mI (531) spi_flash: detected chip: generic[0m
+[0;32mI (534) spi_flash: flash io: dio[0m
+[0;33mW (538) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (552) main_task: Started on CPU0[0m
+[0;32mI (562) main_task: Calling app_main()[0m
+
+========================================
+   RASTREADOR VEICULAR - LILYGO T-A7670
+   Versao 3.0 - Com WiFi
+========================================
+
+[0;32mI (572) WIFI_INIT: Inicializando WiFi...[0m
+[0;32mI (602) wifi:wifi driver task: 3ffbf4ec, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 4209e03[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: accept mbox: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (672) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (692) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (712) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (802) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (822) wifi:mode : sta (e0:8c:fe:d3:66:9c)[0m
+[0;32mI (822) wifi:enable tsf[0m
+[0;32mI (822) WIFI_INIT: Conectando ao WiFi...[0m
+[0;32mI (822) WIFI_INIT: WiFi inicializado.[0m
+[0;32mI (822) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (832) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (842) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1952) HARDWARE: Hardware energizado e pinos configurados.[0m
+[0;33mW (3232) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (3952) GPS_PARSER: Task GPS iniciada[0m
+[0;32mI (3952) MAIN: Sistema em execucao - Aguardando GPS...[0m
+[0;32mI (3952) main_task: Returned from app_main()[0m
+[0;32mI (5102) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154036 | 060626[0m
+[0;33mW (5652) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (6092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154037 | 060626[0m
+[0;33mW (6092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (7092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154038 | 060626[0m
+
+*ATREADY: 1
+[0;33mW (8072) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (8092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154039 | 060626[0m
+
++CPIN: SIM REMOVED
+[0;32mI (9092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154040 | 060626[0m
+[0;32mI (10092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154041 | 060626[0m
+[0;33mW (10492) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (11082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154042 | 060626[0m
+
++CPIN: SIM REMOVED
+[0;32mI (12082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154043 | 060626[0m
+[0;33mW (12082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;33mW (12902) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (13092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154044 | 060626[0m
+[0;32mI (14092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154045 | 060626[0m
+[0;32mI (14622) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (14622) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (15092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154046 | 060626[0m
+[0;32mI (16092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154047 | 060626[0m
+[0;32mI (17082) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154048 | 060626[0m
+[0;33mW (17082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (17612) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (17622) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17642) wifi:connected with KINGKONG_ES, aid = 6, channel 13, BW20, bssid = aa:b1:82:69:af:c5[0m
+[0;32mI (17642) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -23, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (17692) wifi:pm start, type: 1[0m
+
+[0;32mI (17692) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (17692) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (18072) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154049 | 060626[0m
+[0;32mI (19082) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154050 | 060626[0m
+[0;32mI (20082) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154051 | 060626[0m
+[0;32mI (21092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154052 | 060626[0m
+[0;32mI (22082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154053 | 060626[0m
+[0;33mW (22082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (23082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154054 | 060626[0m
+[0;32mI (24092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154055 | 060626[0m
+[0;32mI (25082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154056 | 060626[0m
+[0;32mI (26082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154057 | 060626[0m
+[0;32mI (27082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154058 | 060626[0m
+[0;33mW (27082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (28082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154059 | 060626[0m
+[0;32mI (29102) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154100 | 060626[0m
+[0;32mI (30092) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154101 | 060626[0m
+[0;32mI (31082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154102 | 060626[0m
+[0;32mI (32082) GPS_PARSER: 📍 Posição: -27.600034, -48.508782 | Vel: 0.0 km/h | 154103 | 060626[0m
+[0;33mW (32082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (33092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154104 | 060626[0m
+[0;32mI (34092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154105 | 060626[0m
+[0;32mI (35092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154106 | 060626[0m
+[0;32mI (36092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154107 | 060626[0m
+[0;32mI (37092) GPS_PARSER: 📍 Posição: -27.600034, -48.508781 | Vel: 0.0 km/h | 154108 | 060626[0m
+[0;33mW (37092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (38082) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154109 | 060626[0m
+[0;32mI (39082) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154110 | 060626[0m
+[0;32mI (40092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154111 | 060626[0m
+[0;32mI (41082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154112 | 060626[0m
+[0;32mI (42082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154113 | 060626[0m
+[0;32mI (43082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154114 | 060626[0m
+[0;33mW (43082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (44082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154115 | 060626[0m
+[0;32mI (45082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154116 | 060626[0m
+[0;32mI (46082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154117 | 060626[0m
+[0;32mI (47082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154118 | 060626[0m
+[0;32mI (48092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154119 | 060626[0m
+[0;33mW (48092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (49082) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154120 | 060626[0m
+[0;32mI (50092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154121 | 060626[0m
+[0;32mI (51092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154122 | 060626[0m
+[0;32mI (52102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154123 | 060626[0m
+[0;32mI (53102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154124 | 060626[0m
+[0;33mW (53102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (54112) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154125 | 060626[0m
+[0;32mI (55102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154126 | 060626[0m
+[0;32mI (56102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154127 | 060626[0m
+[0;32mI (57092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154128 | 060626[0m
+[0;32mI (58092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154129 | 060626[0m
+[0;32mI (59102) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154130 | 060626[0m
+[0;33mW (59102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (60082) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154131 | 060626[0m
+[0;32mI (61092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154132 | 060626[0m
+[0;32mI (62112) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154133 | 060626[0m
+[0;32mI (63092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154134 | 060626[0m
+[0;32mI (64092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154135 | 060626[0m
+[0;32mI (65092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154136 | 060626[0m
+[0;33mW (65092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (66092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154137 | 060626[0m
+[0;32mI (67102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154138 | 060626[0m
+[0;32mI (68092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154139 | 060626[0m
+[0;32mI (69092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154140 | 060626[0m
+[0;32mI (70092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154141 | 060626[0m
+[0;33mW (70092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (71092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154142 | 060626[0m
+[0;32mI (72092) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154143 | 060626[0m
+[0;32mI (73092) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154144 | 060626[0m
+[0;32mI (74092) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154145 | 060626[0m
+[0;32mI (75082) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154146 | 060626[0m
+[0;32mI (76082) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154147 | 060626[0m
+[0;33mW (76082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (77072) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154148 | 060626[0m
+[0;32mI (78082) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154149 | 060626[0m
+[0;32mI (79082) GPS_PARSER: 📍 Posição: -27.600032, -48.508782 | Vel: 0.0 km/h | 154150 | 060626[0m
+[0;32mI (80092) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154151 | 060626[0m
+[0;32mI (81082) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154152 | 060626[0m
+[0;33mW (81082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (82072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154153 | 060626[0m
+[0;32mI (83072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154154 | 060626[0m
+[0;32mI (84062) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154155 | 060626[0m
+[0;32mI (85072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154156 | 060626[0m
+[0;32mI (86072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154157 | 060626[0m
+[0;32mI (87072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154158 | 060626[0m
+[0;33mW (87072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (88072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154159 | 060626[0m
+[0;32mI (89072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154200 | 060626[0m
+[0;32mI (90082) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154201 | 060626[0m
+[0;32mI (91082) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154202 | 060626[0m
+[0;32mI (92072) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154203 | 060626[0m
+[0;33mW (92072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (93082) GPS_PARSER: 📍 Posição: -27.600032, -48.508781 | Vel: 0.0 km/h | 154204 | 060626[0m
+[0;32mI (94082) GPS_PARSER: 📍 Posição: -27.600032, -48.508780 | Vel: 0.0 km/h | 154205 | 060626[0m
+[0;32mI (95082) GPS_PARSER: 📍 Posição: -27.600032, -48.508780 | Vel: 0.0 km/h | 154206 | 060626[0m
+[0;32mI (96082) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154207 | 060626[0m
+[0;32mI (97092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154208 | 060626[0m
+[0;33mW (97092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (98092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154209 | 060626[0m
+[0;32mI (99092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154210 | 060626[0m
+[0;32mI (100092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154211 | 060626[0m
+[0;32mI (101092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154212 | 060626[0m
+[0;32mI (102092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154213 | 060626[0m
+[0;33mW (102092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (103092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154214 | 060626[0m
+[0;32mI (104092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154215 | 060626[0m
+[0;32mI (105082) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154216 | 060626[0m
+[0;32mI (106092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154217 | 060626[0m
+[0;32mI (107092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154218 | 060626[0m
+[0;33mW (107092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (108092) GPS_PARSER: 📍 Posição: -27.600031, -48.508780 | Vel: 0.0 km/h | 154219 | 060626[0m
+[0;32mI (109092) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154220 | 060626[0m
+[0;32mI (110092) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154221 | 060626[0m
+[0;32mI (111112) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154222 | 060626[0m
+[0;32mI (112092) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154223 | 060626[0m
+[0;33mW (112092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (113102) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154224 | 060626[0m
+[0;32mI (114102) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154225 | 060626[0m
+[0;32mI (115102) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154226 | 060626[0m
+[0;32mI (116092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154227 | 060626[0m
+[0;32mI (117092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154228 | 060626[0m
+[0;33mW (117092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (118092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154229 | 060626[0m
+[0;32mI (119082) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154230 | 060626[0m
+[0;32mI (120092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154231 | 060626[0m
+[0;32mI (121082) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154232 | 060626[0m
+[0;32mI (122092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154233 | 060626[0m
+[0;33mW (122092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (123102) GPS_PARSER: 📍 Posição: -27.600035, -48.508777 | Vel: 2.4 km/h | 154234 | 060626[0m
+[0;32mI (124092) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154235 | 060626[0m
+[0;32mI (125092) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154236 | 060626[0m
+[0;32mI (126092) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154237 | 060626[0m
+[0;32mI (127082) GPS_PARSER: 📍 Posição: -27.600035, -48.508777 | Vel: 0.0 km/h | 154238 | 060626[0m
+[0;32mI (128072) GPS_PARSER: 📍 Posição: -27.600035, -48.508777 | Vel: 0.0 km/h | 154239 | 060626[0m
+[0;33mW (128072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (129082) GPS_PARSER: 📍 Posição: -27.600035, -48.508777 | Vel: 0.0 km/h | 154240 | 060626[0m
+[0;32mI (130082) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154241 | 060626[0m
+[0;32mI (131072) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154242 | 060626[0m
+[0;32mI (132072) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154243 | 060626[0m
+[0;32mI (133072) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154244 | 060626[0m
+[0;33mW (133072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (134082) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154245 | 060626[0m
+[0;32mI (135072) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154246 | 060626[0m
+[0;32mI (136072) GPS_PARSER: 📍 Posição: -27.600034, -48.508776 | Vel: 0.0 km/h | 154247 | 060626[0m
+[0;32mI (137082) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154248 | 060626[0m
+[0;32mI (138072) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154249 | 060626[0m
+[0;33mW (138072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (139082) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154250 | 060626[0m
+[0;32mI (140082) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154251 | 060626[0m
+[0;32mI (141102) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154252 | 060626[0m
+[0;32mI (142092) GPS_PARSER: 📍 Posição: -27.600034, -48.508777 | Vel: 0.0 km/h | 154253 | 060626[0m
+[0;32mI (143082) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154254 | 060626[0m
+[0;33mW (143082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (144082) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154255 | 060626[0m
+[0;32mI (145092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154256 | 060626[0m
+[0;32mI (146092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154257 | 060626[0m
+[0;32mI (147092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154258 | 060626[0m
+[0;32mI (148092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154259 | 060626[0m
+[0;33mW (148092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (149092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154300 | 060626[0m
+[0;32mI (150092) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154301 | 060626[0m
+[0;32mI (151102) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154302 | 060626[0m
+[0;32mI (152102) GPS_PARSER: 📍 Posição: -27.600034, -48.508778 | Vel: 0.0 km/h | 154303 | 060626[0m
+[0;32mI (153092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154304 | 060626[0m
+[0;33mW (153092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (154092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154305 | 060626[0m
+[0;32mI (155082) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154306 | 060626[0m
+[0;32mI (156082) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154307 | 060626[0m
+[0;32mI (157092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154308 | 060626[0m
+[0;32mI (158082) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154309 | 060626[0m
+[0;32mI (159112) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154310 | 060626[0m
+[0;33mW (159112) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (160092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154311 | 060626[0m
+[0;32mI (161092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154312 | 060626[0m
+[0;32mI (162092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154313 | 060626[0m
+[0;32mI (163092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154314 | 060626[0m
+[0;32mI (164092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154315 | 060626[0m
+[0;32mI (165092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154316 | 060626[0m
+[0;33mW (165092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (166092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154317 | 060626[0m
+[0;32mI (167092) GPS_PARSER: 📍 Posição: -27.600034, -48.508779 | Vel: 0.0 km/h | 154318 | 060626[0m
+[0;32mI (168092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154319 | 060626[0m
+[0;32mI (169092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154320 | 060626[0m
+[0;32mI (170102) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154321 | 060626[0m
+[0;33mW (170102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (171102) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154322 | 060626[0m
+[0;32mI (172092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154323 | 060626[0m
+[0;32mI (173092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154324 | 060626[0m
+[0;32mI (174092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154325 | 060626[0m
+[0;32mI (175092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154326 | 060626[0m
+[0;32mI (176092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154327 | 060626[0m
+[0;33mW (176092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (177092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154328 | 060626[0m
+[0;32mI (178092) GPS_PARSER: 📍 Posição: -27.600033, -48.508779 | Vel: 0.0 km/h | 154329 | 060626[0m
+[0;32mI (179092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154330 | 060626[0m
+[0;32mI (180092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154331 | 060626[0m
+[0;32mI (181092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154332 | 060626[0m
+[0;33mW (181092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (182092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154333 | 060626[0m
+[0;32mI (183092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154334 | 060626[0m
+[0;32mI (184092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154335 | 060626[0m
+[0;32mI (185092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154336 | 060626[0m
+[0;32mI (186092) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154337 | 060626[0m
+[0;33mW (186092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (187102) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154338 | 060626[0m
+[0;32mI (188102) GPS_PARSER: 📍 Posição: -27.600033, -48.508780 | Vel: 0.0 km/h | 154339 | 060626[0m
+[0;32mI (189092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154340 | 060626[0m
+[0;32mI (190092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154341 | 060626[0m
+[0;32mI (191092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154342 | 060626[0m
+[0;33mW (191092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (192092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154343 | 060626[0m
+[0;32mI (193092) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154344 | 060626[0m
+[0;32mI (194102) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154345 | 060626[0m
+[0;32mI (195102) GPS_PARSER: 📍 Posição: -27.600033, -48.508781 | Vel: 0.0 km/h | 154346 | 060626[0m
+[0;32mI (196092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154347 | 060626[0m
+[0;33mW (196092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (197102) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154348 | 060626[0m
+[0;32mI (198092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154349 | 060626[0m
+[0;32mI (199092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154350 | 060626[0m
+[0;32mI (200092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154351 | 060626[0m
+[0;32mI (201092) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154352 | 060626[0m
+[0;33mW (201092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (202102) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154353 | 060626[0m
+[0;32mI (203102) GPS_PARSER: 📍 Posição: -27.600033, -48.508782 | Vel: 0.0 km/h | 154354 | 060626[0m
+[0;32mI (204092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154355 | 060626[0m
+[0;32mI (205092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154356 | 060626[0m
+[0;32mI (206092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154357 | 060626[0m
+[0;33mW (206092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (207102) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154358 | 060626[0m
+[0;32mI (208092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154359 | 060626[0m
+[0;32mI (209092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154400 | 060626[0m
+[0;32mI (210092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154401 | 060626[0m
+[0;32mI (211092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154402 | 060626[0m
+[0;33mW (211092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (212092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154403 | 060626[0m
+[0;32mI (213082) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154404 | 060626[0m
+[0;32mI (214092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154405 | 060626[0m
+[0;32mI (215092) GPS_PARSER: 📍 Posição: -27.600033, -48.508783 | Vel: 0.0 km/h | 154406 | 060626[0m
+[0;32mI (216092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154407 | 060626[0m
+[0;33mW (216092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (217092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154408 | 060626[0m
+[0;32mI (218092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154409 | 060626[0m
+[0;32mI (219102) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154410 | 060626[0m
+[0;32mI (220102) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154411 | 060626[0m
+[0;32mI (221092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154412 | 060626[0m
+[0;33mW (221092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (222092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154413 | 060626[0m
+[0;32mI (223102) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154414 | 060626[0m
+[0;32mI (224092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154415 | 060626[0m
+[0;32mI (225092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154416 | 060626[0m
+[0;32mI (226092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154417 | 060626[0m
+[0;33mW (226092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (227102) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154418 | 060626[0m
+[0;32mI (228092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154419 | 060626[0m
+[0;32mI (229092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154420 | 060626[0m
+[0;32mI (230092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154421 | 060626[0m
+[0;32mI (231092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154422 | 060626[0m
+[0;33mW (231092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (232092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154423 | 060626[0m
+[0;32mI (233092) GPS_PARSER: 📍 Posição: -27.600033, -48.508784 | Vel: 0.0 km/h | 154424 | 060626[0m
+[0;32mI (234112) GPS_PARSER: 📍 Posição: -27.600032, -48.508784 | Vel: 0.0 km/h | 154425 | 060626[0m
+[0;32mI (235112) GPS_PARSER: 📍 Posição: -27.600032, -48.508784 | Vel: 0.0 km/h | 154426 | 060626[0m
+[0;32mI (236102) GPS_PARSER: 📍 Posição: -27.600032, -48.508784 | Vel: 0.0 km/h | 154427 | 060626[0m
+[0;33mW (236102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (237092) GPS_PARSER: 📍 Posição: -27.600032, -48.508784 | Vel: 0.0 km/h | 154428 | 060626[0m
+[0;32mI (238092) GPS_PARSER: 📍 Posição: -27.600032, -48.508784 | Vel: 0.0 km/h | 154429 | 060626[0m
+[0;32mI (239092) GPS_PARSER: 📍 Posição: -27.600032, -48.508785 | Vel: 0.0 km/h | 154430 | 060626[0m
+[0;32mI (240092) GPS_PARSER: 📍 Posição: -27.600032, -48.508785 | Vel: 0.0 km/h | 154431 | 060626[0m
+[0;32mI (241092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154432 | 060626[0m
+[0;32mI (242092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154433 | 060626[0m
+[0;33mW (242092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (243092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154434 | 060626[0m
+[0;32mI (244092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154435 | 060626[0m
+[0;32mI (245092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154436 | 060626[0m
+[0;32mI (246092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154437 | 060626[0m
+[0;32mI (247102) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154438 | 060626[0m
+[0;33mW (247102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (248082) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154439 | 060626[0m
+[0;32mI (249082) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154440 | 060626[0m
+[0;32mI (250102) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154441 | 060626[0m
+[0;32mI (251092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154442 | 060626[0m
+[0;32mI (252102) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154443 | 060626[0m
+[0;33mW (252102) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (253092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154444 | 060626[0m
+[0;32mI (254082) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154445 | 060626[0m
+[0;32mI (255092) GPS_PARSER: 📍 Posição: -27.600031, -48.508785 | Vel: 0.0 km/h | 154446 | 060626[0m
+[0;32mI (256092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 1.1 km/h | 154447 | 060626[0m
+[0;32mI (257092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154448 | 060626[0m
+[0;32mI (258092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154449 | 060626[0m
+[0;33mW (258092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (259082) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154450 | 060626[0m
+[0;32mI (260092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154451 | 060626[0m
+[0;32mI (261102) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154452 | 060626[0m
+[0;32mI (262102) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154453 | 060626[0m
+[0;32mI (263092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154454 | 060626[0m
+[0;33mW (263092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (264092) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154455 | 060626[0m
+[0;32mI (265102) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154456 | 060626[0m
+[0;32mI (266082) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154457 | 060626[0m
+[0;32mI (267092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154458 | 060626[0m
+[0;32mI (268092) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154459 | 060626[0m
+[0;33mW (268092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (269092) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154500 | 060626[0m
+[0;32mI (270102) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154501 | 060626[0m
+[0;32mI (271072) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154502 | 060626[0m
+[0;32mI (272072) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154503 | 060626[0m
+[0;32mI (273082) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154504 | 060626[0m
+[0;32mI (274072) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154505 | 060626[0m
+[0;33mW (274072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (275072) GPS_PARSER: 📍 Posição: -27.600031, -48.508781 | Vel: 0.0 km/h | 154506 | 060626[0m
+[0;32mI (276072) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154507 | 060626[0m
+[0;32mI (277072) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154508 | 060626[0m
+[0;32mI (278072) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154509 | 060626[0m
+[0;32mI (279072) GPS_PARSER: 📍 Posição: -27.600030, -48.508781 | Vel: 0.0 km/h | 154510 | 060626[0m
+[0;33mW (279072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (280072) GPS_PARSER: 📍 Posição: -27.600030, -48.508782 | Vel: 0.0 km/h | 154511 | 060626[0m
+[0;32mI (281072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154512 | 060626[0m
+[0;32mI (282072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154513 | 060626[0m
+[0;32mI (283062) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154514 | 060626[0m
+[0;32mI (284062) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154515 | 060626[0m
+[0;32mI (285072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154516 | 060626[0m
+[0;33mW (285072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (286072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154517 | 060626[0m
+[0;32mI (287072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154518 | 060626[0m
+[0;32mI (288072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154519 | 060626[0m
+[0;32mI (289072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154520 | 060626[0m
+[0;32mI (290072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154521 | 060626[0m
+[0;33mW (290072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (291072) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154522 | 060626[0m
+[0;32mI (292072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154523 | 060626[0m
+[0;32mI (293072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154524 | 060626[0m
+[0;32mI (294072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154525 | 060626[0m
+[0;32mI (295072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154526 | 060626[0m
+[0;33mW (295072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (296072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154527 | 060626[0m
+[0;32mI (297072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154528 | 060626[0m
+[0;32mI (298072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154529 | 060626[0m
+[0;32mI (299072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154530 | 060626[0m
+[0;32mI (300072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154531 | 060626[0m
+[0;33mW (300072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (301072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154532 | 060626[0m
+[0;32mI (302072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154533 | 060626[0m
+[0;32mI (303072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154534 | 060626[0m
+[0;32mI (304072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154535 | 060626[0m
+[0;32mI (305072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154536 | 060626[0m
+[0;33mW (305072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (306072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154537 | 060626[0m
+[0;32mI (307072) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154538 | 060626[0m
+[0;32mI (308082) GPS_PARSER: 📍 Posição: -27.600029, -48.508783 | Vel: 0.0 km/h | 154539 | 060626[0m
+[0;32mI (309082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154540 | 060626[0m
+[0;32mI (310082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154541 | 060626[0m
+[0;33mW (310082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (311082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154542 | 060626[0m
+[0;32mI (312082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154543 | 060626[0m
+[0;32mI (313082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154544 | 060626[0m
+[0;32mI (314082) GPS_PARSER: 📍 Posição: -27.600029, -48.508782 | Vel: 0.0 km/h | 154545 | 060626[0m
+[0;32mI (315082) GPS_PARSER: 📍 Posição: -27.600028, -48.508782 | Vel: 0.0 km/h | 154546 | 060626[0m
+[0;33mW (315082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (316082) GPS_PARSER: 📍 Posição: -27.600028, -48.508782 | Vel: 0.0 km/h | 154547 | 060626[0m
+[0;32mI (317072) GPS_PARSER: 📍 Posição: -27.600028, -48.508782 | Vel: 0.0 km/h | 154548 | 060626[0m
+[0;32mI (318072) GPS_PARSER: 📍 Posição: -27.600028, -48.508782 | Vel: 0.0 km/h | 154549 | 060626[0m
+[0;32mI (319072) GPS_PARSER: 📍 Posição: -27.600028, -48.508781 | Vel: 0.0 km/h | 154550 | 060626[0m
+[0;32mI (320072) GPS_PARSER: 📍 Posição: -27.600028, -48.508781 | Vel: 0.0 km/h | 154551 | 060626[0m
+[0;32mI (321072) GPS_PARSER: 📍 Posição: -27.600028, -48.508781 | Vel: 0.0 km/h | 154552 | 060626[0m
+[0;33mW (321072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (322072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154553 | 060626[0m
+[0;32mI (323072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154554 | 060626[0m
+[0;32mI (324072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154555 | 060626[0m
+[0;32mI (325072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154556 | 060626[0m
+[0;32mI (326072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154557 | 060626[0m
+[0;33mW (326072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (327072) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154558 | 060626[0m
+[0;32mI (328062) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154559 | 060626[0m
+[0;32mI (329062) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154600 | 060626[0m
+[0;32mI (330062) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154601 | 060626[0m
+[0;32mI (331062) GPS_PARSER: 📍 Posição: -27.600027, -48.508781 | Vel: 0.0 km/h | 154602 | 060626[0m
+[0;32mI (332062) GPS_PARSER: 📍 Posição: -27.600026, -48.508781 | Vel: 0.0 km/h | 154603 | 060626[0m
+[0;33mW (332062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (333062) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154604 | 060626[0m
+[0;32mI (334062) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154605 | 060626[0m
+[0;32mI (335062) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154606 | 060626[0m
+[0;32mI (336072) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154607 | 060626[0m
+[0;32mI (337062) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154608 | 060626[0m
+[0;33mW (337062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (338072) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154609 | 060626[0m
+[0;32mI (339072) GPS_PARSER: 📍 Posição: -27.600026, -48.508780 | Vel: 0.0 km/h | 154610 | 060626[0m
+[0;32mI (340072) GPS_PARSER: 📍 Posição: -27.600026, -48.508779 | Vel: 0.0 km/h | 154611 | 060626[0m
+[0;32mI (341062) GPS_PARSER: 📍 Posição: -27.600026, -48.508779 | Vel: 0.0 km/h | 154612 | 060626[0m
+[0;32mI (342072) GPS_PARSER: 📍 Posição: -27.600027, -48.508779 | Vel: 0.0 km/h | 154613 | 060626[0m
+[0;33mW (342072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (343062) GPS_PARSER: 📍 Posição: -27.600027, -48.508779 | Vel: 0.0 km/h | 154614 | 060626[0m
+[0;32mI (344072) GPS_PARSER: 📍 Posição: -27.600027, -48.508779 | Vel: 0.0 km/h | 154615 | 060626[0m
+[0;32mI (345072) GPS_PARSER: 📍 Posição: -27.600027, -48.508779 | Vel: 0.0 km/h | 154616 | 060626[0m
+[0;32mI (346062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154617 | 060626[0m
+[0;32mI (347072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154618 | 060626[0m
+[0;33mW (347072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (348062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154619 | 060626[0m
+[0;32mI (349072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154620 | 060626[0m
+[0;32mI (350062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154621 | 060626[0m
+[0;32mI (351072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154622 | 060626[0m
+[0;32mI (352062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154623 | 060626[0m
+[0;32mI (353062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154624 | 060626[0m
+[0;33mW (353062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (354082) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154625 | 060626[0m
+[0;32mI (355082) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154626 | 060626[0m
+[0;32mI (356072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154627 | 060626[0m
+[0;32mI (357062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154628 | 060626[0m
+[0;32mI (358072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154629 | 060626[0m
+[0;33mW (358072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (359072) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154630 | 060626[0m
+[0;32mI (360072) GPS_PARSER: 📍 Posição: -27.600028, -48.508779 | Vel: 0.0 km/h | 154631 | 060626[0m
+[0;32mI (361082) GPS_PARSER: 📍 Posição: -27.600028, -48.508779 | Vel: 0.0 km/h | 154632 | 060626[0m
+[0;32mI (362072) GPS_PARSER: 📍 Posição: -27.600028, -48.508779 | Vel: 0.0 km/h | 154633 | 060626[0m
+[0;32mI (363082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154634 | 060626[0m
+[0;33mW (363082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (364072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154635 | 060626[0m
+[0;32mI (365082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154636 | 060626[0m
+[0;32mI (366082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154637 | 060626[0m
+[0;32mI (367082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154638 | 060626[0m
+[0;32mI (368072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154639 | 060626[0m
+[0;32mI (369072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154640 | 060626[0m
+[0;33mW (369072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (370072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154641 | 060626[0m
+[0;32mI (371082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154642 | 060626[0m
+[0;32mI (372072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154643 | 060626[0m
+[0;32mI (373072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154644 | 060626[0m
+[0;32mI (374082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154645 | 060626[0m
+[0;33mW (374082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (375072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154646 | 060626[0m
+[0;32mI (376082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154647 | 060626[0m
+[0;32mI (377082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154648 | 060626[0m
+[0;32mI (378072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154649 | 060626[0m
+[0;32mI (379072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154650 | 060626[0m
+[0;32mI (380072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154651 | 060626[0m
+[0;33mW (380072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (381072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154652 | 060626[0m
+[0;32mI (382072) GPS_PARSER: 📍 Posição: -27.600030, -48.508779 | Vel: 0.0 km/h | 154653 | 060626[0m
+[0;32mI (383072) GPS_PARSER: 📍 Posição: -27.600030, -48.508779 | Vel: 0.0 km/h | 154654 | 060626[0m
+[0;32mI (384072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154655 | 060626[0m
+[0;32mI (385072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154656 | 060626[0m
+[0;33mW (385072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (386082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154657 | 060626[0m
+[0;32mI (387072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154658 | 060626[0m
+[0;32mI (388072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154659 | 060626[0m
+[0;32mI (389082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154700 | 060626[0m
+[0;32mI (390082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154701 | 060626[0m
+[0;33mW (390082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (391082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154702 | 060626[0m
+[0;32mI (392072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154703 | 060626[0m
+[0;32mI (393082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154704 | 060626[0m
+[0;32mI (394072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154705 | 060626[0m
+[0;32mI (395072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154706 | 060626[0m
+[0;32mI (396082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154707 | 060626[0m
+[0;33mW (396082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (397072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154708 | 060626[0m
+[0;32mI (398072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154709 | 060626[0m
+[0;32mI (399082) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154710 | 060626[0m
+[0;32mI (400072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154711 | 060626[0m
+[0;32mI (401072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154712 | 060626[0m
+[0;32mI (402072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154713 | 060626[0m
+[0;33mW (402072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (403062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154714 | 060626[0m
+[0;32mI (404072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154715 | 060626[0m
+[0;32mI (405062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154716 | 060626[0m
+[0;32mI (406072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154717 | 060626[0m
+[0;32mI (407072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154718 | 060626[0m
+[0;33mW (407072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (408062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154719 | 060626[0m
+[0;32mI (409062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154720 | 060626[0m
+[0;32mI (410062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154721 | 060626[0m
+[0;32mI (411062) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154722 | 060626[0m
+[0;32mI (412052) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154723 | 060626[0m
+[0;32mI (413062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154724 | 060626[0m
+[0;33mW (413062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (414052) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154725 | 060626[0m
+[0;32mI (415062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154726 | 060626[0m
+[0;32mI (416062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154727 | 060626[0m
+[0;32mI (417062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154728 | 060626[0m
+[0;32mI (418062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154729 | 060626[0m
+[0;33mW (418062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (419062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154730 | 060626[0m
+[0;32mI (420062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154731 | 060626[0m
+[0;32mI (421062) GPS_PARSER: 📍 Posição: -27.600028, -48.508778 | Vel: 0.0 km/h | 154732 | 060626[0m
+[0;32mI (422062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154733 | 060626[0m
+[0;32mI (423062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154734 | 060626[0m
+[0;33mW (423062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (424062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154735 | 060626[0m
+[0;32mI (425062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154736 | 060626[0m
+[0;32mI (426062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154737 | 060626[0m
+[0;32mI (427062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154738 | 060626[0m
+[0;32mI (428062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154739 | 060626[0m
+[0;33mW (428062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (429062) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154740 | 060626[0m
+[0;32mI (430072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154741 | 060626[0m
+[0;32mI (431072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154742 | 060626[0m
+[0;32mI (432072) GPS_PARSER: 📍 Posição: -27.600029, -48.508779 | Vel: 0.0 km/h | 154743 | 060626[0m
+[0;32mI (433072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154744 | 060626[0m
+[0;33mW (433072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (434072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154745 | 060626[0m
+[0;32mI (435072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154746 | 060626[0m
+[0;32mI (436082) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154747 | 060626[0m
+[0;32mI (437072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154748 | 060626[0m
+[0;32mI (438082) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154749 | 060626[0m
+[0;33mW (438082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (439092) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154750 | 060626[0m
+[0;32mI (440082) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154751 | 060626[0m
+[0;32mI (441082) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154752 | 060626[0m
+[0;32mI (442072) GPS_PARSER: 📍 Posição: -27.600029, -48.508778 | Vel: 0.0 km/h | 154753 | 060626[0m
+[0;32mI (443072) GPS_PARSER: 📍 Posição: -27.600029, -48.508777 | Vel: 0.0 km/h | 154754 | 060626[0m
+[0;32mI (444072) GPS_PARSER: 📍 Posição: -27.600029, -48.508777 | Vel: 0.0 km/h | 154755 | 060626[0m
+[0;33mW (444072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (445082) GPS_PARSER: 📍 Posição: -27.600029, -48.508777 | Vel: 0.0 km/h | 154756 | 060626[0m
+[0;32mI (446072) GPS_PARSER: 📍 Posição: -27.600029, -48.508777 | Vel: 0.0 km/h | 154757 | 060626[0m
+[0;32mI (447072) GPS_PARSER: 📍 Posição: -27.600029, -48.508777 | Vel: 0.0 km/h | 154758 | 060626[0m
+[0;32mI (448072) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154759 | 060626[0m
+[0;32mI (449072) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154800 | 060626[0m
+[0;33mW (449072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (450062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154801 | 060626[0m
+[0;32mI (451062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154802 | 060626[0m
+[0;32mI (452062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154803 | 060626[0m
+[0;32mI (453062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154804 | 060626[0m
+[0;32mI (454062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154805 | 060626[0m
+[0;32mI (455062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154806 | 060626[0m
+[0;33mW (455062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (456062) GPS_PARSER: 📍 Posição: -27.600030, -48.508777 | Vel: 0.0 km/h | 154807 | 060626[0m
+[0;32mI (457062) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154808 | 060626[0m
+[0;32mI (458062) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154809 | 060626[0m
+[0;32mI (459062) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154810 | 060626[0m
+[0;32mI (460062) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154811 | 060626[0m
+[0;33mW (460062) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (461062) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154812 | 060626[0m
+[0;32mI (462072) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154813 | 060626[0m
+[0;32mI (463072) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154814 | 060626[0m
+[0;32mI (464082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154815 | 060626[0m
+[0;32mI (465082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154816 | 060626[0m
+[0;33mW (465082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (466082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154817 | 060626[0m
+[0;32mI (467082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154818 | 060626[0m
+[0;32mI (468082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154819 | 060626[0m
+[0;32mI (469082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154820 | 060626[0m
+[0;32mI (470082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154821 | 060626[0m
+[0;33mW (470082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (471082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154822 | 060626[0m
+[0;32mI (472082) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154823 | 060626[0m
+[0;32mI (473072) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154824 | 060626[0m
+[0;32mI (474072) GPS_PARSER: 📍 Posição: -27.600030, -48.508776 | Vel: 0.0 km/h | 154825 | 060626[0m
+[0;32mI (475082) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154826 | 060626[0m
+[0;33mW (475082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (476072) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154827 | 060626[0m
+[0;32mI (477072) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154828 | 060626[0m
+[0;32mI (478072) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154829 | 060626[0m
+[0;32mI (479072) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154830 | 060626[0m
+[0;32mI (480072) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154831 | 060626[0m
+[0;32mI (481082) GPS_PARSER: 📍 Posição: -27.600030, -48.508775 | Vel: 0.0 km/h | 154832 | 060626[0m
+[0;33mW (481082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (482082) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154833 | 060626[0m
+[0;32mI (483072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154834 | 060626[0m
+[0;32mI (484072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154835 | 060626[0m
+[0;32mI (485072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154836 | 060626[0m
+[0;32mI (486072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154837 | 060626[0m
+[0;32mI (487072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154838 | 060626[0m
+[0;33mW (487072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (488072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154839 | 060626[0m
+[0;32mI (489072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154840 | 060626[0m
+[0;32mI (490072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154841 | 060626[0m
+[0;32mI (491072) GPS_PARSER: 📍 Posição: -27.600029, -48.508774 | Vel: 0.0 km/h | 154842 | 060626[0m
+[0;32mI (492072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154843 | 060626[0m
+[0;33mW (492072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (493072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154844 | 060626[0m
+[0;32mI (494072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154845 | 060626[0m
+[0;32mI (495072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154846 | 060626[0m
+[0;32mI (496072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154847 | 060626[0m
+[0;32mI (497072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154848 | 060626[0m
+[0;33mW (497072) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (498072) GPS_PARSER: 📍 Posição: -27.600029, -48.508773 | Vel: 0.0 km/h | 154849 | 060626[0m
+[0;32mI (499072) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154850 | 060626[0m
+[0;32mI (500082) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154851 | 060626[0m
+[0;32mI (501082) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154852 | 060626[0m
+[0;32mI (502082) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154853 | 060626[0m
+[0;33mW (502082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (503092) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154854 | 060626[0m
+[0;32mI (504092) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154855 | 060626[0m
+[0;32mI (505092) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154856 | 060626[0m
+[0;32mI (506082) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154857 | 060626[0m
+[0;32mI (507082) GPS_PARSER: 📍 Posição: -27.600029, -48.508772 | Vel: 0.0 km/h | 154858 | 060626[0m
+[0;33mW (507082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (508092) GPS_PARSER: 📍 Posição: -27.600029, -48.508771 | Vel: 0.0 km/h | 154859 | 060626[0m
+[0;32mI (509092) GPS_PARSER: 📍 Posição: -27.600029, -48.508771 | Vel: 0.0 km/h | 154900 | 060626[0m
+[0;32mI (510092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154901 | 060626[0m
+[0;32mI (511092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154902 | 060626[0m
+[0;32mI (512092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154903 | 060626[0m
+[0;33mW (512092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (513082) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154904 | 060626[0m
+[0;32mI (514082) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154905 | 060626[0m
+[0;32mI (515092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154906 | 060626[0m
+[0;32mI (516092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154907 | 060626[0m
+[0;32mI (517092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154908 | 060626[0m
+[0;33mW (517092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (518092) GPS_PARSER: 📍 Posição: -27.600028, -48.508771 | Vel: 0.0 km/h | 154909 | 060626[0m
+[0;32mI (519092) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154910 | 060626[0m
+[0;32mI (520092) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154911 | 060626[0m
+[0;32mI (521092) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154912 | 060626[0m
+[0;32mI (522082) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154913 | 060626[0m
+[0;32mI (523092) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154914 | 060626[0m
+[0;33mW (523092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (524092) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154915 | 060626[0m
+[0;32mI (525082) GPS_PARSER: 📍 Posição: -27.600028, -48.508770 | Vel: 0.0 km/h | 154916 | 060626[0m
+[0;32mI (526082) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154917 | 060626[0m
+[0;32mI (527092) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154918 | 060626[0m
+[0;32mI (528082) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154919 | 060626[0m
+[0;32mI (529092) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154920 | 060626[0m
+[0;33mW (529092) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (530082) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154921 | 060626[0m
+[0;32mI (531072) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154922 | 060626[0m
+[0;32mI (532072) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154923 | 060626[0m
+[0;32mI (533082) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154924 | 060626[0m
+[0;32mI (534072) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154925 | 060626[0m
+[0;32mI (535082) GPS_PARSER: 📍 Posição: -27.600028, -48.508769 | Vel: 0.0 km/h | 154926 | 060626[0m
+[0;33mW (535082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (536072) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154927 | 060626[0m
+[0;32mI (537082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154928 | 060626[0m
+[0;32mI (538082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154929 | 060626[0m
+[0;32mI (539082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154930 | 060626[0m
+[0;32mI (540082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154931 | 060626[0m
+[0;33mW (540082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (541082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154932 | 060626[0m
+[0;32mI (542082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154933 | 060626[0m
+[0;32mI (543082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154934 | 060626[0m
+[0;32mI (544092) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154935 | 060626[0m
+[0;32mI (545082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154936 | 060626[0m
+[0;33mW (545082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (546082) GPS_PARSER: 📍 Posição: -27.600028, -48.508768 | Vel: 0.0 km/h | 154937 | 060626[0m
+[0;32mI (547092) GPS_PARSER: 📍 Posição: -27.600027, -48.508768 | Vel: 0.0 km/h | 154938 | 060626[0m
+[0;32mI (548092) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154939 | 060626[0m
+[0;32mI (549092) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154940 | 060626[0m
+[0;32mI (550082) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154941 | 060626[0m
+[0;33mW (550082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (551092) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154942 | 060626[0m
+[0;32mI (552092) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154943 | 060626[0m
+[0;32mI (553082) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154944 | 060626[0m
+[0;32mI (554092) GPS_PARSER: 📍 Posição: -27.600027, -48.508767 | Vel: 0.0 km/h | 154945 | 060626[0m
+[0;32mI (555082) GPS_PARSER: 📍 Posição: -27.600027, -48.508766 | Vel: 0.0 km/h | 154946 | 060626[0m
+[0;33mW (555082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (556082) GPS_PARSER: 📍 Posição: -27.600027, -48.508766 | Vel: 0.0 km/h | 154947 | 060626[0m
+[0;32mI (557082) GPS_PARSER: 📍 Posição: -27.600027, -48.508766 | Vel: 0.0 km/h | 154948 | 060626[0m
+[0;32mI (558082) GPS_PARSER: 📍 Posição: -27.600027, -48.508765 | Vel: 0.0 km/h | 154949 | 060626[0m
+[0;32mI (559072) GPS_PARSER: 📍 Posição: -27.600027, -48.508765 | Vel: 0.0 km/h | 154950 | 060626[0m
+[0;32mI (560082) GPS_PARSER: 📍 Posição: -27.600027, -48.508765 | Vel: 0.0 km/h | 154951 | 060626[0m
+[0;33mW (560082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (561082) GPS_PARSER: 📍 Posição: -27.600027, -48.508765 | Vel: 0.0 km/h | 154952 | 060626[0m
+[0;32mI (562082) GPS_PARSER: 📍 Posição: -27.600027, -48.508765 | Vel: 0.0 km/h | 154953 | 060626[0m
+[0;32mI (563082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154954 | 060626[0m
+[0;32mI (564082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154955 | 060626[0m
+[0;32mI (565082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154956 | 060626[0m
+[0;33mW (565082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (566082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154957 | 060626[0m
+[0;32mI (567082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154958 | 060626[0m
+[0;32mI (568082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 154959 | 060626[0m
+[0;32mI (569082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 155000 | 060626[0m
+[0;32mI (570082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 155001 | 060626[0m
+[0;33mW (570082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (571082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 155002 | 060626[0m
+[0;32mI (572082) GPS_PARSER: 📍 Posição: -27.600027, -48.508764 | Vel: 0.0 km/h | 155003 | 060626[0m
+[0;32mI (573092) GPS_PARSER: 📍 Posição: -27.600026, -48.508764 | Vel: 0.0 km/h | 155004 | 060626[0m
+[0;32mI (574082) GPS_PARSER: 📍 Posição: -27.600026, -48.508764 | Vel: 0.0 km/h | 155005 | 060626[0m
+[0;32mI (575082) GPS_PARSER: 📍 Posição: -27.600026, -48.508764 | Vel: 0.0 km/h | 155006 | 060626[0m
+[0;33mW (575082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (576082) GPS_PARSER: 📍 Posição: -27.600026, -48.508764 | Vel: 0.0 km/h | 155007 | 060626[0m
+[0;32mI (577082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155008 | 060626[0m
+[0;32mI (578082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155009 | 060626[0m
+[0;32mI (579082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155010 | 060626[0m
+[0;32mI (580072) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155011 | 060626[0m
+[0;32mI (581082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155012 | 060626[0m
+[0;33mW (581082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (582082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155013 | 060626[0m
+[0;32mI (583082) GPS_PARSER: 📍 Posição: -27.600026, -48.508763 | Vel: 0.0 km/h | 155014 | 060626[0m
+[0;32mI (584082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155015 | 060626[0m
+[0;32mI (585082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155016 | 060626[0m
+[0;32mI (586082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155017 | 060626[0m
+[0;33mW (586082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (587082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155018 | 060626[0m
+[0;32mI (588082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155019 | 060626[0m
+[0;32mI (589082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155020 | 060626[0m
+[0;32mI (590082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155021 | 060626[0m
+[0;32mI (591082) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155022 | 060626[0m
+[0;33mW (591082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (592072) GPS_PARSER: 📍 Posição: -27.600026, -48.508762 | Vel: 0.0 km/h | 155023 | 060626[0m
+[0;32mI (593072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155024 | 060626[0m
+[0;32mI (594072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155025 | 060626[0m
+[0;32mI (595082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155026 | 060626[0m
+[0;32mI (596072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155027 | 060626[0m
+[0;32mI (597082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155028 | 060626[0m
+[0;33mW (597082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (598082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155029 | 060626[0m
+[0;32mI (599072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155030 | 060626[0m
+[0;32mI (600072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155031 | 060626[0m
+[0;32mI (601082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155032 | 060626[0m
+[0;32mI (602082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155033 | 060626[0m
+[0;33mW (602082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m
+[0;32mI (603082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155034 | 060626[0m
+[0;32mI (604082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155035 | 060626[0m
+[0;32mI (605072) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155036 | 060626[0m
+[0;32mI (606082) GPS_PARSER: 📍 Posição: -27.600026, -48.508761 | Vel: 0.0 km/h | 155037 | 060626[0m
+[0;32mI (607072) GPS_PARSER: 📍 Posição: -27.600025, -48.508761 | Vel: 0.0 km/h | 155038 | 060626[0m
+[0;32mI (608082) GPS_PARSER: 📍 Posição: -27.600025, -48.508761 | Vel: 0.0 km/h | 155039 | 060626[0m
+[0;33mW (608082) GPS_PARSER: WiFi ainda não está pronto. Dados não enviados.[0m

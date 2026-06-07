@@ -1,0 +1,229 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  6 2026 13:39:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f7c0h (128960) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=0002f7e8 vaddr=3ffb0000 size=00830h (  2096) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a2518h (664856) map[0m
+[0;32mI (382) esp_image: segment 3: paddr=000d2540 vaddr=3ffb0830 size=03b8ch ( 15244) load[0m
+[0;32mI (388) esp_image: segment 4: paddr=000d60d4 vaddr=40080000 size=18ba0h (101280) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Jun  6 2026 16:19:51[0m
+[0;32mI (480) app_init: ELF file SHA256:  6bed77187...[0m
+[0;32mI (485) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8CA8 len 00027358 (156 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 40098BA0 len 00007460 (29 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (552) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+
+========================================
+   RASTREADOR VEICULAR - LILYGO T-A7670
+   Versao 3.0 - Com WiFi
+========================================
+
+[0;32mI (586) WIFI_INIT: Inicializando WiFi...[0m
+[0;32mI (626) wifi:wifi driver task: 3ffc0d20, prio:23, stack:6656, core=0[0m
+[0;32mI (636) wifi:wifi firmware version: 4209e03[0m
+[0;32mI (636) wifi:wifi certification version: v7.0[0m
+[0;32mI (636) wifi:config NVS flash: enabled[0m
+[0;32mI (636) wifi:config nano formating: disabled[0m
+[0;32mI (636) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (646) wifi:Init management short buffer num: 32[0m
+[0;32mI (656) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (656) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (666) wifi:Init static rx buffer num: 10[0m
+[0;32mI (666) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: accept mbox: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5760[0m
+[0;32mI (696) wifi_init: tcp rx win: 5760[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (716) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (716) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (796) wifi:mode : sta (e0:8c:fe:d3:66:9c)[0m
+[0;32mI (796) wifi:enable tsf[0m
+[0;32mI (796) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=43[0m
+[0;32mI (796) WIFI_INIT: Outro evento ignorado: base=WIFI_EVENT, id=43[0m
+[0;32mI (806) WIFI_INIT: WiFi inicializado.[0m
+[0;32mI (806) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=2[0m
+[0;32mI (816) WIFI_INIT: Conectando ao WiFi...[0m
+[0;32mI (826) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (826) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (836) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2056) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=43[0m
+[0;32mI (2056) WIFI_INIT: Outro evento ignorado: base=WIFI_EVENT, id=43[0m
+[0;32mI (2066) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2076) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3536) HARDWARE: Hardware energizado e pinos configurados.[0m
+[0;32mI (3836) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3846) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3866) wifi:connected with KINGKONG_ES, aid = 6, channel 13, BW20, bssid = aa:b1:82:69:af:c5[0m
+[0;32mI (3866) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -19, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (3876) wifi:pm start, type: 1[0m
+
+[0;32mI (3876) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3886) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=4[0m
+[0;32mI (3886) WIFI_INIT: Outro evento ignorado: base=WIFI_EVENT, id=4[0m
+[0;32mI (3896) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (4886) esp_netif_handlers: sta ip: 10.38.29.63, mask: 255.255.255.0, gw: 10.38.29.80[0m
+[0;32mI (4886) WIFI_INIT: 📡 Evento recebido: base=IP_EVENT, id=0[0m
+[0;32mI (4886) WIFI_INIT: 🎉 IP_EVENT_STA_GOT_IP recebido! IP: 10.38.29.63[0m
+[0;32mI (5536) GPS_PARSER: Task GPS iniciada[0m
+[0;32mI (5536) GPS_PARSER: Task GPS iniciada[0m
+[0;32mI (5536) GPS_PARSER: 🔧 TESTE: Aguardando WiFi ficar pronto...[0m
+[0;32mI (5536) GPS_PARSER: ✅ WiFi pronto! IP obtido. Testando envio...[0m
+[0;32mI (5546) MAIN: Sistema em execucao - Aguardando GPS...[0m
+[0;32mI (5546) main_task: Returned from app_main()[0m
+[0;32mI (6706) GPS_PARSER: 📍 Posição: -27.600025, -48.508737 | Vel: 0.0 km/h | 162046 | 060626[0m
+[0;32mI (6706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (6706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508737,"speed":0.0}[0m
+[0;31mE (7176) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (7176) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (7196) esp-tls: create_ssl_handle failed[0m
+[0;31mE (7196) esp-tls: Failed to open new connection[0m
+[0;31mE (7206) transport_base: Failed to open a new connection[0m
+[0;31mE (7206) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (7216) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7716) GPS_PARSER: 📍 Posição: -27.600025, -48.508737 | Vel: 0.0 km/h | 162047 | 060626[0m
+[0;32mI (7716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (8726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162048 | 060626[0m
+[0;32mI (8726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (9716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162049 | 060626[0m
+[0;32mI (9716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (10726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162050 | 060626[0m
+[0;32mI (10726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+
+*ATREADY: 1
+[0;32mI (11716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162051 | 060626[0m
+[0;32mI (11716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (11716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508738,"speed":0.0}[0m
+[0;31mE (12096) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (12096) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (12106) esp-tls: create_ssl_handle failed[0m
+[0;31mE (12106) esp-tls: Failed to open new connection[0m
+[0;31mE (12116) transport_base: Failed to open a new connection[0m
+[0;31mE (12126) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (12126) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+
++CPIN: SIM REMOVED
+[0;32mI (12716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162052 | 060626[0m
+[0;32mI (12716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (13706) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162053 | 060626[0m
+[0;32mI (13706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+
++CPIN: SIM REMOVED
+[0;32mI (14716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162054 | 060626[0m
+[0;32mI (14716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (15716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162055 | 060626[0m
+[0;32mI (15716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (16716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162056 | 060626[0m
+[0;32mI (16716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (16716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508738,"speed":0.0}[0m
+[0;31mE (17016) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (17016) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (17026) esp-tls: create_ssl_handle failed[0m
+[0;31mE (17026) esp-tls: Failed to open new connection[0m
+[0;31mE (17036) transport_base: Failed to open a new connection[0m
+[0;31mE (17046) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (17046) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162057 | 060626[0m
+[0;32mI (17726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (18716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162058 | 060626[0m
+[0;32mI (18716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (19716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162059 | 060626[0m
+[0;32mI (19716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (20716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162100 | 060626[0m
+[0;32mI (20716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (21716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162101 | 060626[0m
+[0;32mI (21716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (21716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508738,"speed":0.0}[0m
+[0;31mE (22226) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (22236) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (22246) esp-tls: create_ssl_handle failed[0m
+[0;31mE (22246) esp-tls: Failed to open new connection[0m
+[0;31mE (22256) transport_base: Failed to open a new connection[0m
+[0;31mE (22256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (22266) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22706) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162102 | 060626[0m
+[0;32mI (22706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (23716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162103 | 060626[0m
+[0;32mI (23716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (24716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162104 | 060626[0m
+[0;32mI (24716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (25726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162105 | 060626[0m
+[0;32mI (25726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (26716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162106 | 060626[0m
+[0;32mI (26716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (26716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508738,"speed":0.0}[0m
+[0;32mI (27146) wifi:<ba-add>idx:0 (ifx:0, aa:b1:82:69:af:c5), tid:1, ssn:492, winSize:64[0m
+[0;31mE (27146) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (27156) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (27166) esp-tls: create_ssl_handle failed[0m
+[0;31mE (27166) esp-tls: Failed to open new connection[0m
+[0;31mE (27176) transport_base: Failed to open a new connection[0m
+[0;31mE (27186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (27186) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27716) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162107 | 060626[0m
+[0;32mI (27716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (28726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162108 | 060626[0m
+[0;32mI (28726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (29736) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162109 | 060626[0m
+[0;32mI (29736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (30726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162110 | 060626[0m
+[0;32mI (30726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (31726) GPS_PARSER: 📍 Posição: -27.600025, -48.508738 | Vel: 0.0 km/h | 162111 | 060626[0m
+[0;32mI (31726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (31726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"esp32_001","latitude":-27.600025,"longitude":-48.508738,"speed":0.0}[0m
+[0;31mE (32066) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (32066) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (32076) esp-tls: create_ssl_handle failed[0m
+[0;31mE (32076) esp-tls: Failed to open new connection[0m
+[0;31mE (32086) transport_base: Failed to open a new connection[0m
+[0;31mE (32096) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (32096) GPS_PARSER: ❌ Falha no envio: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (32726) GPS_PARSER: 📍 Posiç

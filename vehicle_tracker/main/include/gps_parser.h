@@ -3,21 +3,23 @@
 
 #include <stdbool.h>
 
-typedef struct {
+typedef struct
+{
     double latitude;
     double longitude;
+    double speed;
     char fix_time[9];
     char fix_date[7];
     bool valid;
 } gps_data_t;
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-void gps_task(void *pvParameters);
-
-
+    extern gps_data_t current_gps;
+    void gps_task(void *pvParameters);
 
 #ifdef __cplusplus
 }

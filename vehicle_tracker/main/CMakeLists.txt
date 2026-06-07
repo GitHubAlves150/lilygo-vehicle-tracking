@@ -14,5 +14,7 @@ idf_component_register(
         nvs_flash
         esp_event
         esp_wifi
+        esp_http_client
+    PRIV_REQUIRES "mbedtls" # 🔥 ADICIONE ESTA LINHA AQUI!
         
 )

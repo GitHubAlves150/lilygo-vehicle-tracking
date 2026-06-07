@@ -35,5 +35,7 @@ extern "C" void app_main(void) {
     xTaskCreate(gps_task, "gps_task", 4096, NULL, 5, NULL);
     xTaskCreate(modem_task, "modem_task", 4096, NULL, 4, NULL);
 
+    
+
     ESP_LOGI(TAG, "Sistema em execucao - Aguardando GPS...");
 }
