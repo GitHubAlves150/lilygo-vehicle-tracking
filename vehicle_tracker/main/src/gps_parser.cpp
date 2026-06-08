@@ -81,7 +81,7 @@ static void enviarDadosGPS(double lat, double lon, double speed, const char *veh
              "{\"vehicle_id\":\"%s\",\"latitude\":%.6f,\"longitude\":%.6f,\"speed\":%.1f}",
              vehicle_id, lat, lon, speed);
 
-    LOGI(TAG, "📤 Enviando para AWS: %s", json_buffer);
+    ESP_LOGI(TAG, "📤 Enviando para AWS: %s", json_buffer);
 
     // 5. Configuração do Cliente HTTP integrada ao Bundle TLS do ESP-IDF v5.3
     esp_http_client_config_t config = {}; 
@@ -93,7 +93,7 @@ static void enviarDadosGPS(double lat, double lon, double speed, const char *veh
     // 6. APENAS UMA declaração do client aqui:
     esp_http_client_handle_t client = esp_http_client_init(&config);
     if (client == NULL) {
-        LOGE(TAG, "Falha ao inicializar o cliente HTTP");
+        ESP_LOGE(TAG, "Falha ao inicializar o cliente HTTP");
         return;
     }
 
@@ -109,16 +109,16 @@ static void enviarDadosGPS(double lat, double lon, double speed, const char *veh
         int status_code = esp_http_client_get_status_code(client);
         if (status_code == 200 || status_code == 201)
         {
-            LOGI(TAG, "✅ Dados enviados com sucesso para a AWS!");
+            ESP_LOGI(TAG, "✅ Dados enviados com sucesso para a AWS!");
         }
         else
         {
-            LOGW(TAG, "⚠️ AWS respondeu com código: %d", status_code);
+            ESP_LOGW(TAG, "⚠️ AWS respondeu com código: %d", status_code);
         }
     }
     else
     {
-        LOGE(TAG, "❌ Falha no envio: %s", esp_err_to_name(err));
+        ESP_LOGE(TAG, "❌ Falha no envio: %s", esp_err_to_name(err));
     }
 
     // 9. Liberação do descritor de memória
@@ -171,7 +171,7 @@ void parse_nmea_gprmc(const char *line)
 
             // Envia para a API
             enviarDadosGPS(current_gps.latitude, current_gps.longitude,
-                           current_gps.speed, "esp32_001");
+                           current_gps.speed, "lilygo-vehicle-tracking");
         }
         else
         {
