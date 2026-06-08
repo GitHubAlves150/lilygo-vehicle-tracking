@@ -1,56 +1,41 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
+#include "include/hardware.h"
+#include "include/gps_parser.h"
+#include "include/modem.h"
+#include "include/wifi_init_.h"
 #include "esp_log.h"
-#include "driver/uart.h"
 
 
 
-static const char *TAG = "VEHICLE_TRACKER";
+static const char *TAG = "MAIN";
 
-// Configuração da UART para o GPS (A7670E)
-#define GPS_UART_NUM UART_NUM_1
-#define GPS_TXD_PIN 17
-#define GPS_RXD_PIN 16
-#define GPS_BAUD_RATE 9600
 
-extern "C" void app_main(void)
-{
+
+extern "C" void app_main(void) {
     printf("\n");
     printf("========================================\n");
-    printf("   LILYGO VEHICLE TRACKER - ESP32\n");
-    printf("   Versao: 1.0.0\n");
+    printf("   RASTREADOR VEICULAR - LILYGO T-A7670\n");
+    printf("   Versao 3.0 - Com WiFi\n");
     printf("========================================\n\n");
+
+    // 1. Inicializa WiFi (antes do GPS)
+    wifi_init();
     
-    // Configura UART para comunicação com GPS
-    uart_config_t uart_config = {
-        .baud_rate = GPS_BAUD_RATE,
-        .data_bits = UART_DATA_8_BITS,
-        .parity = UART_PARITY_DISABLE,
-        .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
-        .source_clk = UART_SCLK_APB,
-    };
     
-    uart_param_config(GPS_UART_NUM, &uart_config);
-    uart_set_pin(GPS_UART_NUM, GPS_TXD_PIN, GPS_RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-    uart_driver_install(GPS_UART_NUM, 1024, 0, 0, NULL, 0);
+    // 2. Inicializa hardware (liga alimentação)
+    init_board_power();
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+    // 3. Inicia as tasks
+    xTaskCreate(gps_task, "gps_task", 4096, NULL, 5, NULL);
+    xTaskCreate(modem_task, "modem_task", 4096, NULL, 4, NULL);
+
     
-    ESP_LOGI(TAG, "GPS UART configurado na GPIO16(RX) e GPIO17(TX)");
-    ESP_LOGI(TAG, "Aguardando dados do modulo A7670E...");
-    
-    while (1) {
-        // Loop principal do rastreador
-        uint8_t data[256];
-        int len = uart_read_bytes(GPS_UART_NUM, data, sizeof(data), 100 / portTICK_PERIOD_MS);
-        
-        if (len > 0) {
-            // Processa dados do GPS (NMEA)
-            for (int i = 0; i < len; i++) {
-                putchar(data[i]);  // Imprime no terminal para debug
-            }
-        }
-        
-        vTaskDelay(100 / portTICK_PERIOD_MS);
-    }
+
+    ESP_LOGI(TAG, "Sistema em execucao - Aguardando GPS...");
 }
