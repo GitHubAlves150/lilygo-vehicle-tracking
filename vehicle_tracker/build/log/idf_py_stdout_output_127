@@ -1,3 +1,1426 @@
-[1/2] Cleaning additional files...
-[2/2] Cleaning all built files...
-Cleaning... 974 files.
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF 0cf21f6b 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  6 2026 13:39:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30568h (197992) map[0m
+[0;32mI (172) esp_image: segment 1: paddr=00040590 vaddr=3ffb0000 size=043bch ( 17340) load[0m
+[0;32mI (179) esp_image: segment 2: paddr=00044954 vaddr=40080000 size=0b6c4h ( 46788) load[0m
+[0;32mI (198) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a2bc8h (666568) map[0m
+[0;32mI (426) esp_image: segment 4: paddr=000f2bf0 vaddr=4008b6c4 size=0d4dch ( 54492) load[0m
+[0;32mI (460) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (460) boot: Disabling RNG early entropy source...[0m
+[0;32mI (473) cpu_start: Multicore app[0m
+[0;32mI (481) cpu_start: Pro cpu start user code[0m
+[0;32mI (481) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (481) app_init: Application information:[0m
+[0;32mI (484) app_init: Project name:     vehicle_tracker[0m
+[0;32mI (490) app_init: App version:      1[0m
+[0;32mI (494) app_init: Compile time:     Jun  8 2026 00:12:16[0m
+[0;32mI (500) app_init: ELF file SHA256:  5b993ce29...[0m
+[0;32mI (505) app_init: ESP-IDF:          0cf21f6b[0m
+[0;32mI (510) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (515) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (520) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB8CB8 len 00027348 (156 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 40098BA0 len 00007460 (29 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;33mW (572) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (586) main_task: Started on CPU0[0m
+[0;32mI (596) main_task: Calling app_main()[0m
+
+========================================
+   RASTREADOR VEICULAR - LILYGO T-A7670
+   Versao 3.0 - Com WiFi
+========================================
+
+[0;32mI (606) WIFI_INIT: Inicializando WiFi...[0m
+[0;32mI (646) wifi:wifi driver task: 3ffc0d30, prio:23, stack:6656, core=0[0m
+[0;32mI (656) wifi:wifi firmware version: 4209e03[0m
+[0;32mI (656) wifi:wifi certification version: v7.0[0m
+[0;32mI (656) wifi:config NVS flash: enabled[0m
+[0;32mI (656) wifi:config nano formating: disabled[0m
+[0;32mI (656) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (666) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (666) wifi:Init management short buffer num: 32[0m
+[0;32mI (676) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (676) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (686) wifi:Init static rx buffer num: 10[0m
+[0;32mI (686) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (686) wifi_init: rx ba win: 6[0m
+[0;32mI (696) wifi_init: accept mbox: 6[0m
+[0;32mI (696) wifi_init: tcpip mbox: 32[0m
+[0;32mI (696) wifi_init: udp mbox: 6[0m
+[0;32mI (706) wifi_init: tcp mbox: 6[0m
+[0;32mI (706) wifi_init: tcp tx win: 5760[0m
+[0;32mI (716) wifi_init: tcp rx win: 5760[0m
+[0;32mI (716) wifi_init: tcp mss: 1440[0m
+[0;32mI (716) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (726) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (726) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (736) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (816) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (856) wifi:mode : sta (e0:8c:fe:d3:66:9c)[0m
+[0;32mI (866) wifi:enable tsf[0m
+[0;32mI (866) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=43[0m
+[0;32mI (866) WIFI_INIT: Outro evento ignorado: base=WIFI_EVENT, id=43[0m
+[0;32mI (876) WIFI_INIT: WiFi inicializado.[0m
+[0;32mI (876) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=2[0m
+[0;32mI (886) WIFI_INIT: Conectando ao WiFi...[0m
+[0;32mI (886) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (896) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (906) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1646) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1646) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2746) HARDWARE: Hardware energizado e pinos configurados.[0m
+[0;32mI (4746) GPS_PARSER: Task GPS iniciada[0m
+[0;32mI (4746) GPS_PARSER: Task GPS iniciada[0m
+[0;32mI (4746) GPS_PARSER: 🔧 TESTE: Aguardando WiFi ficar pronto...[0m
+[0;32mI (4746) MAIN: Sistema em execucao - Aguardando GPS...[0m
+[0;32mI (4756) main_task: Returned from app_main()[0m
+[0;32mI (5636) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5646) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5646) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=5[0m
+[0;33mW (5646) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (8076) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=5[0m
+[0;33mW (8076) WIFI_INIT: WiFi desconectado. Tentando reconectar...[0m
+[0;32mI (8086) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8086) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (9766) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (9776) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (9806) wifi:connected with KINGKONG_ES, aid = 6, channel 1, BW20, bssid = de:5e:f0:5a:c5:b3[0m
+[0;32mI (9806) wifi:security: WPA3-SAE HUNT_AND_PECK, phy: bgn, rssi: -33, cipher(pairwise:0x3, group:0x3), pmf:1[0m
+[0;32mI (9816) wifi:pm start, type: 1[0m
+
+[0;32mI (9816) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (9826) WIFI_INIT: 📡 Evento recebido: base=WIFI_EVENT, id=4[0m
+[0;32mI (9826) WIFI_INIT: Outro evento ignorado: base=WIFI_EVENT, id=4[0m
+[0;32mI (9836) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+
+*ATREADY: 1
+[0;32mI (10826) esp_netif_handlers: sta ip: 10.38.29.63, mask: 255.255.255.0, gw: 10.38.29.80[0m
+[0;32mI (10826) WIFI_INIT: 📡 Evento recebido: base=IP_EVENT, id=0[0m
+[0;32mI (10826) WIFI_INIT: 🎉 IP_EVENT_STA_GOT_IP recebido! IP: 10.38.29.63[0m
+[0;32mI (10846) GPS_PARSER: ✅ WiFi pronto! IP obtido. Testando envio...[0m
+[0;32mI (10846) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"teste_boot","latitude":-27.600000,"longitude":-48.500000,"speed":50.0}[0m
+[0;32mI (11986) esp-x509-crt-bundle: Certificate validated[0m
+
++CPIN: SIM REMOVED
+[0;32mI (13636) wifi:<ba-add>idx:0 (ifx:0, de:5e:f0:5a:c5:b3), tid:1, ssn:3508, winSize:64[0m
+[0;33mW (14046) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (14046) GPS_PARSER: 📍 Posição: -27.599955, -48.508674 | Vel: 0.0 km/h | 014916 | 080626[0m
+[0;32mI (14046) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (14066) GPS_PARSER: 📍 Posição: -27.599955, -48.508674 | Vel: 0.0 km/h | 014917 | 080626[0m
+[0;32mI (14066) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (14266) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+
++CPIN: SIM REMOVED
+[0;32mI (14706) GPS_PARSER: 📍 Posição: -27.599957, -48.508666 | Vel: 0.0 km/h | 014925 | 080626[0m
+[0;32mI (14706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (15706) GPS_PARSER: 📍 Posição: -27.599957, -48.508665 | Vel: 0.0 km/h | 014926 | 080626[0m
+[0;32mI (15706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (16706) GPS_PARSER: 📍 Posição: -27.599957, -48.508664 | Vel: 0.0 km/h | 014927 | 080626[0m
+[0;32mI (16706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (16706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599957,"longitude":-48.508664,"speed":0.0}[0m
+[0;32mI (17836) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (19576) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (19586) GPS_PARSER: 📍 Posição: -27.599957, -48.508664 | Vel: 0.0 km/h | 014928 | 080626[0m
+[0;32mI (19586) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (19596) GPS_PARSER: 📍 Posição: -27.599957, -48.508663 | Vel: 0.0 km/h | 014929 | 080626[0m
+[0;32mI (19596) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (19716) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (20706) GPS_PARSER: 📍 Posição: -27.599952, -48.508663 | Vel: 0.0 km/h | 014931 | 080626[0m
+[0;32mI (20706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (21716) GPS_PARSER: 📍 Posição: -27.599952, -48.508663 | Vel: 0.0 km/h | 014932 | 080626[0m
+[0;32mI (21716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (21716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599952,"longitude":-48.508663,"speed":0.0}[0m
+[0;32mI (22416) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (24496) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (24506) GPS_PARSER: 📍 Posição: -27.599952, -48.508663 | Vel: 0.0 km/h | 014933 | 080626[0m
+[0;32mI (24506) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (24516) GPS_PARSER: 📍 Posição: -27.599952, -48.508663 | Vel: 0.0 km/h | 014934 | 080626[0m
+[0;32mI (24516) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (24726) GPS_PARSER: 📍 Posição: -27.599947, -48.508661 | Vel: 1.8 km/h | 014935 | 080626[0m
+[0;32mI (24726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (25706) GPS_PARSER: 📍 Posição: -27.599947, -48.508662 | Vel: 0.0 km/h | 014936 | 080626[0m
+[0;32mI (25706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (26706) GPS_PARSER: 📍 Posição: -27.599947, -48.508662 | Vel: 0.0 km/h | 014937 | 080626[0m
+[0;32mI (26706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (27706) GPS_PARSER: 📍 Posição: -27.599946, -48.508662 | Vel: 0.0 km/h | 014938 | 080626[0m
+[0;32mI (27706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (27706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599946,"longitude":-48.508662,"speed":0.0}[0m
+[0;32mI (28556) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (30626) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (30646) GPS_PARSER: 📍 Posição: -27.599946, -48.508662 | Vel: 0.0 km/h | 014939 | 080626[0m
+[0;32mI (30646) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (30656) GPS_PARSER: 📍 Posição: -27.599945, -48.508662 | Vel: 0.0 km/h | 014940 | 080626[0m
+[0;32mI (30656) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (30776) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (31716) GPS_PARSER: 📍 Posição: -27.599942, -48.508660 | Vel: 1.0 km/h | 014942 | 080626[0m
+[0;32mI (31716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (32726) GPS_PARSER: 📍 Posição: -27.599942, -48.508660 | Vel: 0.1 km/h | 014943 | 080626[0m
+[0;32mI (32726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (32726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599942,"longitude":-48.508660,"speed":0.1}[0m
+[0;32mI (33476) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (35856) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (35866) GPS_PARSER: 📍 Posição: -27.599941, -48.508660 | Vel: 0.0 km/h | 014944 | 080626[0m
+[0;32mI (35866) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (35876) GPS_PARSER: 📍 Posição: -27.599940, -48.508661 | Vel: 0.0 km/h | 014945 | 080626[0m
+[0;32mI (35876) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (35996) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (36606) GPS_PARSER: 📍 Posição: -27.599937, -48.508662 | Vel: 0.0 km/h | 014947 | 080626[0m
+[0;32mI (36606) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (37706) GPS_PARSER: 📍 Posição: -27.599936, -48.508663 | Vel: 0.0 km/h | 014948 | 080626[0m
+[0;32mI (37706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (38706) GPS_PARSER: 📍 Posição: -27.599935, -48.508663 | Vel: 0.0 km/h | 014949 | 080626[0m
+[0;32mI (38706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (38706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599935,"longitude":-48.508663,"speed":0.0}[0m
+[0;32mI (39306) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (41486) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (41496) GPS_PARSER: 📍 Posição: -27.599933, -48.508664 | Vel: 0.0 km/h | 014950 | 080626[0m
+[0;32mI (41496) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (41506) GPS_PARSER: 📍 Posição: -27.599932, -48.508665 | Vel: 0.0 km/h | 014951 | 080626[0m
+[0;32mI (41506) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (41696) GPS_PARSER: 📍 Posição: -27.599930, -48.508666 | Vel: 0.0 km/h | 014952 | 080626[0m
+[0;32mI (41696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (42706) GPS_PARSER: 📍 Posição: -27.599929, -48.508666 | Vel: 0.0 km/h | 014953 | 080626[0m
+[0;32mI (42706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (43706) GPS_PARSER: 📍 Posição: -27.599929, -48.508668 | Vel: 0.0 km/h | 014954 | 080626[0m
+[0;32mI (43706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (43706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599929,"longitude":-48.508668,"speed":0.0}[0m
+[0;32mI (44636) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (46406) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (46416) GPS_PARSER: 📍 Posição: -27.599928, -48.508669 | Vel: 0.0 km/h | 014955 | 080626[0m
+[0;32mI (46416) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (46426) GPS_PARSER: 📍 Posição: -27.599927, -48.508669 | Vel: 0.0 km/h | 014956 | 080626[0m
+[0;32mI (46426) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (46706) GPS_PARSER: 📍 Posição: -27.599927, -48.508670 | Vel: 0.0 km/h | 014957 | 080626[0m
+[0;32mI (46706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (47706) GPS_PARSER: 📍 Posição: -27.599926, -48.508671 | Vel: 0.0 km/h | 014958 | 080626[0m
+[0;32mI (47706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (48706) GPS_PARSER: 📍 Posição: -27.599926, -48.508672 | Vel: 0.0 km/h | 014959 | 080626[0m
+[0;32mI (48706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (48706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599926,"longitude":-48.508672,"speed":0.0}[0m
+[0;32mI (49856) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (52236) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (52256) GPS_PARSER: 📍 Posição: -27.599926, -48.508672 | Vel: 0.0 km/h | 015000 | 080626[0m
+[0;32mI (52256) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (52266) GPS_PARSER: 📍 Posição: -27.599926, -48.508673 | Vel: 0.0 km/h | 015001 | 080626[0m
+[0;32mI (52266) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (52386) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (52706) GPS_PARSER: 📍 Posição: -27.599925, -48.508675 | Vel: 0.0 km/h | 015003 | 080626[0m
+[0;32mI (52706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (53706) GPS_PARSER: 📍 Posição: -27.599925, -48.508676 | Vel: 0.0 km/h | 015004 | 080626[0m
+[0;32mI (53706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (53706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599925,"longitude":-48.508676,"speed":0.0}[0m
+[0;32mI (54466) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (56536) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (56556) GPS_PARSER: 📍 Posição: -27.599925, -48.508676 | Vel: 0.0 km/h | 015005 | 080626[0m
+[0;32mI (56556) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (56566) GPS_PARSER: 📍 Posição: -27.599925, -48.508677 | Vel: 0.0 km/h | 015006 | 080626[0m
+[0;32mI (56566) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (56696) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (57706) GPS_PARSER: 📍 Posição: -27.599926, -48.508679 | Vel: 0.0 km/h | 015008 | 080626[0m
+[0;32mI (57706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (58706) GPS_PARSER: 📍 Posição: -27.599926, -48.508680 | Vel: 0.0 km/h | 015009 | 080626[0m
+[0;32mI (58706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (58706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599926,"longitude":-48.508680,"speed":0.0}[0m
+[0;32mI (59686) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (61766) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (61776) GPS_PARSER: 📍 Posição: -27.599926, -48.508681 | Vel: 0.0 km/h | 015010 | 080626[0m
+[0;32mI (61776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (61786) GPS_PARSER: 📍 Posição: -27.599927, -48.508681 | Vel: 0.0 km/h | 015011 | 080626[0m
+[0;32mI (61786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (61906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (62706) GPS_PARSER: 📍 Posição: -27.599927, -48.508683 | Vel: 0.0 km/h | 015013 | 080626[0m
+[0;32mI (62706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (63706) GPS_PARSER: 📍 Posição: -27.599928, -48.508684 | Vel: 0.0 km/h | 015014 | 080626[0m
+[0;32mI (63706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (63706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599928,"longitude":-48.508684,"speed":0.0}[0m
+[0;32mI (64916) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (66986) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (66996) GPS_PARSER: 📍 Posição: -27.599928, -48.508685 | Vel: 0.0 km/h | 015015 | 080626[0m
+[0;32mI (66996) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (67006) GPS_PARSER: 📍 Posição: -27.599929, -48.508686 | Vel: 0.0 km/h | 015016 | 080626[0m
+[0;32mI (67006) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (67126) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (67606) GPS_PARSER: 📍 Posição: -27.599929, -48.508688 | Vel: 0.0 km/h | 015018 | 080626[0m
+[0;32mI (67606) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (68696) GPS_PARSER: 📍 Posição: -27.599929, -48.508689 | Vel: 0.0 km/h | 015019 | 080626[0m
+[0;32mI (68696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (69696) GPS_PARSER: 📍 Posição: -27.599930, -48.508690 | Vel: 0.0 km/h | 015020 | 080626[0m
+[0;32mI (69696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (69696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599930,"longitude":-48.508690,"speed":0.0}[0m
+[0;32mI (70766) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (72816) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (72836) GPS_PARSER: 📍 Posição: -27.599930, -48.508691 | Vel: 0.0 km/h | 015021 | 080626[0m
+[0;32mI (72836) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (72846) GPS_PARSER: 📍 Posição: -27.599931, -48.508692 | Vel: 0.0 km/h | 015022 | 080626[0m
+[0;32mI (72846) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (72976) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (73606) GPS_PARSER: 📍 Posição: -27.599931, -48.508694 | Vel: 0.0 km/h | 015024 | 080626[0m
+[0;32mI (73606) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (74716) GPS_PARSER: 📍 Posição: -27.599931, -48.508695 | Vel: 0.0 km/h | 015025 | 080626[0m
+[0;32mI (74716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (74716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599931,"longitude":-48.508695,"speed":0.0}[0m
+[0;32mI (75356) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (77116) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (77136) GPS_PARSER: 📍 Posição: -27.599932, -48.508695 | Vel: 0.0 km/h | 015026 | 080626[0m
+[0;32mI (77136) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (77276) GPS_PARSER: 📍 Posição: -27.599932, -48.508696 | Vel: 0.0 km/h | 015027 | 080626[0m
+[0;32mI (77276) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (77706) GPS_PARSER: 📍 Posição: -27.599932, -48.508697 | Vel: 0.0 km/h | 015028 | 080626[0m
+[0;32mI (77706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (78706) GPS_PARSER: 📍 Posição: -27.599932, -48.508698 | Vel: 0.0 km/h | 015029 | 080626[0m
+[0;32mI (78706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (79716) GPS_PARSER: 📍 Posição: -27.599932, -48.508698 | Vel: 0.0 km/h | 015030 | 080626[0m
+[0;32mI (79716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (79716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599932,"longitude":-48.508698,"speed":0.0}[0m
+[0;32mI (80886) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (82656) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (82666) GPS_PARSER: 📍 Posição: -27.599932, -48.508699 | Vel: 0.0 km/h | 015031 | 080626[0m
+[0;32mI (82666) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (82676) GPS_PARSER: 📍 Posição: -27.599932, -48.508699 | Vel: 0.0 km/h | 015032 | 080626[0m
+[0;32mI (82676) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (82796) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (83706) GPS_PARSER: 📍 Posição: -27.599932, -48.508701 | Vel: 0.0 km/h | 015034 | 080626[0m
+[0;32mI (83706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (84726) GPS_PARSER: 📍 Posição: -27.599929, -48.508702 | Vel: 0.6 km/h | 015035 | 080626[0m
+[0;32mI (84726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (84726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599929,"longitude":-48.508702,"speed":0.6}[0m
+[0;32mI (86006) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (88386) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (88406) GPS_PARSER: 📍 Posição: -27.599929, -48.508704 | Vel: 0.0 km/h | 015036 | 080626[0m
+[0;32mI (88406) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (88416) GPS_PARSER: 📍 Posição: -27.599929, -48.508705 | Vel: 0.0 km/h | 015037 | 080626[0m
+[0;32mI (88416) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (88536) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (88706) GPS_PARSER: 📍 Posição: -27.599928, -48.508708 | Vel: 0.0 km/h | 015039 | 080626[0m
+[0;32mI (88706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (89696) GPS_PARSER: 📍 Posição: -27.599927, -48.508708 | Vel: 0.0 km/h | 015040 | 080626[0m
+[0;32mI (89696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (90716) GPS_PARSER: 📍 Posição: -27.599927, -48.508709 | Vel: 0.0 km/h | 015041 | 080626[0m
+[0;32mI (90716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (90716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599927,"longitude":-48.508709,"speed":0.0}[0m
+[0;32mI (91846) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (93916) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (93926) GPS_PARSER: 📍 Posição: -27.599927, -48.508710 | Vel: 0.0 km/h | 015042 | 080626[0m
+[0;32mI (93926) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (93936) GPS_PARSER: 📍 Posição: -27.599926, -48.508711 | Vel: 0.0 km/h | 015043 | 080626[0m
+[0;32mI (93936) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (94106) GPS_PARSER: 📍 Posição: 48.508713, 150.750000 | Vel: 0.0 km/h | 015044 | [0m
+[0;32mI (94106) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (94696) GPS_PARSER: 📍 Posição: -27.599925, -48.508713 | Vel: 0.0 km/h | 015045 | 080626[0m
+[0;32mI (94696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (95706) GPS_PARSER: 📍 Posição: -27.599924, -48.508714 | Vel: 0.0 km/h | 015046 | 080626[0m
+[0;32mI (95706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (96696) GPS_PARSER: 📍 Posição: -27.599924, -48.508715 | Vel: 0.0 km/h | 015047 | 080626[0m
+[0;32mI (96696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (96696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599924,"longitude":-48.508715,"speed":0.0}[0m
+[0;32mI (97376) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (99136) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (99156) GPS_PARSER: 📍 Posição: -27.599923, -48.508716 | Vel: 0.0 km/h | 015048 | 080626[0m
+[0;32mI (99156) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (99286) GPS_PARSER: 📍 Posição: -27.599923, -48.508717 | Vel: 0.0 km/h | 015049 | 080626[0m
+[0;32mI (99286) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (99726) GPS_PARSER: 📍 Posição: -27.599922, -48.508717 | Vel: 0.0 km/h | 015050 | 080626[0m
+[0;32mI (99726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (100706) GPS_PARSER: 📍 Posição: -27.599922, -48.508719 | Vel: 0.0 km/h | 015051 | 080626[0m
+[0;32mI (100706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (101696) GPS_PARSER: 📍 Posição: -27.599922, -48.508720 | Vel: 0.0 km/h | 015052 | 080626[0m
+[0;32mI (101696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (101696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599922,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (102906) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (104666) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (104676) GPS_PARSER: 📍 Posição: -27.599922, -48.508721 | Vel: 0.0 km/h | 015053 | 080626[0m
+[0;32mI (104676) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (104686) GPS_PARSER: 📍 Posição: -27.599921, -48.508722 | Vel: 0.0 km/h | 015054 | 080626[0m
+[0;32mI (104686) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (104806) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (105706) GPS_PARSER: 📍 Posição: -27.599921, -48.508724 | Vel: 0.0 km/h | 015056 | 080626[0m
+[0;32mI (105706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (106706) GPS_PARSER: 📍 Posição: -27.599921, -48.508724 | Vel: 0.0 km/h | 015057 | 080626[0m
+[0;32mI (106706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (106706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599921,"longitude":-48.508724,"speed":0.0}[0m
+[0;32mI (107506) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (109586) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (109606) GPS_PARSER: 📍 Posição: -27.599921, -48.508725 | Vel: 0.0 km/h | 015058 | 080626[0m
+[0;32mI (109606) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (109616) GPS_PARSER: 📍 Posição: -27.599921, -48.508726 | Vel: 0.0 km/h | 015059 | 080626[0m
+[0;32mI (109616) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (109736) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (110706) GPS_PARSER: 📍 Posição: -27.599920, -48.508727 | Vel: 0.0 km/h | 015101 | 080626[0m
+[0;32mI (110706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (111696) GPS_PARSER: 📍 Posição: -27.599920, -48.508728 | Vel: 0.0 km/h | 015102 | 080626[0m
+[0;32mI (111696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (112696) GPS_PARSER: 📍 Posição: -27.599919, -48.508728 | Vel: 0.0 km/h | 015103 | 080626[0m
+[0;32mI (112696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (112696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599919,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (113346) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (115416) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (115436) GPS_PARSER: 📍 Posição: -27.599919, -48.508728 | Vel: 0.0 km/h | 015104 | 080626[0m
+[0;32mI (115436) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (115446) GPS_PARSER: 📍 Posição: -27.599918, -48.508728 | Vel: 0.0 km/h | 015105 | 080626[0m
+[0;32mI (115446) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (115696) GPS_PARSER: 📍 Posição: -27.599918, -48.508728 | Vel: 0.0 km/h | 015106 | 080626[0m
+[0;32mI (115696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (116706) GPS_PARSER: 📍 Posição: -27.599918, -48.508728 | Vel: 0.0 km/h | 015107 | 080626[0m
+[0;32mI (116706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (117706) GPS_PARSER: 📍 Posição: -27.599917, -48.508728 | Vel: 0.0 km/h | 015108 | 080626[0m
+[0;32mI (117706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (117706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599917,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (118876) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (120876) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (120896) GPS_PARSER: 📍 Posição: -27.599917, -48.508728 | Vel: 0.0 km/h | 015109 | 080626[0m
+[0;32mI (120896) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (120906) GPS_PARSER: 📍 Posição: -27.599917, -48.508728 | Vel: 0.0 km/h | 015110 | 080626[0m
+[0;32mI (120906) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (121116) GPS_PARSER: 📍 Posição: 48.508728, 151.200000 | Vel: 0.0 km/h | 015111 | [0m
+[0;32mI (121116) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (121696) GPS_PARSER: 📍 Posição: -27.599917, -48.508728 | Vel: 0.0 km/h | 015112 | 080626[0m
+[0;32mI (121696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (122696) GPS_PARSER: 📍 Posição: -27.599917, -48.508727 | Vel: 0.0 km/h | 015113 | 080626[0m
+[0;32mI (122696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (123696) GPS_PARSER: 📍 Posição: -27.599916, -48.508727 | Vel: 0.0 km/h | 015114 | 080626[0m
+[0;32mI (123696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (123696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599916,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (124406) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (126476) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (126496) GPS_PARSER: 📍 Posição: -27.599916, -48.508727 | Vel: 0.0 km/h | 015115 | 080626[0m
+[0;32mI (126496) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (126506) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015116 | 080626[0m
+[0;32mI (126506) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (126706) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015117 | 080626[0m
+[0;32mI (126706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (127696) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015118 | 080626[0m
+[0;32mI (127696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (128696) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015119 | 080626[0m
+[0;32mI (128696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (128696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599915,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (129626) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (131696) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (131716) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015120 | 080626[0m
+[0;32mI (131716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (131726) GPS_PARSER: 📍 Posição: -27.599916, -48.508727 | Vel: 0.8 km/h | 015121 | 080626[0m
+[0;32mI (131726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (131846) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (132696) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015123 | 080626[0m
+[0;32mI (132696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (133696) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015124 | 080626[0m
+[0;32mI (133696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (133696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599915,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (134546) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (136306) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (136326) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015125 | 080626[0m
+[0;32mI (136326) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (136426) GPS_PARSER: 📍 Posição: -27.599915, -48.508727 | Vel: 0.0 km/h | 015126 | 080626[0m
+[0;32mI (136426) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (136706) GPS_PARSER: 📍 Posição: -27.599915, -48.508728 | Vel: 0.0 km/h | 015127 | 080626[0m
+[0;32mI (136706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (137696) GPS_PARSER: 📍 Posição: -27.599915, -48.508728 | Vel: 0.0 km/h | 015128 | 080626[0m
+[0;32mI (137696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (138696) GPS_PARSER: 📍 Posição: -27.599915, -48.508728 | Vel: 0.0 km/h | 015129 | 080626[0m
+[0;32mI (138696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (138696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599915,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (139456) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (141836) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (141856) GPS_PARSER: 📍 Posição: -27.599915, -48.508728 | Vel: 0.0 km/h | 015130 | 080626[0m
+[0;32mI (141856) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (141866) GPS_PARSER: 📍 Posição: -27.599915, -48.508728 | Vel: 0.0 km/h | 015131 | 080626[0m
+[0;32mI (141866) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (141986) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (142696) GPS_PARSER: 📍 Posição: -27.599914, -48.508728 | Vel: 0.0 km/h | 015133 | 080626[0m
+[0;32mI (142696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (143696) GPS_PARSER: 📍 Posição: -27.599914, -48.508728 | Vel: 0.0 km/h | 015134 | 080626[0m
+[0;32mI (143696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (143696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599914,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (144376) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (146756) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (146776) GPS_PARSER: 📍 Posição: -27.599914, -48.508728 | Vel: 0.0 km/h | 015135 | 080626[0m
+[0;32mI (146776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (146786) GPS_PARSER: 📍 Posição: -27.599914, -48.508728 | Vel: 0.0 km/h | 015136 | 080626[0m
+[0;32mI (146786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (146906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (147706) GPS_PARSER: 📍 Posição: -27.599913, -48.508729 | Vel: 0.0 km/h | 015138 | 080626[0m
+[0;32mI (147706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (148706) GPS_PARSER: 📍 Posição: -27.599912, -48.508729 | Vel: 0.0 km/h | 015139 | 080626[0m
+[0;32mI (148706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (148706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599912,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (149596) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (151366) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (151386) GPS_PARSER: 📍 Posição: -27.599912, -48.508729 | Vel: 0.0 km/h | 015140 | 080626[0m
+[0;32mI (151386) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (151416) GPS_PARSER: 📍 Posição: -27.599912, -48.508729 | Vel: 0.0 km/h | 015141 | 080626[0m
+[0;32mI (151416) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (151706) GPS_PARSER: 📍 Posição: -27.599911, -48.508729 | Vel: 0.0 km/h | 015142 | 080626[0m
+[0;32mI (151706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (152696) GPS_PARSER: 📍 Posição: -27.599911, -48.508729 | Vel: 0.0 km/h | 015143 | 080626[0m
+[0;32mI (152696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (153706) GPS_PARSER: 📍 Posição: -27.599911, -48.508729 | Vel: 0.0 km/h | 015144 | 080626[0m
+[0;32mI (153706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (153706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599911,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (154816) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (157206) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (157216) GPS_PARSER: 📍 Posição: -27.599911, -48.508729 | Vel: 0.0 km/h | 015145 | 080626[0m
+[0;32mI (157216) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (157226) GPS_PARSER: 📍 Posição: -27.599910, -48.508729 | Vel: 0.0 km/h | 015146 | 080626[0m
+[0;32mI (157226) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (157386) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (157706) GPS_PARSER: 📍 Posição: -27.599910, -48.508729 | Vel: 0.0 km/h | 015148 | 080626[0m
+[0;32mI (157706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (158706) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015149 | 080626[0m
+[0;32mI (158706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (158706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508730,"speed":0.0}[0m
+[0;32mI (159426) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (161536) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (161546) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015150 | 080626[0m
+[0;32mI (161546) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (161556) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015151 | 080626[0m
+[0;32mI (161556) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (161696) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015152 | 080626[0m
+[0;32mI (161696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (162706) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015153 | 080626[0m
+[0;32mI (162706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (163706) GPS_PARSER: 📍 Posição: -27.599910, -48.508730 | Vel: 0.0 km/h | 015154 | 080626[0m
+[0;32mI (163706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (163706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508730,"speed":0.0}[0m
+[0;32mI (164966) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (166726) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (166736) GPS_PARSER: 📍 Posição: -27.599910, -48.508731 | Vel: 0.0 km/h | 015155 | 080626[0m
+[0;32mI (166736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (166746) GPS_PARSER: 📍 Posição: -27.599910, -48.508731 | Vel: 0.0 km/h | 015156 | 080626[0m
+[0;32mI (166746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (166866) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (167716) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015158 | 080626[0m
+[0;32mI (167716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (168716) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015159 | 080626[0m
+[0;32mI (168716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (168716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508732,"speed":0.0}[0m
+[0;32mI (169866) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (172256) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (172276) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015200 | 080626[0m
+[0;32mI (172276) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (172286) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015201 | 080626[0m
+[0;32mI (172286) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (172406) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (172726) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015203 | 080626[0m
+[0;32mI (172726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (173716) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015204 | 080626[0m
+[0;32mI (173716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (173716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508732,"speed":0.0}[0m
+[0;32mI (174786) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (176866) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (176876) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015205 | 080626[0m
+[0;32mI (176876) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (176886) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015206 | 080626[0m
+[0;32mI (176886) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (177006) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (177616) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015208 | 080626[0m
+[0;32mI (177616) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (178716) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015209 | 080626[0m
+[0;32mI (178716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (178716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508732,"speed":0.0}[0m
+[0;32mI (180016) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (182086) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (182096) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015210 | 080626[0m
+[0;32mI (182096) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (182106) GPS_PARSER: 📍 Posição: -27.599910, -48.508732 | Vel: 0.0 km/h | 015211 | 080626[0m
+[0;32mI (182106) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (182256) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (182716) GPS_PARSER: 📍 Posição: -27.599910, -48.508733 | Vel: 0.0 km/h | 015213 | 080626[0m
+[0;32mI (182716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (183716) GPS_PARSER: 📍 Posição: -27.599910, -48.508733 | Vel: 0.0 km/h | 015214 | 080626[0m
+[0;32mI (183716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (183716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599910,"longitude":-48.508733,"speed":0.0}[0m
+[0;32mI (184936) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (187306) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (187326) GPS_PARSER: 📍 Posição: -27.599910, -48.508733 | Vel: 0.0 km/h | 015215 | 080626[0m
+[0;32mI (187326) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (187336) GPS_PARSER: 📍 Posição: -27.599910, -48.508733 | Vel: 0.0 km/h | 015216 | 080626[0m
+[0;32mI (187336) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (187526) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (187716) GPS_PARSER: 📍 Posição: -27.599910, -48.508733 | Vel: 0.0 km/h | 015218 | 080626[0m
+[0;32mI (187716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (188726) GPS_PARSER: 📍 Posição: -27.599907, -48.508733 | Vel: 1.3 km/h | 015219 | 080626[0m
+[0;32mI (188726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (188726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599907,"longitude":-48.508733,"speed":1.3}[0m
+[0;32mI (189536) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (191606) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (191616) GPS_PARSER: 📍 Posição: -27.599904, -48.508729 | Vel: 2.2 km/h | 015220 | 080626[0m
+[0;32mI (191616) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (191626) GPS_PARSER: 📍 Posição: -27.599905, -48.508729 | Vel: 0.0 km/h | 015221 | 080626[0m
+[0;32mI (191626) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (191746) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (192706) GPS_PARSER: 📍 Posição: -27.599906, -48.508729 | Vel: 0.0 km/h | 015223 | 080626[0m
+[0;32mI (192706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (193706) GPS_PARSER: 📍 Posição: -27.599906, -48.508729 | Vel: 0.0 km/h | 015224 | 080626[0m
+[0;32mI (193706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (194706) GPS_PARSER: 📍 Posição: -27.599906, -48.508729 | Vel: 0.0 km/h | 015225 | 080626[0m
+[0;32mI (194706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (194706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599906,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (195996) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (197746) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (197766) GPS_PARSER: 📍 Posição: -27.599906, -48.508729 | Vel: 0.0 km/h | 015226 | 080626[0m
+[0;32mI (197766) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (197776) GPS_PARSER: 📍 Posição: -27.599907, -48.508730 | Vel: 0.0 km/h | 015227 | 080626[0m
+[0;32mI (197776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (197896) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (198716) GPS_PARSER: 📍 Posição: -27.599907, -48.508730 | Vel: 0.0 km/h | 015229 | 080626[0m
+[0;32mI (198716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (199706) GPS_PARSER: 📍 Posição: -27.599908, -48.508730 | Vel: 0.0 km/h | 015230 | 080626[0m
+[0;32mI (199706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (199706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599908,"longitude":-48.508730,"speed":0.0}[0m
+[0;32mI (200596) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (202966) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (202986) GPS_PARSER: 📍 Posição: -27.599908, -48.508729 | Vel: 0.0 km/h | 015231 | 080626[0m
+[0;32mI (202986) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (202996) GPS_PARSER: 📍 Posição: -27.599908, -48.508729 | Vel: 0.0 km/h | 015232 | 080626[0m
+[0;32mI (202996) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (203116) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (203706) GPS_PARSER: 📍 Posição: -27.599908, -48.508728 | Vel: 0.0 km/h | 015234 | 080626[0m
+[0;32mI (203706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (204716) GPS_PARSER: 📍 Posição: -27.599909, -48.508727 | Vel: 0.0 km/h | 015235 | 080626[0m
+[0;32mI (204716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (204716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599909,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (205826) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (208196) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (208216) GPS_PARSER: 📍 Posição: -27.599909, -48.508727 | Vel: 0.0 km/h | 015236 | 080626[0m
+[0;32mI (208216) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (208226) GPS_PARSER: 📍 Posição: -27.599909, -48.508727 | Vel: 0.0 km/h | 015237 | 080626[0m
+[0;32mI (208226) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (208396) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (208716) GPS_PARSER: 📍 Posição: -27.599909, -48.508726 | Vel: 0.0 km/h | 015239 | 080626[0m
+[0;32mI (208716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (209726) GPS_PARSER: 📍 Posição: -27.599909, -48.508726 | Vel: 0.0 km/h | 015240 | 080626[0m
+[0;32mI (209726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (209726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599909,"longitude":-48.508726,"speed":0.0}[0m
+[0;32mI (211036) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (212806) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (212816) GPS_PARSER: 📍 Posição: -27.599910, -48.508727 | Vel: 0.0 km/h | 015241 | 080626[0m
+[0;32mI (212816) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (212826) GPS_PARSER: 📍 Posição: -27.599910, -48.508727 | Vel: 0.0 km/h | 015242 | 080626[0m
+[0;32mI (212826) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (212946) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (213736) GPS_PARSER: 📍 Posição: -27.599911, -48.508727 | Vel: 0.0 km/h | 015244 | 080626[0m
+[0;32mI (213736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (214716) GPS_PARSER: 📍 Posição: -27.599911, -48.508728 | Vel: 0.0 km/h | 015245 | 080626[0m
+[0;32mI (214716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (215716) GPS_PARSER: 📍 Posição: -27.599911, -48.508728 | Vel: 0.0 km/h | 015246 | 080626[0m
+[0;32mI (215716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (215716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599911,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (217186) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (219556) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (219576) GPS_PARSER: 📍 Posição: -27.599912, -48.508729 | Vel: 0.0 km/h | 015247 | 080626[0m
+[0;32mI (219576) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (219586) GPS_PARSER: 📍 Posição: -27.599912, -48.508729 | Vel: 0.0 km/h | 015248 | 080626[0m
+[0;32mI (219586) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (219706) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (220716) GPS_PARSER: 📍 Posição: -27.599914, -48.508729 | Vel: 0.0 km/h | 015251 | 080626[0m
+[0;32mI (220716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (220716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599914,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (221516) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (223556) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (223566) GPS_PARSER: 📍 Posição: -27.599914, -48.508729 | Vel: 0.0 km/h | 015252 | 080626[0m
+[0;32mI (223566) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (223576) GPS_PARSER: 📍 Posição: -27.599915, -48.508729 | Vel: 0.0 km/h | 015253 | 080626[0m
+[0;32mI (223576) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (223706) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (224716) GPS_PARSER: 📍 Posição: -27.599916, -48.508727 | Vel: 0.9 km/h | 015255 | 080626[0m
+[0;32mI (224716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (225706) GPS_PARSER: 📍 Posição: -27.599916, -48.508727 | Vel: 0.0 km/h | 015256 | 080626[0m
+[0;32mI (225706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (226716) GPS_PARSER: 📍 Posição: -27.599917, -48.508727 | Vel: 0.0 km/h | 015257 | 080626[0m
+[0;32mI (226716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (226716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599917,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (227656) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (229696) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (229716) GPS_PARSER: 📍 Posição: -27.599918, -48.508728 | Vel: 0.0 km/h | 015258 | 080626[0m
+[0;32mI (229716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (229726) GPS_PARSER: 📍 Posição: -27.599918, -48.508728 | Vel: 0.0 km/h | 015259 | 080626[0m
+[0;32mI (229726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (229846) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (230716) GPS_PARSER: 📍 Posição: -27.599919, -48.508729 | Vel: 0.0 km/h | 015301 | 080626[0m
+[0;32mI (230716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (231706) GPS_PARSER: 📍 Posição: -27.599920, -48.508729 | Vel: 0.0 km/h | 015302 | 080626[0m
+[0;32mI (231706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (232706) GPS_PARSER: 📍 Posição: -27.599920, -48.508729 | Vel: 0.0 km/h | 015303 | 080626[0m
+[0;32mI (232706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (232706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599920,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (233466) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (235226) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (235236) GPS_PARSER: 📍 Posição: -27.599921, -48.508729 | Vel: 0.0 km/h | 015304 | 080626[0m
+[0;32mI (235236) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (235406) GPS_PARSER: 📍 Posição: -27.599922, -48.508730 | Vel: 0.0 km/h | 015305 | 080626[0m
+[0;32mI (235406) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (235716) GPS_PARSER: 📍 Posição: -27.599923, -48.508730 | Vel: 0.0 km/h | 015306 | 080626[0m
+[0;32mI (235716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (236706) GPS_PARSER: 📍 Posição: -27.599924, -48.508731 | Vel: 0.0 km/h | 015307 | 080626[0m
+[0;32mI (236706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (237696) GPS_PARSER: 📍 Posição: -27.599924, -48.508731 | Vel: 0.0 km/h | 015308 | 080626[0m
+[0;32mI (237696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (238696) GPS_PARSER: 📍 Posição: -27.599924, -48.508731 | Vel: 0.0 km/h | 015309 | 080626[0m
+[0;32mI (238696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (238696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599924,"longitude":-48.508731,"speed":0.0}[0m
+[0;32mI (239916) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (242286) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (242306) GPS_PARSER: 📍 Posição: -27.599927, -48.508730 | Vel: 1.1 km/h | 015310 | 080626[0m
+[0;32mI (242306) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (242316) GPS_PARSER: 📍 Posição: -27.599929, -48.508730 | Vel: 0.7 km/h | 015311 | 080626[0m
+[0;32mI (242316) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (242526) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (242706) GPS_PARSER: 📍 Posição: -27.599929, -48.508729 | Vel: 0.0 km/h | 015313 | 080626[0m
+[0;32mI (242706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (243706) GPS_PARSER: 📍 Posição: -27.599930, -48.508729 | Vel: 0.0 km/h | 015314 | 080626[0m
+[0;32mI (243706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (243706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599930,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (244826) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (247516) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (247526) GPS_PARSER: 📍 Posição: -27.599930, -48.508729 | Vel: 0.0 km/h | 015315 | 080626[0m
+[0;32mI (247526) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (247536) GPS_PARSER: 📍 Posição: -27.599935, -48.508729 | Vel: 2.1 km/h | 015316 | 080626[0m
+[0;32mI (247536) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (247706) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (248716) GPS_PARSER: 📍 Posição: -27.599934, -48.508727 | Vel: 0.0 km/h | 015319 | 080626[0m
+[0;32mI (248716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (248716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599934,"longitude":-48.508727,"speed":0.0}[0m
+[0;32mI (249436) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (251196) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (251216) GPS_PARSER: 📍 Posição: -27.599934, -48.508727 | Vel: 0.0 km/h | 015320 | 080626[0m
+[0;32mI (251216) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (251396) GPS_PARSER: 📍 Posição: -27.599934, -48.508727 | Vel: 0.0 km/h | 015321 | 080626[0m
+[0;32mI (251396) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (251716) GPS_PARSER: 📍 Posição: -27.599935, -48.508726 | Vel: 0.0 km/h | 015322 | 080626[0m
+[0;32mI (251716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (252716) GPS_PARSER: 📍 Posição: -27.599935, -48.508726 | Vel: 0.0 km/h | 015323 | 080626[0m
+[0;32mI (252716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (253716) GPS_PARSER: 📍 Posição: -27.599935, -48.508726 | Vel: 0.0 km/h | 015324 | 080626[0m
+[0;32mI (253716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (253716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599935,"longitude":-48.508726,"speed":0.0}[0m
+[0;32mI (254356) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (256426) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (256436) GPS_PARSER: 📍 Posição: -27.599936, -48.508725 | Vel: 0.0 km/h | 015325 | 080626[0m
+[0;32mI (256436) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (256446) GPS_PARSER: 📍 Posição: -27.599936, -48.508725 | Vel: 0.0 km/h | 015326 | 080626[0m
+[0;32mI (256446) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (256726) GPS_PARSER: 📍 Posição: -27.599931, -48.508724 | Vel: 2.2 km/h | 015327 | 080626[0m
+[0;32mI (256726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (257736) GPS_PARSER: 📍 Posição: -27.599928, -48.508720 | Vel: 3.1 km/h | 015328 | 080626[0m
+[0;32mI (257736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (258726) GPS_PARSER: 📍 Posição: -27.599929, -48.508719 | Vel: 0.0 km/h | 015329 | 080626[0m
+[0;32mI (258726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (258726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599929,"longitude":-48.508719,"speed":0.0}[0m
+[0;32mI (259886) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (262876) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (262886) GPS_PARSER: 📍 Posição: -27.599930, -48.508718 | Vel: 0.0 km/h | 015330 | 080626[0m
+[0;32mI (262886) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (262896) GPS_PARSER: 📍 Posição: -27.599931, -48.508718 | Vel: 0.0 km/h | 015331 | 080626[0m
+[0;32mI (262896) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (263016) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (263636) GPS_PARSER: 📍 Posição: -27.599936, -48.508714 | Vel: 0.4 km/h | 015334 | 080626[0m
+[0;32mI (263636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (264726) GPS_PARSER: 📍 Posição: -27.599935, -48.508714 | Vel: 0.5 km/h | 015335 | 080626[0m
+[0;32mI (264726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (264726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599935,"longitude":-48.508714,"speed":0.5}[0m
+[0;32mI (265406) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (267786) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (267806) GPS_PARSER: 📍 Posição: -27.599936, -48.508714 | Vel: 0.0 km/h | 015336 | 080626[0m
+[0;32mI (267806) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (267816) GPS_PARSER: 📍 Posição: -27.599938, -48.508715 | Vel: 0.0 km/h | 015337 | 080626[0m
+[0;32mI (267816) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (267986) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (268706) GPS_PARSER: 📍 Posição: -27.599941, -48.508716 | Vel: 0.0 km/h | 015339 | 080626[0m
+[0;32mI (268706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (269706) GPS_PARSER: 📍 Posição: -27.599942, -48.508717 | Vel: 0.0 km/h | 015340 | 080626[0m
+[0;32mI (269706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (270706) GPS_PARSER: 📍 Posição: -27.599944, -48.508717 | Vel: 0.0 km/h | 015341 | 080626[0m
+[0;32mI (270706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (270706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599944,"longitude":-48.508717,"speed":0.0}[0m
+[0;32mI (271866) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (273626) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (273646) GPS_PARSER: 📍 Posição: -27.599945, -48.508717 | Vel: 0.0 km/h | 015342 | 080626[0m
+[0;32mI (273646) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (273656) GPS_PARSER: 📍 Posição: -27.599947, -48.508717 | Vel: 0.0 km/h | 015343 | 080626[0m
+[0;32mI (273656) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (273776) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (274706) GPS_PARSER: 📍 Posição: -27.599950, -48.508718 | Vel: 0.0 km/h | 015345 | 080626[0m
+[0;32mI (274706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (275706) GPS_PARSER: 📍 Posição: -27.599950, -48.508718 | Vel: 0.0 km/h | 015346 | 080626[0m
+[0;32mI (275706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (275706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599950,"longitude":-48.508718,"speed":0.0}[0m
+[0;32mI (276466) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (278536) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (278556) GPS_PARSER: 📍 Posição: -27.599951, -48.508719 | Vel: 0.0 km/h | 015347 | 080626[0m
+[0;32mI (278556) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (278566) GPS_PARSER: 📍 Posição: -27.599953, -48.508719 | Vel: 0.0 km/h | 015348 | 080626[0m
+[0;32mI (278566) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (278706) GPS_PARSER: 📍 Posição: -27.599954, -48.508719 | Vel: 0.0 km/h | 015349 | 080626[0m
+[0;32mI (278706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (279706) GPS_PARSER: 📍 Posição: -27.599955, -48.508719 | Vel: 0.0 km/h | 015350 | 080626[0m
+[0;32mI (279706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (280706) GPS_PARSER: 📍 Posição: -27.599956, -48.508719 | Vel: 0.0 km/h | 015351 | 080626[0m
+[0;32mI (280706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (280706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599956,"longitude":-48.508719,"speed":0.0}[0m
+[0;32mI (281696) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (283766) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (283776) GPS_PARSER: 📍 Posição: -27.599957, -48.508719 | Vel: 0.0 km/h | 015352 | 080626[0m
+[0;32mI (283776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (283786) GPS_PARSER: 📍 Posição: -27.599959, -48.508718 | Vel: 0.0 km/h | 015353 | 080626[0m
+[0;32mI (283786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (283906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (284706) GPS_PARSER: 📍 Posição: -27.599962, -48.508716 | Vel: 0.0 km/h | 015355 | 080626[0m
+[0;32mI (284706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (285696) GPS_PARSER: 📍 Posição: -27.599963, -48.508714 | Vel: 0.0 km/h | 015356 | 080626[0m
+[0;32mI (285696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (286686) GPS_PARSER: 📍 Posição: -27.599964, -48.508714 | Vel: 0.0 km/h | 015357 | 080626[0m
+[0;32mI (286686) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (286686) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599964,"longitude":-48.508714,"speed":0.0}[0m
+[0;32mI (287836) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (289596) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (289616) GPS_PARSER: 📍 Posição: -27.599965, -48.508713 | Vel: 0.0 km/h | 015358 | 080626[0m
+[0;32mI (289616) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (289626) GPS_PARSER: 📍 Posição: -27.599966, -48.508712 | Vel: 0.0 km/h | 015359 | 080626[0m
+[0;32mI (289626) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (289746) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (290706) GPS_PARSER: 📍 Posição: -27.599967, -48.508711 | Vel: 0.0 km/h | 015401 | 080626[0m
+[0;32mI (290706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (291706) GPS_PARSER: 📍 Posição: -27.599968, -48.508711 | Vel: 0.0 km/h | 015402 | 080626[0m
+[0;32mI (291706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (291706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599968,"longitude":-48.508711,"speed":0.0}[0m
+[0;32mI (292446) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (294826) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (294836) GPS_PARSER: 📍 Posição: -27.599968, -48.508711 | Vel: 0.0 km/h | 015403 | 080626[0m
+[0;32mI (294836) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (294846) GPS_PARSER: 📍 Posição: -27.599969, -48.508711 | Vel: 0.0 km/h | 015404 | 080626[0m
+[0;32mI (294846) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (295016) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (295636) GPS_PARSER: 📍 Posição: -27.599963, -48.508714 | Vel: 2.3 km/h | 015406 | 080626[0m
+[0;32mI (295636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (296726) GPS_PARSER: 📍 Posição: -27.599960, -48.508717 | Vel: 1.4 km/h | 015407 | 080626[0m
+[0;32mI (296726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (296726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599960,"longitude":-48.508717,"speed":1.4}[0m
+[0;32mI (297366) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (299736) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (299756) GPS_PARSER: 📍 Posição: -27.599959, -48.508718 | Vel: 0.5 km/h | 015408 | 080626[0m
+[0;32mI (299756) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (299766) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015409 | 080626[0m
+[0;32mI (299766) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (299886) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (300716) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015411 | 080626[0m
+[0;32mI (300716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (301716) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015412 | 080626[0m
+[0;32mI (301716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (302716) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015413 | 080626[0m
+[0;32mI (302716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (302716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599960,"longitude":-48.508718,"speed":0.0}[0m
+[0;32mI (303806) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (306186) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (306206) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015414 | 080626[0m
+[0;32mI (306206) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (306216) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015415 | 080626[0m
+[0;32mI (306216) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (306406) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (306726) GPS_PARSER: 📍 Posição: -27.599959, -48.508718 | Vel: 0.0 km/h | 015417 | 080626[0m
+[0;32mI (306726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (307736) GPS_PARSER: 📍 Posição: -27.599959, -48.508718 | Vel: 0.0 km/h | 015418 | 080626[0m
+[0;32mI (307736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (307736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599959,"longitude":-48.508718,"speed":0.0}[0m
+[0;32mI (308726) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (310796) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (310816) GPS_PARSER: 📍 Posição: -27.599959, -48.508719 | Vel: 0.0 km/h | 015419 | 080626[0m
+[0;32mI (310816) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (310826) GPS_PARSER: 📍 Posição: -27.599959, -48.508719 | Vel: 0.0 km/h | 015420 | 080626[0m
+[0;32mI (310826) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (310986) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (311706) GPS_PARSER: 📍 Posição: -27.599959, -48.508719 | Vel: 0.0 km/h | 015422 | 080626[0m
+[0;32mI (311706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (312706) GPS_PARSER: 📍 Posição: -27.599959, -48.508719 | Vel: 0.0 km/h | 015423 | 080626[0m
+[0;32mI (312706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (313706) GPS_PARSER: 📍 Posição: -27.599959, -48.508719 | Vel: 0.0 km/h | 015424 | 080626[0m
+[0;32mI (313706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (313706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599959,"longitude":-48.508719,"speed":0.0}[0m
+[0;32mI (314566) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (316326) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (316346) GPS_PARSER: 📍 Posição: -27.599959, -48.508720 | Vel: 0.0 km/h | 015425 | 080626[0m
+[0;32mI (316346) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (316426) GPS_PARSER: 📍 Posição: -27.599959, -48.508720 | Vel: 0.0 km/h | 015426 | 080626[0m
+[0;32mI (316436) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (316716) GPS_PARSER: 📍 Posição: -27.599959, -48.508720 | Vel: 0.0 km/h | 015427 | 080626[0m
+[0;32mI (316716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (317716) GPS_PARSER: 📍 Posição: -27.599959, -48.508720 | Vel: 0.0 km/h | 015428 | 080626[0m
+[0;32mI (317716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (318706) GPS_PARSER: 📍 Posição: -27.599959, -48.508721 | Vel: 0.0 km/h | 015429 | 080626[0m
+[0;32mI (318706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (318706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599959,"longitude":-48.508721,"speed":0.0}[0m
+[0;32mI (319476) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (321546) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (321566) GPS_PARSER: 📍 Posição: -27.599959, -48.508721 | Vel: 0.0 km/h | 015430 | 080626[0m
+[0;32mI (321566) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (321576) GPS_PARSER: 📍 Posição: -27.599959, -48.508721 | Vel: 0.0 km/h | 015431 | 080626[0m
+[0;32mI (321576) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (321706) GPS_PARSER: 📍 Posição: -27.599959, -48.508721 | Vel: 0.0 km/h | 015432 | 080626[0m
+[0;32mI (321706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (322716) GPS_PARSER: 📍 Posição: -27.599959, -48.508722 | Vel: 0.0 km/h | 015433 | 080626[0m
+[0;32mI (322716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (323716) GPS_PARSER: 📍 Posição: -27.599959, -48.508722 | Vel: 0.0 km/h | 015434 | 080626[0m
+[0;32mI (323716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (323716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599959,"longitude":-48.508722,"speed":0.0}[0m
+[0;32mI (324396) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (326766) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (326786) GPS_PARSER: 📍 Posição: -27.599959, -48.508723 | Vel: 0.0 km/h | 015435 | 080626[0m
+[0;32mI (326786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (326796) GPS_PARSER: 📍 Posição: -27.599959, -48.508723 | Vel: 0.0 km/h | 015436 | 080626[0m
+[0;32mI (326796) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (326916) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (327716) GPS_PARSER: 📍 Posição: -27.599959, -48.508723 | Vel: 0.0 km/h | 015438 | 080626[0m
+[0;32mI (327716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (328726) GPS_PARSER: 📍 Posição: -27.599961, -48.508723 | Vel: 1.0 km/h | 015439 | 080626[0m
+[0;32mI (328726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (328726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599961,"longitude":-48.508723,"speed":1.0}[0m
+[0;32mI (329916) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (331996) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (332006) GPS_PARSER: 📍 Posição: -27.599961, -48.508723 | Vel: 0.0 km/h | 015440 | 080626[0m
+[0;32mI (332006) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (332016) GPS_PARSER: 📍 Posição: -27.599961, -48.508723 | Vel: 0.1 km/h | 015441 | 080626[0m
+[0;32mI (332016) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (332136) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (332716) GPS_PARSER: 📍 Posição: -27.599958, -48.508720 | Vel: 0.9 km/h | 015443 | 080626[0m
+[0;32mI (332716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (333716) GPS_PARSER: 📍 Posição: -27.599958, -48.508720 | Vel: 0.0 km/h | 015444 | 080626[0m
+[0;32mI (333716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (334706) GPS_PARSER: 📍 Posição: -27.599958, -48.508720 | Vel: 0.0 km/h | 015445 | 080626[0m
+[0;32mI (334706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (334706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599958,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (335446) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (337526) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (337536) GPS_PARSER: 📍 Posição: -27.599958, -48.508720 | Vel: 0.0 km/h | 015446 | 080626[0m
+[0;32mI (337536) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (337546) GPS_PARSER: 📍 Posição: -27.599958, -48.508720 | Vel: 0.0 km/h | 015447 | 080626[0m
+[0;32mI (337546) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (337706) GPS_PARSER: 📍 Posição: -27.599958, -48.508719 | Vel: 0.0 km/h | 015448 | 080626[0m
+[0;32mI (337706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (338696) GPS_PARSER: 📍 Posição: -27.599957, -48.508719 | Vel: 0.0 km/h | 015449 | 080626[0m
+[0;32mI (338696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (339706) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015450 | 080626[0m
+[0;32mI (339706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (339706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599957,"longitude":-48.508718,"speed":0.0}[0m
+[0;32mI (340976) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (342746) GPS_PARSER: ⚠️ AWS respondeu com código: 405[0m
+[0;32mI (342766) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015451 | 080626[0m
+[0;32mI (342766) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (342776) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015452 | 080626[0m
+[0;32mI (342776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (342896) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (343716) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015454 | 080626[0m
+[0;32mI (343716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (344706) GPS_PARSER: 📍 Posição: -27.599956, -48.508717 | Vel: 0.0 km/h | 015455 | 080626[0m
+[0;32mI (344706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (344706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599956,"longitude":-48.508717,"speed":0.0}[0m
+[0;32mI (345596) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (349506) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (349526) GPS_PARSER: 📍 Posição: -27.599956, -48.508717 | Vel: 0.0 km/h | 015456 | 080626[0m
+[0;32mI (349526) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (349536) GPS_PARSER: 📍 Posição: -27.599956, -48.508716 | Vel: 0.0 km/h | 015457 | 080626[0m
+[0;32mI (349536) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (349686) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (350696) GPS_PARSER: 📍 Posição: -27.599957, -48.508717 | Vel: 0.0 km/h | 015501 | 080626[0m
+[0;32mI (350696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (350696) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599957,"longitude":-48.508717,"speed":0.0}[0m
+[0;32mI (351426) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (353496) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (353516) GPS_PARSER: 📍 Posição: -27.599957, -48.508717 | Vel: 0.0 km/h | 015502 | 080626[0m
+[0;32mI (353516) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (353526) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015503 | 080626[0m
+[0;32mI (353526) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (353716) GPS_PARSER: 📍 Posição: -27.599957, -48.508718 | Vel: 0.0 km/h | 015504 | 080626[0m
+[0;32mI (353716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (354706) GPS_PARSER: 📍 Posição: -27.599957, -48.508719 | Vel: 0.0 km/h | 015505 | 080626[0m
+[0;32mI (354706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (355706) GPS_PARSER: 📍 Posição: -27.599957, -48.508720 | Vel: 0.0 km/h | 015506 | 080626[0m
+[0;32mI (355706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (355706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599957,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (356956) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (358716) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (358736) GPS_PARSER: 📍 Posição: -27.599957, -48.508720 | Vel: 0.0 km/h | 015507 | 080626[0m
+[0;32mI (358736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (358746) GPS_PARSER: 📍 Posição: -27.599957, -48.508721 | Vel: 0.0 km/h | 015508 | 080626[0m
+[0;32mI (358746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (358866) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (359706) GPS_PARSER: 📍 Posição: -27.599957, -48.508722 | Vel: 0.0 km/h | 015510 | 080626[0m
+[0;32mI (359706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (360706) GPS_PARSER: 📍 Posição: -27.599957, -48.508723 | Vel: 0.0 km/h | 015511 | 080626[0m
+[0;32mI (360706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (360706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599957,"longitude":-48.508723,"speed":0.0}[0m
+[0;32mI (361256) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (363326) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (363346) GPS_PARSER: 📍 Posição: -27.599958, -48.508723 | Vel: 0.0 km/h | 015512 | 080626[0m
+[0;32mI (363346) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (363426) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015513 | 080626[0m
+[0;32mI (363426) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (363706) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015514 | 080626[0m
+[0;32mI (363706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (364706) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015515 | 080626[0m
+[0;32mI (364706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (365706) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015516 | 080626[0m
+[0;32mI (365706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (365706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599958,"longitude":-48.508724,"speed":0.0}[0m
+[0;32mI (366486) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (368546) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (368566) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015517 | 080626[0m
+[0;32mI (368566) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (368576) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015518 | 080626[0m
+[0;32mI (368576) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (368716) GPS_PARSER: 📍 Posição: -27.599958, -48.508724 | Vel: 0.0 km/h | 015519 | 080626[0m
+[0;32mI (368716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (369726) GPS_PARSER: 📍 Posição: -27.599959, -48.508723 | Vel: 0.8 km/h | 015520 | 080626[0m
+[0;32mI (369726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (370726) GPS_PARSER: 📍 Posição: -27.599960, -48.508722 | Vel: 0.3 km/h | 015521 | 080626[0m
+[0;32mI (370726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (370726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599960,"longitude":-48.508722,"speed":0.3}[0m
+[0;32mI (372006) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (374076) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (374096) GPS_PARSER: 📍 Posição: -27.599960, -48.508721 | Vel: 0.0 km/h | 015522 | 080626[0m
+[0;32mI (374096) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (374106) GPS_PARSER: 📍 Posição: -27.599960, -48.508721 | Vel: 0.0 km/h | 015523 | 080626[0m
+[0;32mI (374106) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (374256) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (374706) GPS_PARSER: 📍 Posição: -27.599960, -48.508720 | Vel: 0.0 km/h | 015525 | 080626[0m
+[0;32mI (374706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (375706) GPS_PARSER: 📍 Posição: -27.599960, -48.508719 | Vel: 0.0 km/h | 015526 | 080626[0m
+[0;32mI (375706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (376716) GPS_PARSER: 📍 Posição: -27.599960, -48.508719 | Vel: 0.0 km/h | 015527 | 080626[0m
+[0;32mI (376716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (376716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599960,"longitude":-48.508719,"speed":0.0}[0m
+[0;32mI (377536) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (380226) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (380246) GPS_PARSER: 📍 Posição: -27.599960, -48.508718 | Vel: 0.0 km/h | 015528 | 080626[0m
+[0;32mI (380246) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (380256) GPS_PARSER: 📍 Posição: -27.599961, -48.508717 | Vel: 0.0 km/h | 015529 | 080626[0m
+[0;32mI (380256) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (380396) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (380716) GPS_PARSER: 📍 Posição: -27.599961, -48.508717 | Vel: 0.0 km/h | 015531 | 080626[0m
+[0;32mI (380716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (381716) GPS_PARSER: 📍 Posição: -27.599961, -48.508716 | Vel: 0.0 km/h | 015532 | 080626[0m
+[0;32mI (381716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (381716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599961,"longitude":-48.508716,"speed":0.0}[0m
+[0;32mI (382456) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (384836) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (384846) GPS_PARSER: 📍 Posição: -27.599960, -48.508714 | Vel: 1.0 km/h | 015533 | 080626[0m
+[0;32mI (384846) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (384856) GPS_PARSER: 📍 Posição: -27.599960, -48.508713 | Vel: 0.5 km/h | 015534 | 080626[0m
+[0;32mI (384856) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (385006) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (385636) GPS_PARSER: 📍 Posição: -27.599962, -48.508715 | Vel: 0.4 km/h | 015536 | 080626[0m
+[0;32mI (385636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (386716) GPS_PARSER: 📍 Posição: -27.599962, -48.508715 | Vel: 0.0 km/h | 015537 | 080626[0m
+[0;32mI (386716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (386716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599962,"longitude":-48.508715,"speed":0.0}[0m
+[0;32mI (387696) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (389436) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (389456) GPS_PARSER: 📍 Posição: -27.599963, -48.508716 | Vel: 0.0 km/h | 015538 | 080626[0m
+[0;32mI (389456) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (389466) GPS_PARSER: 📍 Posição: -27.599963, -48.508716 | Vel: 0.0 km/h | 015539 | 080626[0m
+[0;32mI (389466) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (389726) GPS_PARSER: 📍 Posição: -27.599963, -48.508716 | Vel: 0.0 km/h | 015540 | 080626[0m
+[0;32mI (389726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (390726) GPS_PARSER: 📍 Posição: -27.599963, -48.508717 | Vel: 0.0 km/h | 015541 | 080626[0m
+[0;32mI (390726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (391726) GPS_PARSER: 📍 Posição: -27.599963, -48.508717 | Vel: 0.0 km/h | 015542 | 080626[0m
+[0;32mI (391726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (391726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599963,"longitude":-48.508717,"speed":0.0}[0m
+[0;32mI (392596) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (394766) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (394776) GPS_PARSER: 📍 Posição: -27.599964, -48.508718 | Vel: 0.0 km/h | 015543 | 080626[0m
+[0;32mI (394776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (394786) GPS_PARSER: 📍 Posição: -27.599964, -48.508718 | Vel: 0.0 km/h | 015544 | 080626[0m
+[0;32mI (394786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (394906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (395726) GPS_PARSER: 📍 Posição: -27.599965, -48.508720 | Vel: 0.0 km/h | 015546 | 080626[0m
+[0;32mI (395726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (396726) GPS_PARSER: 📍 Posição: -27.599966, -48.508720 | Vel: 0.0 km/h | 015547 | 080626[0m
+[0;32mI (396726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (396726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599966,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (397606) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (399676) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (399696) GPS_PARSER: 📍 Posição: -27.599966, -48.508721 | Vel: 0.0 km/h | 015548 | 080626[0m
+[0;32mI (399696) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (399706) GPS_PARSER: 📍 Posição: -27.599966, -48.508721 | Vel: 0.0 km/h | 015549 | 080626[0m
+[0;32mI (399706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (399826) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (400736) GPS_PARSER: 📍 Posição: -27.599967, -48.508723 | Vel: 0.0 km/h | 015551 | 080626[0m
+[0;32mI (400736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (401736) GPS_PARSER: 📍 Posição: -27.599968, -48.508724 | Vel: 0.0 km/h | 015552 | 080626[0m
+[0;32mI (401736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (401736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599968,"longitude":-48.508724,"speed":0.0}[0m
+[0;32mI (402826) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (405216) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (405226) GPS_PARSER: 📍 Posição: -27.599968, -48.508724 | Vel: 0.0 km/h | 015553 | 080626[0m
+[0;32mI (405226) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (405236) GPS_PARSER: 📍 Posição: -27.599968, -48.508725 | Vel: 0.0 km/h | 015554 | 080626[0m
+[0;32mI (405236) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (405406) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (405736) GPS_PARSER: 📍 Posição: -27.599971, -48.508728 | Vel: 0.0 km/h | 015556 | 080626[0m
+[0;32mI (405736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (406736) GPS_PARSER: 📍 Posição: -27.599971, -48.508729 | Vel: 0.0 km/h | 015557 | 080626[0m
+[0;32mI (406736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (406736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599971,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (407446) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (409516) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (409526) GPS_PARSER: 📍 Posição: -27.599972, -48.508729 | Vel: 0.0 km/h | 015558 | 080626[0m
+[0;32mI (409526) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (409536) GPS_PARSER: 📍 Posição: -27.599972, -48.508730 | Vel: 0.0 km/h | 015559 | 080626[0m
+[0;32mI (409536) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (409736) GPS_PARSER: 📍 Posição: -27.599973, -48.508731 | Vel: 0.0 km/h | 015600 | 080626[0m
+[0;32mI (409736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (410736) GPS_PARSER: 📍 Posição: -27.599974, -48.508732 | Vel: 0.0 km/h | 015601 | 080626[0m
+[0;32mI (410736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (411726) GPS_PARSER: 📍 Posição: -27.599974, -48.508732 | Vel: 0.0 km/h | 015602 | 080626[0m
+[0;32mI (411726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (412736) GPS_PARSER: 📍 Posição: -27.599974, -48.508732 | Vel: 0.0 km/h | 015603 | 080626[0m
+[0;32mI (412736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (412736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599974,"longitude":-48.508732,"speed":0.0}[0m
+[0;32mI (413886) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (415966) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (415976) GPS_PARSER: 📍 Posição: -27.599975, -48.508732 | Vel: 0.0 km/h | 015604 | 080626[0m
+[0;32mI (415976) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (415986) GPS_PARSER: 📍 Posição: -27.599975, -48.508732 | Vel: 0.0 km/h | 015605 | 080626[0m
+[0;32mI (415986) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (416126) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (416626) GPS_PARSER: 📍 Posição: -27.599975, -48.508732 | Vel: 0.0 km/h | 015607 | 080626[0m
+[0;32mI (416626) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (417726) GPS_PARSER: 📍 Posição: -27.599975, -48.508733 | Vel: 0.0 km/h | 015608 | 080626[0m
+[0;32mI (417726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (418736) GPS_PARSER: 📍 Posição: -27.599972, -48.508729 | Vel: 1.6 km/h | 015609 | 080626[0m
+[0;32mI (418736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (418736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599972,"longitude":-48.508729,"speed":1.6}[0m
+[0;32mI (420036) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (421796) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (421816) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015610 | 080626[0m
+[0;32mI (421816) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (421826) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015611 | 080626[0m
+[0;32mI (421826) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (421946) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (422736) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015613 | 080626[0m
+[0;32mI (422736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (423716) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015614 | 080626[0m
+[0;32mI (423716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (424716) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015615 | 080626[0m
+[0;32mI (424716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (424716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599973,"longitude":-48.508730,"speed":0.0}[0m
+[0;32mI (425866) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (428246) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (428266) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015616 | 080626[0m
+[0;32mI (428266) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (428276) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015617 | 080626[0m
+[0;32mI (428276) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (428416) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (428746) GPS_PARSER: 📍 Posição: -27.599969, -48.508730 | Vel: 1.6 km/h | 015619 | 080626[0m
+[0;32mI (428746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (429736) GPS_PARSER: 📍 Posição: -27.599966, -48.508730 | Vel: 1.2 km/h | 015620 | 080626[0m
+[0;32mI (429736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (429736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599966,"longitude":-48.508730,"speed":1.2}[0m
+[0;32mI (430376) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (432456) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (432476) GPS_PARSER: 📍 Posição: -27.599966, -48.508729 | Vel: 0.0 km/h | 015621 | 080626[0m
+[0;32mI (432476) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (432486) GPS_PARSER: 📍 Posição: -27.599965, -48.508728 | Vel: 0.0 km/h | 015622 | 080626[0m
+[0;32mI (432486) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (432726) GPS_PARSER: 📍 Posição: -27.599965, -48.508727 | Vel: 0.0 km/h | 015623 | 080626[0m
+[0;32mI (432726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (433716) GPS_PARSER: 📍 Posição: -27.599965, -48.508726 | Vel: 0.0 km/h | 015624 | 080626[0m
+[0;32mI (433716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (434726) GPS_PARSER: 📍 Posição: -27.599965, -48.508725 | Vel: 0.0 km/h | 015625 | 080626[0m
+[0;32mI (434726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (435716) GPS_PARSER: 📍 Posição: -27.599965, -48.508724 | Vel: 0.0 km/h | 015626 | 080626[0m
+[0;32mI (435716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (435716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599965,"longitude":-48.508724,"speed":0.0}[0m
+[0;32mI (436826) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (439206) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (439226) GPS_PARSER: 📍 Posição: -27.599965, -48.508724 | Vel: 0.0 km/h | 015627 | 080626[0m
+[0;32mI (439226) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (439236) GPS_PARSER: 📍 Posição: -27.599965, -48.508723 | Vel: 0.0 km/h | 015628 | 080626[0m
+[0;32mI (439236) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (439396) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (439716) GPS_PARSER: 📍 Posição: -27.599965, -48.508724 | Vel: 0.0 km/h | 015630 | 080626[0m
+[0;32mI (439716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (440706) GPS_PARSER: 📍 Posição: -27.599966, -48.508724 | Vel: 0.0 km/h | 015631 | 080626[0m
+[0;32mI (440706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (441706) GPS_PARSER: 📍 Posição: -27.599967, -48.508724 | Vel: 0.0 km/h | 015632 | 080626[0m
+[0;32mI (441706) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (441706) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599967,"longitude":-48.508724,"speed":0.0}[0m
+[0;32mI (442666) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (444426) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (444446) GPS_PARSER: 📍 Posição: -27.599967, -48.508724 | Vel: 0.0 km/h | 015633 | 080626[0m
+[0;32mI (444446) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (444456) GPS_PARSER: 📍 Posição: -27.599967, -48.508725 | Vel: 0.0 km/h | 015634 | 080626[0m
+[0;32mI (444456) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (444726) GPS_PARSER: 📍 Posição: -27.599968, -48.508726 | Vel: 0.0 km/h | 015635 | 080626[0m
+[0;32mI (444726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (445726) GPS_PARSER: 📍 Posição: -27.599968, -48.508726 | Vel: 0.0 km/h | 015636 | 080626[0m
+[0;32mI (445726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (446716) GPS_PARSER: 📍 Posição: -27.599969, -48.508726 | Vel: 0.0 km/h | 015637 | 080626[0m
+[0;32mI (446716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (446716) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599969,"longitude":-48.508726,"speed":0.0}[0m
+[0;32mI (447576) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (449956) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (449976) GPS_PARSER: 📍 Posição: -27.599969, -48.508727 | Vel: 0.0 km/h | 015638 | 080626[0m
+[0;32mI (449976) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (449986) GPS_PARSER: 📍 Posição: -27.599970, -48.508727 | Vel: 0.0 km/h | 015639 | 080626[0m
+[0;32mI (449986) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (450136) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (450636) GPS_PARSER: 📍 Posição: -27.599971, -48.508728 | Vel: 0.0 km/h | 015641 | 080626[0m
+[0;32mI (450636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (451736) GPS_PARSER: 📍 Posição: -27.599971, -48.508728 | Vel: 0.0 km/h | 015642 | 080626[0m
+[0;32mI (451736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (451736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599971,"longitude":-48.508728,"speed":0.0}[0m
+[0;32mI (452496) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (454876) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (454896) GPS_PARSER: 📍 Posição: -27.599972, -48.508729 | Vel: 0.0 km/h | 015643 | 080626[0m
+[0;32mI (454896) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (454906) GPS_PARSER: 📍 Posição: -27.599972, -48.508729 | Vel: 0.0 km/h | 015644 | 080626[0m
+[0;32mI (454906) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (455026) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (455626) GPS_PARSER: 📍 Posição: -27.599972, -48.508729 | Vel: 0.0 km/h | 015646 | 080626[0m
+[0;32mI (455626) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (456736) GPS_PARSER: 📍 Posição: -27.599973, -48.508729 | Vel: 0.0 km/h | 015647 | 080626[0m
+[0;32mI (456736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (456736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599973,"longitude":-48.508729,"speed":0.0}[0m
+[0;32mI (457516) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (459176) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (459186) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015648 | 080626[0m
+[0;32mI (459186) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (459296) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015649 | 080626[0m
+[0;32mI (459296) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (459726) GPS_PARSER: 📍 Posição: -27.599973, -48.508730 | Vel: 0.0 km/h | 015650 | 080626[0m
+[0;32mI (459726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (460736) GPS_PARSER: 📍 Posição: -27.599974, -48.508731 | Vel: 0.0 km/h | 015651 | 080626[0m
+[0;32mI (460736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (461736) GPS_PARSER: 📍 Posição: -27.599974, -48.508731 | Vel: 0.0 km/h | 015652 | 080626[0m
+[0;32mI (461736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (461736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599974,"longitude":-48.508731,"speed":0.0}[0m
+[0;32mI (462936) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (465016) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (465026) GPS_PARSER: 📍 Posição: -27.599974, -48.508731 | Vel: 0.0 km/h | 015653 | 080626[0m
+[0;32mI (465026) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (465036) GPS_PARSER: 📍 Posição: -27.599974, -48.508732 | Vel: 0.0 km/h | 015654 | 080626[0m
+[0;32mI (465036) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (465156) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (465646) GPS_PARSER: 📍 Posição: -27.599975, -48.508732 | Vel: 0.0 km/h | 015656 | 080626[0m
+[0;32mI (465646) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (466746) GPS_PARSER: 📍 Posição: -27.599976, -48.508732 | Vel: 0.0 km/h | 015657 | 080626[0m
+[0;32mI (466746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (466746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599976,"longitude":-48.508732,"speed":0.0}[0m
+[0;32mI (467856) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (470236) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (470246) GPS_PARSER: 📍 Posição: -27.599977, -48.508732 | Vel: 0.0 km/h | 015658 | 080626[0m
+[0;32mI (470246) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (470256) GPS_PARSER: 📍 Posição: -27.599977, -48.508732 | Vel: 0.0 km/h | 015659 | 080626[0m
+[0;32mI (470256) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (470416) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (470756) GPS_PARSER: 📍 Posição: -27.599982, -48.508731 | Vel: 0.0 km/h | 015701 | 080626[0m
+[0;32mI (470756) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (471746) GPS_PARSER: 📍 Posição: -27.599983, -48.508730 | Vel: 0.0 km/h | 015702 | 080626[0m
+[0;32mI (471746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (471746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599983,"longitude":-48.508730,"speed":0.0}[0m
+[0;32mI (473076) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (475146) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (475166) GPS_PARSER: 📍 Posição: -27.599984, -48.508729 | Vel: 0.0 km/h | 015703 | 080626[0m
+[0;32mI (475166) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (475176) GPS_PARSER: 📍 Posição: -27.599984, -48.508728 | Vel: 0.0 km/h | 015704 | 080626[0m
+[0;32mI (475176) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (475296) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (475736) GPS_PARSER: 📍 Posição: -27.599986, -48.508726 | Vel: 0.0 km/h | 015706 | 080626[0m
+[0;32mI (475736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (476746) GPS_PARSER: 📍 Posição: -27.599987, -48.508726 | Vel: 0.0 km/h | 015707 | 080626[0m
+[0;32mI (476746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (476746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599987,"longitude":-48.508726,"speed":0.0}[0m
+[0;32mI (477376) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (479756) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (479776) GPS_PARSER: 📍 Posição: -27.599986, -48.508723 | Vel: 1.2 km/h | 015708 | 080626[0m
+[0;32mI (479776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (479786) GPS_PARSER: 📍 Posição: -27.599987, -48.508722 | Vel: 0.0 km/h | 015709 | 080626[0m
+[0;32mI (479786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (479906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (480736) GPS_PARSER: 📍 Posição: -27.599987, -48.508721 | Vel: 0.0 km/h | 015711 | 080626[0m
+[0;32mI (480736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (481736) GPS_PARSER: 📍 Posição: -27.599987, -48.508721 | Vel: 0.0 km/h | 015712 | 080626[0m
+[0;32mI (481736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (482736) GPS_PARSER: 📍 Posição: -27.599988, -48.508720 | Vel: 0.0 km/h | 015713 | 080626[0m
+[0;32mI (482736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (482736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599988,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (483526) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (485286) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (485306) GPS_PARSER: 📍 Posição: -27.599989, -48.508720 | Vel: 0.0 km/h | 015714 | 080626[0m
+[0;32mI (485306) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (485416) GPS_PARSER: 📍 Posição: -27.599989, -48.508720 | Vel: 0.0 km/h | 015715 | 080626[0m
+[0;32mI (485416) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (485736) GPS_PARSER: 📍 Posição: -27.599989, -48.508720 | Vel: 0.0 km/h | 015716 | 080626[0m
+[0;32mI (485736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (486746) GPS_PARSER: 📍 Posição: -27.599989, -48.508721 | Vel: 0.0 km/h | 015717 | 080626[0m
+[0;32mI (486746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (487736) GPS_PARSER: 📍 Posição: -27.599989, -48.508721 | Vel: 0.0 km/h | 015718 | 080626[0m
+[0;32mI (487736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (487736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599989,"longitude":-48.508721,"speed":0.0}[0m
+[0;32mI (488436) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (490506) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (490526) GPS_PARSER: 📍 Posição: -27.599989, -48.508721 | Vel: 0.0 km/h | 015719 | 080626[0m
+[0;32mI (490526) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (490536) GPS_PARSER: 📍 Posição: -27.599989, -48.508721 | Vel: 0.0 km/h | 015720 | 080626[0m
+[0;32mI (490536) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (490746) GPS_PARSER: 📍 Posição: -27.599989, -48.508721 | Vel: 0.0 km/h | 015721 | 080626[0m
+[0;32mI (490746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (491756) GPS_PARSER: 📍 Posição: -27.599987, -48.508720 | Vel: 1.3 km/h | 015722 | 080626[0m
+[0;32mI (491756) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (492746) GPS_PARSER: 📍 Posição: -27.599984, -48.508720 | Vel: 1.4 km/h | 015723 | 080626[0m
+[0;32mI (492746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (492746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599984,"longitude":-48.508720,"speed":1.4}[0m
+[0;32mI (493656) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (496036) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (496056) GPS_PARSER: 📍 Posição: -27.599984, -48.508720 | Vel: 0.0 km/h | 015724 | 080626[0m
+[0;32mI (496056) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (496066) GPS_PARSER: 📍 Posição: -27.599985, -48.508720 | Vel: 0.0 km/h | 015725 | 080626[0m
+[0;32mI (496066) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (496186) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (496666) GPS_PARSER: 📍 Posição: -27.599984, -48.508721 | Vel: 0.8 km/h | 015727 | 080626[0m
+[0;32mI (496666) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (497746) GPS_PARSER: 📍 Posição: -27.599985, -48.508721 | Vel: 0.0 km/h | 015728 | 080626[0m
+[0;32mI (497746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (497746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599985,"longitude":-48.508721,"speed":0.0}[0m
+[0;32mI (498576) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (500746) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (500766) GPS_PARSER: 📍 Posição: -27.599985, -48.508722 | Vel: 0.0 km/h | 015729 | 080626[0m
+[0;32mI (500766) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (500776) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015730 | 080626[0m
+[0;32mI (500776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (500896) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (501746) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015732 | 080626[0m
+[0;32mI (501746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (502746) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015733 | 080626[0m
+[0;32mI (502746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (502746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599986,"longitude":-48.508722,"speed":0.0}[0m
+[0;32mI (503906) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (505976) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (505996) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015734 | 080626[0m
+[0;32mI (505996) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (506006) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015735 | 080626[0m
+[0;32mI (506006) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (506136) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (506726) GPS_PARSER: 📍 Posição: -27.599986, -48.508722 | Vel: 0.0 km/h | 015737 | 080626[0m
+[0;32mI (506726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (507746) GPS_PARSER: 📍 Posição: -27.599987, -48.508722 | Vel: 0.0 km/h | 015738 | 080626[0m
+[0;32mI (507746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (507746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599987,"longitude":-48.508722,"speed":0.0}[0m
+[0;32mI (508816) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (510886) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (510906) GPS_PARSER: 📍 Posição: -27.599987, -48.508721 | Vel: 0.0 km/h | 015739 | 080626[0m
+[0;32mI (510906) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (510916) GPS_PARSER: 📍 Posição: -27.599987, -48.508721 | Vel: 0.0 km/h | 015740 | 080626[0m
+[0;32mI (510916) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (511036) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (511636) GPS_PARSER: 📍 Posição: -27.599988, -48.508720 | Vel: 0.0 km/h | 015742 | 080626[0m
+[0;32mI (511636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (512736) GPS_PARSER: 📍 Posição: -27.599988, -48.508720 | Vel: 0.0 km/h | 015743 | 080626[0m
+[0;32mI (512736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (513736) GPS_PARSER: 📍 Posição: -27.599988, -48.508720 | Vel: 0.0 km/h | 015744 | 080626[0m
+[0;32mI (513736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (513736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599988,"longitude":-48.508720,"speed":0.0}[0m
+[0;32mI (514666) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (516726) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (516736) GPS_PARSER: 📍 Posição: -27.599989, -48.508719 | Vel: 0.0 km/h | 015745 | 080626[0m
+[0;32mI (516736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (516746) GPS_PARSER: 📍 Posição: -27.599989, -48.508719 | Vel: 0.0 km/h | 015746 | 080626[0m
+[0;32mI (516746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (516866) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (517746) GPS_PARSER: 📍 Posição: -27.599989, -48.508719 | Vel: 0.0 km/h | 015748 | 080626[0m
+[0;32mI (517746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (518726) GPS_PARSER: 📍 Posição: -27.599989, -48.508719 | Vel: 0.0 km/h | 015749 | 080626[0m
+[0;32mI (518726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (519726) GPS_PARSER: 📍 Posição: -27.599989, -48.508719 | Vel: 0.0 km/h | 015750 | 080626[0m
+[0;32mI (519726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (519726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599989,"longitude":-48.508719,"speed":0.0}[0m
+[0;32mI (520796) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (522566) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (522576) GPS_PARSER: 📍 Posição: -27.599990, -48.508719 | Vel: 0.0 km/h | 015751 | 080626[0m
+[0;32mI (522576) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (522586) GPS_PARSER: 📍 Posição: -27.599990, -48.508719 | Vel: 0.0 km/h | 015752 | 080626[0m
+[0;32mI (522586) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (522716) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (523716) GPS_PARSER: 📍 Posição: -27.599990, -48.508719 | Vel: 0.0 km/h | 015754 | 080626[0m
+[0;32mI (523716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (524726) GPS_PARSER: 📍 Posição: -27.599989, -48.508718 | Vel: 0.0 km/h | 015755 | 080626[0m
+[0;32mI (524726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (524726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599989,"longitude":-48.508718,"speed":0.0}[0m
+[0;32mI (525406) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (527986) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (528006) GPS_PARSER: 📍 Posição: -27.599989, -48.508718 | Vel: 0.0 km/h | 015756 | 080626[0m
+[0;32mI (528006) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (528016) GPS_PARSER: 📍 Posição: -27.599989, -48.508718 | Vel: 0.0 km/h | 015757 | 080626[0m
+[0;32mI (528016) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (528136) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (528636) GPS_PARSER: 📍 Posição: -27.599989, -48.508717 | Vel: 0.0 km/h | 015759 | 080626[0m
+[0;32mI (528636) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (529746) GPS_PARSER: 📍 Posição: -27.599989, -48.508717 | Vel: 0.0 km/h | 015800 | 080626[0m
+[0;32mI (529746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (529746) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599989,"longitude":-48.508717,"speed":0.0}[0m
+[0;32mI (530626) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (532696) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (532716) GPS_PARSER: 📍 Posição: -27.599989, -48.508717 | Vel: 0.0 km/h | 015801 | 080626[0m
+[0;32mI (532716) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (532726) GPS_PARSER: 📍 Posição: -27.599989, -48.508717 | Vel: 0.0 km/h | 015802 | 080626[0m
+[0;32mI (532726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (532846) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (533726) GPS_PARSER: 📍 Posição: -27.599991, -48.508714 | Vel: 0.0 km/h | 015804 | 080626[0m
+[0;32mI (533726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (534726) GPS_PARSER: 📍 Posição: -27.599991, -48.508714 | Vel: 0.0 km/h | 015805 | 080626[0m
+[0;32mI (534726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (535726) GPS_PARSER: 📍 Posição: -27.599991, -48.508714 | Vel: 0.0 km/h | 015806 | 080626[0m
+[0;32mI (535726) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (535726) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599991,"longitude":-48.508714,"speed":0.0}[0m
+[0;32mI (536766) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (538536) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (538546) GPS_PARSER: 📍 Posição: -27.599991, -48.508714 | Vel: 0.0 km/h | 015807 | 080626[0m
+[0;32mI (538546) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (538556) GPS_PARSER: 📍 Posição: -27.599991, -48.508713 | Vel: 0.0 km/h | 015808 | 080626[0m
+[0;32mI (538556) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (538746) GPS_PARSER: 📍 Posição: -27.599991, -48.508713 | Vel: 0.0 km/h | 015809 | 080626[0m
+[0;32mI (538746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (539746) GPS_PARSER: 📍 Posição: -27.599992, -48.508712 | Vel: 0.0 km/h | 015810 | 080626[0m
+[0;32mI (539746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (540736) GPS_PARSER: 📍 Posição: -27.599992, -48.508711 | Vel: 0.0 km/h | 015811 | 080626[0m
+[0;32mI (540736) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (540736) GPS_PARSER: 📤 Enviando para AWS: {"vehicle_id":"lilygo-vehicle-tracking","latitude":-27.599992,"longitude":-48.508711,"speed":0.0}[0m
+[0;32mI (541386) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (543756) GPS_PARSER: ✅ Dados enviados com sucesso para a AWS![0m
+[0;32mI (543776) GPS_PARSER: 📍 Posição: -27.599992, -48.508711 | Vel: 0.0 km/h | 015812 | 080626[0m
+[0;32mI (543776) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (543786) GPS_PARSER: 📍 Posição: -27.599992, -48.508710 | Vel: 0.0 km/h | 015813 | 080626[0m
+[0;32mI (543786) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;33mW (543906) GPS_PARSER: 🛰️ Aguardando sinal GPS...[0m
+[0;32mI (544746) GPS_PARSER: 📍 Posição: -27.599992, -48.508709 | Vel: 0.0 km/h | 015815 | 080626[0m
+[0;32mI (544746) GPS_PARSER: 🔍 Chamando enviarDadosGPS...[0m
+[0;32mI (545736) GPS_PARSER: 📍 Posição: -27.5999
