@@ -1,13 +1,4 @@
-<style>
-    .texto-formatado {
-        text-indent: 2.5em;         
-        text-align: justify;        
-        line-height: 1.6;          
-        font-family: Arial, sans-serif; 
-        font-size: 16px;            
-        color: #c1bbbb;             
-    }
-</style>
+
 
 <div align="center" markdown="1">
   <img src="https://github.com/GitHubAlves150/Consumo-Api/blob/main/img/ChatGPT%20Image%20Jun%201,%202026,%2012_25_07%20PM.png?raw=true" alt="LilyGo logo" width="700"/>
