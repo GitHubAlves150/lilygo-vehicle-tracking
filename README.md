@@ -1,11 +1,11 @@
 <style>
     .texto-formatado {
-        text-indent: 2.5em;         /* Recuo na primeira linha do parágrafo */
-        text-align: justify;        /* Alinha o texto perfeitamente nas laterais (esquerda e direita) */
-        line-height: 1.6;           /* Espaçamento entre as linhas (evita que o texto fique espremido) */
-        font-family: Arial, sans-serif; /* Muda a fonte para uma leitura mais limpa */
-        font-size: 16px;            /* Define um tamanho confortável para leitura */
-        color: #c1bbbb;             /* Um tom de cinza escuro, mais suave para os olhos do que o preto puro */
+        text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;             
     }
 </style>
 
@@ -18,18 +18,38 @@
 <div align="center">
 
 <h2>SOBRE O PROJETO</h2>
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb; ">
     Este projeto(MVP) é um <strong>rastreador veicular</strong> desenvolvido com a placa de desenvolvimento <strong>LILYGO T-A7670E</strong> (Esp32 + 4G + GPS Externo + Bateria). O objetivo deste projeto é demonstrar minha transição de carreira, unindo conhecimentos de Hardware aplicados na área de desenvolvimento de placas eletrônicas com <strong>software web(backend Golang), banco de dados, API, microserviços</strong>
 </p>
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     A placa Lilygo T-A7670E é um kit de desenvolvimento da própria empresa chinesa LilyGO, líder mundial P&D(Projeto & Desenvolvimento) em internet das coisas. Por possuir os quatro módulo essenciais de um rastreador veicular(Esp32 + 4G + GPS + Bateria), ter um hardware confiável e com muitas documentações de fábrica eu escolhi <strong>lilygo T-A7670E</strong> como sendo o hardware necessário para coletar dados de GPS e disponibilizar via API na web para fins de estudos e para fins profissionais para demoonstrar minhas habilidades em Engenharia de software e Engenharia de Eletrônica entre outras tecnologias atuais.
 </p>
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
         O cerne deste projeto é, coletar dados GPS e envia-lo via API para a nuvem usando Golang como linguagem backend principal.
     A arquitetura do projeto compôe o firmware do Esp32(módulo inserido na placa LilyGo) escrito em linguagem CPP(C++) a nível de Hardware para gerenciar a memória dinâmica do microcontrolador e também, gerir o barramento UART de comunicação do GPS com o Esp32. Para este projeto, está sendo utilizado serviços AWS cloud com serverless Lambda, banco de dados DynamoDB e API Gateway para disponibilizar os dados de coordenadas GPS em formato JSON em qualquer navegador e ser utilizado em microserviços como páginas web.
 </p>
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     <strong>Diferencial deste projeto:</strong> Capacidade de entender os dois mundos - firmware embarcado para o microcontrolador Esp32 escrito em C++, gerenciamento de memória dinâmica. Este projeto demonstra um amplo entendimento em como hardware se comunicam via nuvem(handshake).
 <p>
 
@@ -65,19 +85,34 @@
  ### Como usar.
 
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     O projeto lilygo-vehicle-tracking pode ser clonado com o seguinte comando git clone git@github.com:GitHubAlves150/lilygo-vehicle-tracking.git e pode ser gravado usando um terminal linux. È preciso ter instalado o docker Engine(não desktop). Baixando apenas o projeto lilygo-vehicle-tracking pode-se ter acesso as coordenadas via serial(dados brutos na tela usando um cabo USB-C), pois no desenvolvimento do projeto foi preciso validar a clareza dos dados. Quanto a conexão wifi foi utilizado Hotspot do celular para poder transportar pela cidade, mas a placa lilyGo tem estrutura elétrica para comportar SIM-Card 4G.
 </p>
 
 ### Consulte a documentação do firmware ESP-IDF em [FIRMWARE.md](/docs/FIRMWARE.md)
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     O projeto lambda_project pode ser clonado com o comando git clone git@github.com:GitHubAlves150/lambda_project.git. O projeto lambda_project é o backend escrito em Golang e deve ser concultado a documentação BACKEND.md primeiro e em seguida consultado a documentação AWS.md para abrir resuisições /POST/GET para envio e consulta dos dados via URL em qualquer navegador de qualquer lugar do mundo.
 </p>
 
 ### Consulte a documentação do backend em [BACKEND.md](/docs/BACKEND.md) e a documentação da configuração do AWS cloud em [AWS.md](/docs/AWS.md)
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 Para todas as branch deste repositório, é preciso subir o container <strong>lilygo-vehicle-tracking</strong>. È preciso também ter em mãos a placa  <a href="https://lilygo.cc/en-us/products/t-sim-a7670e?srsltid=AfmBOor6rdfBl_cieeBHlcDflmsB9XpvkZ3t6VhoQHLQuaOGv8QbgviG">LILYGO T-A7670</a> para poder abrir conexão com o container <strong>OU</strong> se apenas preferir navegar pelo projeto basta entrar no arquivo <strong>docker-compose.yml e comentar a linha 16 que diz respeito ao compartilhamente das portas do container com a máquina local(notebook, desktop..)</strong>
 </p>
 
@@ -87,7 +122,12 @@ devices:
       - "/dev/ttyACM0:/dev/ttyACM0"   # ← comentar esta linha para poder subir o container
 ```
 <div>
-    <p class= "texto-formatado">
+    <p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     O projeto foi desenvolvido todo em sistema linux versão 26.04 resolute, mas caso esteja usando windows, basta instalar o WSL(Subsistema do Windows para Linux) para virtualizar o sistema linux
     </p>
     <h3>Pré-requisitos</h3>

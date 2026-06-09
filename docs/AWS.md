@@ -1,13 +1,4 @@
-<style>
-    .texto-formatado {
-        text-indent: 2.5em;         /* Recuo na primeira linha do parágrafo */
-        text-align: justify;        /* Alinha o texto perfeitamente nas laterais (esquerda e direita) */
-        line-height: 1.6;           /* Espaçamento entre as linhas (evita que o texto fique espremido) */
-        font-family: Arial, sans-serif; /* Muda a fonte para uma leitura mais limpa */
-        font-size: 16px;            /* Define um tamanho confortável para leitura */
-        color: #c1bbbb;             /* Um tom de cinza claro, mais suave para os olhos do que o preto puro */
-    }
-</style>
+
 
 <div style="margin-top:80px; display: flex; justify-content:center "  >
   <img src="../Repositorio-de-Imagens/image-9.png" alt="AWS Serverless Stack Banner" width="50%" >
@@ -17,27 +8,57 @@
 
 ## Configuração da Infraestrutura AWS
 
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     As instruções detalhadas neste roadmap para criação da conta AWS, configuração do DynamoDB, Lambda e API Gateway foram seguidas conforme orientações técnicas obtidas durante o desenvolvimento do projeto. Pode haver nuances no processo de criação da API seguindo este roadmap, então vale consultar a internet. A Amazon Cloud pede cartão de crédito para abertura de conta, mas só será cobrado após limite de requisição. Escolha o plano que mais lhe cair bem e para este proketo escolhi a arquitetura serverless por ser um serviço com várias camadas úteis evitando configuração manual. As imagens usadas neste documento são de orientações visuais e devem ser encaradas apenas para familiariazação coma plataforma AWS e não como guia de instruções.
 </p>
 
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     A relação entre esses três serviços é o coração do que chamamos de Arquitetura serverless(Sem servidor) na AWS. Eles funcionam como uma engrenagem sincronizada, onde cada um cuida de uma camada específica da aplicação(Rede, Processamento e Armazenamento).
 </p>
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     AWS API Gateway é a porta de entrada. Ele fica exposto para a internet esperando as requisições /POST do ESp32 ou /GET do navegador. Ele não processa regras de negócios e não guarda dados  pois sua única função é receber o cliente, validar a segurança(CROS) e direcionar a rota.
 </p>
 
 
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 AWS Lambda é o cérebro do sistema pois quando o API Gateway recebe uma requisição, ele "acorda" a Lambda e entrega o pacote de dados. O cógio escrito em Golang roda dentro da Lambda, ela interpreta a rota(/POST/GET), trata os dados e apaga assim que termina de rodar por que a Lambda é volátil.Então ela precisa persistir os dados para consulta de histórico. 
 </p>
 
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 AWS DynamoDB é o banco de dados NoSQl, a Lambda conecta com o DynamoDB para salvar o pacote recebido(PutItem) ou para consultar o histórico já armazenado(Scan). Ele apenas guarda e entrega as informações quando a Lambda solicita.
 </p>
 
-<p class="texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 </p>
 ### Recursos Criados
 
@@ -149,11 +170,21 @@ Após esses passos, sua função Lambda Go estará criada e configurada com o c�
 
 ## API Gateway(A porta de entrada).
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 
 O ```Amazom API Gateaway ``` é um serviço da AWS que atua como um ```porteiro``` ou ```recepsionista``` para a aplicação, pois ela recebe requisições HTTP/HTTPS do mundo externo(ESP32, navegador, etc). Roteia as requisições para o serviço correto(sua Lmbda). Ela também gerencia autenticação, limites de taxas, CORS, etc..E por fim roteia as respostas para o cliente.
 </p>
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     Na tela abaixo mostra o caminho que deve ser seguido para receber a URL pública gerada pela API Gateway. Segue um breve roadmap para preencher os campos corretos até a geração da url. Vale pesquisar na internet por atualizações pois este roadmap pode ter mudado com o tempo.
 </p>
 

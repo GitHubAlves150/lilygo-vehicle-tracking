@@ -1,13 +1,3 @@
-<style>
-    .texto-formatado {
-        text-indent: 2.5em;         /* Recuo na primeira linha do parágrafo */
-        text-align: justify;        /* Alinha o texto perfeitamente nas laterais (esquerda e direita) */
-        line-height: 1.6;           /* Espaçamento entre as linhas (evita que o texto fique espremido) */
-        font-family: Arial, sans-serif; /* Muda a fonte para uma leitura mais limpa */
-        font-size: 16px;            /* Define um tamanho confortável para leitura */
-        color: #c1bbbb;             /* Um tom de cinza escuro, mais suave para os olhos do que o preto puro */
-    }
-</style>
 
 
 <div style="margin-top:80px; display: flex; justify-content:center "  >
@@ -19,10 +9,20 @@
 
 ## Firmware.
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     O firmware é um programa que pode se dizer backend, quando a interface se trata de um hardware. Por exemplo! display é uma interface pois mostra as informações para o usuário. Botoeiras também é um tipo de interface, pois os botões nos dão opções de escolha para configuração e controle do dispositivo. Resumindo! interface é qualquer componente que nos dê alguma informação ou que nos dê acesso e controle de informações, ou seja Display ou leds é o monitor e botoeiras é o teclado do computador. Assim como todo computador tem seu S.O(windows, linux ou MAC) microcontroladores e processadores também precisam ser configurados e inicializados, autenticação de assesso na rede etc... 
 </p>
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     A placa lilyGo T-A7670 é um dispositivo desenvolvido pela empresa chinesa Lilygo, lider e referência mundial em "devices IoT". Esta placa contém como cérebro o chip ESP32 da empresa chinesa Espressif, dentro de um módulo chamado ESP32-Wroom v5.3. Este microcontrolador tem pinos de leitura e escrita(I/O). Além do ESP32 a lilygo T-A7670 comporta outros componentes de periféricos como o modem A7670, o módulo GPS L76K da Quecteel, suporte a bateria, slot de cartão SD-CARD para gravação de logs e configuração JSON, slot para SIM-CARD para cobertura 4G movél. A baixo está a descrição dos arquivos que realizam toda a infra deste dispositivo para enviar os dados para a nuvem.
 </p>
 
@@ -108,7 +108,12 @@ O firmware é responsável por:
 ```
 
 ## 🔄 Fluxo de Dados
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
     O fluxo de dados abaixo demonstra a coleta de dados feito pelo módulo e sensor GPS L76K e enviado através do barramento UART com velocidade de 9600 bit por segundo até o módulo ESP32. Em seguida o ESP32 faz um handshake com a rede enviando os dados em formato JSON via HTTPS. A AWS Gateway após receber a requisição do esp32 ele envia o pacote direto para o lambda pela rota "/ANY", e o lambda em GO fa o roteamento interno.
 </p>
 
@@ -125,7 +130,12 @@ O firmware é responsável por:
 ## 📡 Protocolo de Comunicação (HTTPS)
 
 ### Requisição enviada pelo ESP32
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 Dentro do arquivo gps_parser.cpp o JSON é montado manualmente para envio via HTTPS.
 </p>
 
@@ -144,7 +154,12 @@ snprintf(json_buffer, sizeof(json_buffer),
 
 ``` 
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 O arquivo gps_parser.cpp compôe três grandes pilares lógicos coordenados.
 </p>
 
@@ -156,7 +171,12 @@ O arquivo gps_parser.cpp compôe três grandes pilares lógicos coordenados.
 
 ## 1. Captura de Dados por Hardware (gps_task)
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 A execução começa com a inicialização da porta serial UART. O ESP32 configura a taxa de transmissão em 9600 baud (padrão do módulo Quectel L76) e atrela os pinos físicos de recepção e transmissão.
 
     Sincronismo Inicial (Boot Test): Antes de entrar no laço infinito, a tarefa roda um laço de espera (timeout) monitorando o status da rede. Assim que o Wi-Fi obtém uma atribuição de IP válida, o firmware dispara um payload fixo (teste_boot) para o API Gateway. Isso serve como um validador de diagnóstico para garantir, logo no ligamento, que as rotas de nuvem e as chaves do DynamoDB estão operacionais.
@@ -166,7 +186,12 @@ A execução começa com a inicialização da porta serial UART. O ESP32 configu
 </p>
 
 ## 2. Filtragem e Tratamento Geográfico (parse_nmea_gprmc)
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 O módulo GPS gera dezenas de linhas por segundo (GPGGA, GPGSA, GPGSV, etc.). A lógica deste arquivo foca estritamente na sentença RMC (Recommended Minimum Navigation Information), que contém o pacote essencial de localização.
 
     Validação do Sinal: O código usa sscanf para quebrar a string NMEA separada por vírgulas em variáveis estruturadas. Ele checa o caractere de status: se for 'A' (Active), os dados são confiáveis; se for 'V' (Void), o algoritmo ignora o pacote e exibe o aviso de que o GPS está buscando sincronismo com os satélites.
@@ -179,7 +204,12 @@ O módulo GPS gera dezenas de linhas por segundo (GPGGA, GPGSA, GPGSV, etc.). A 
 
 ## 3. Transmissão CRiptografada e Segura(enviarDadosGPS)
 
-<p class= "texto-formatado">
+<p style="text-indent: 2.5em;         
+        text-align: justify;        
+        line-height: 1.6;          
+        font-family: Arial, sans-serif; 
+        font-size: 16px;            
+        color: #c1bbbb;  ">
 Esta função é a ponte de saída do ecossistema embarcado para a AWS. Ela foi projetada com proteções estritas contra transbordamento de rede e falhas de memória:
 
     Filtro de Inundação (Trava de Tempo): Utilizando variáveis estáticas de controle e a contagem de ticks do FreeRTOS (xTaskGetTickCount), a função calcula o intervalo temporal desde o último envio. Se menos de 5 segundos tiverem se passado, a transmissão é abortada. Isso poupa processamento do ESP32 e evita consumo desnecessário na arquitetura Serverless da AWS.
