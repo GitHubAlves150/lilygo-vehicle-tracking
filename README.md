@@ -172,7 +172,8 @@ idf.py -p /dev/ttyACM0 monitor
 
 ![alt text](/Repositorio-de-Imagens/image-21.png)
 
-
+## veja o vídeo do projeto em funionamento.  
+[https://www.youtube.com/watch?v=CLIrlaGR2Sk](https://www.youtube.com/watch?v=CLIrlaGR2Sk)
 
 
 ## 📚 Bibliografia e Referências
