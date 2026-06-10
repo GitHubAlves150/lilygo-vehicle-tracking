@@ -9,6 +9,8 @@
 <h2 style="text-align:center; margin-top: 100px;">lilygo-vehicle-tracking</h2>
 
 <h2>SOBRE O PROJETO</h2>
+</div>
+
 <p style="text-indent: 2.5em;         
         text-align: justify;        
         line-height: 1.6;          
@@ -44,7 +46,6 @@
     <strong>Diferencial deste projeto:</strong> Capacidade de entender os dois mundos - firmware embarcado para o microcontrolador Esp32 escrito em C++, gerenciamento de memória dinâmica. Este projeto demonstra um amplo entendimento em como hardware se comunicam via nuvem(handshake).
 <p>
 
-</div>
 
 ### Funcionalidades aplicadas a este projeto(MVP)
 
